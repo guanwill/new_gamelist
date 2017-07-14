@@ -1,0 +1,517 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require jquery-ui
+ */
+
+ // @import "materialize";
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "bootstrap-sortable";
+
+ // @import "bootstrap-table";
+
+
+
+ // SIGN UP FORM: ;
+ .sign_up_form {
+   text-align: center;
+   margin-top: 50px;
+ }
+ .sign_up_field {
+   width: 23%;
+   text-align: center;
+   border: 1px solid #193892;
+   border-radius: 3px;
+   height: 30px;
+   margin-bottom: 10px;
+ }
+ // .sign_bg {
+ //   background: rgba(221, 221, 221, 0.7);
+ //   border: 2px solid gray;
+ //   padding: 30px 0px 30px 0px;
+ //   border-radius: 20px;
+ // }
+ // EDIT FORM
+ .edit_form {
+   text-align: center;
+   margin-top: 50px;
+ }
+ .edit_field {
+   width: 25%;
+   text-align: center;
+   border: 1px solid #193892;
+   border-radius: 3px;
+   height: 30px;
+ }
+ // .edit_bg {
+ //   background: rgba(221, 221, 221, 0.7);
+ //   border: 2px solid gray;
+ //   padding: 30px 0px 30px 0px;
+ //   border-radius: 20px;
+ // }
+ // LOGIN FORM
+ .login_form {
+   text-align: center;
+   margin-top: 50px;
+ }
+ .login_field {
+     width: 23%;
+     text-align: center;
+     padding: 7px;
+     border-radius: 5px;
+     border: 1px solid #2b6285;
+ }
+
+  h2 {
+    color: #384c91;
+    font-family: 'raleway';
+    font-weight: bold;
+  }
+
+ // .login-bg {
+ //   background: rgba(221, 221, 221, 0.7);
+ //   border: 2px solid gray;
+ //   padding: 30px 0px 30px 0px;
+ //   border-radius: 20px;
+ // }
+
+
+// ///////////////////// RESPONSIVENESS //////////
+
+// @media (max-width: 1199px) {
+//   .welcome-div {
+//     margin-top: 380px;
+//   }
+// }
+
+@media (max-width: 1070px) {
+  .content-wrapper {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 916px) {
+  table tr th[data-field="rating"], table tr td:nth-child(6) {
+    display: none;
+  }
+
+  .welcome-div {
+    // margin-top: 220px;
+    // margin-bottom: 220px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    text-align: center;
+  }
+  .navbar-header {
+    display: inline-block;
+  }
+
+  .navbar-nav {
+    margin: 0 !important;
+    display: inline-block;
+    float: right;
+  }
+
+  .navbar-nav a {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .welcome-img2 {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .navbar-header {
+    float: left;
+  }
+
+  .welcome-title {
+    padding: 0;
+    // font-size: 50px;
+  }
+
+  .navbar-nav .open .dropdown-menu {
+    position: absolute !important;
+    float: none;
+    width: auto;
+    margin-top: 4px;
+    background-color: transparent;
+    box-shadow: none;
+    z-index: 9999;
+    background: white;
+    border: 1px solid lightgrey;
+  }
+
+  .gamename-input {
+    width: 50%;
+  }
+
+  // EDIT PROFILE PAGE
+  .edit_form {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  form.edit_user div.form-group input {
+    width: 50%;
+  }
+
+  // SIGN UP FORM
+  .sign_up_form {
+    text-align: center;
+    position: relative;
+    top: 32px;
+    margin-bottom: 10px;
+  }
+
+  .sign_up_field {
+    width: 50%;
+  }
+
+  // LOG IN FORM
+  .login_form {
+    text-align: center;
+    position: relative;
+    top: 32px;
+    margin-bottom: 10px;
+  }
+
+  .login_field {
+    width: 50%;
+  }
+
+  // GAME SEARCH RESULTS
+  .jumbotron {
+    width: 90%;
+  }
+
+  .api-paragraph {
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
+    color: #757575;
+  }
+
+  .jumbotron p {
+      margin-bottom: 15px;
+      font-size: 14px;
+      font-weight: 200;
+  }
+  .api-heading {
+    text-align: center;
+    margin: 25px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+  }
+
+}
+
+@media (max-width: 736px) {
+  table tr th[data-field="rating"], table tr td:nth-child(6) {
+    display: none;
+  }
+  table tr th[data-field="genre"], table tr td:nth-child(2) {
+    display: none;
+  }
+  table tr th[data-field="platform"], table tr td:nth-child(3) {
+    display: none;
+  }
+  table tr th[data-field="release_date"], table tr td:nth-child(5) {
+    display: none;
+  }
+
+  table tr th[data-field="progress"], table tr td:nth-child(4) {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-right {
+    // float: left;
+  }
+  .navbar-brand {
+    font-size: 12px;
+  }
+  .navbar-brand .fa {
+    font-size: 16px !important;
+  }
+  .navbar-header {
+    font-size: 10px !important;
+  }
+  .welcome-title {
+    padding: 0;
+    // margin-bottom: 50px;
+    // font-size: 35px;
+  }
+  .welcone-div {
+    margin-top: 80px !important;
+  }
+  .welcome-img img {
+    width: 65px;
+    margin-top: 20px;
+  }
+  .welcome-paragraph {
+    text-align: center;
+    margin: 0 auto;
+    width: 75%;
+    font-size: 15px;
+  }
+  // EDIT PROFILE PAGE
+  .edit_form {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  form.edit_user div.form-group input {
+    width: 70%;
+  }
+
+  // SIGN UP FORM
+  .sign_up_form {
+    text-align: center;
+    position: relative;
+    top: 7px;
+    margin-bottom: 10px;
+  }
+
+  .sign_up_field {
+    width: 70%;
+  }
+
+  // LOG IN FORM
+  .login_form {
+    text-align: center;
+    position: relative;
+    top: 7px;
+    margin-bottom: 10px;
+  }
+
+  .login_field {
+    width: 70%;
+  }
+
+}
+
+@media (max-width: 414px) {
+
+  .welcome-paragraph {
+    font-size: 11px;
+  }
+
+  #plan-container table tr td:nth-child(4),  #index-container table tr td:nth-child(4) {
+    text-align: center;
+  }
+
+  .nav-tabs > li > a {
+    padding: 7px;
+    font-size: 13px;
+  }
+
+  .table {
+    font-size: 12px;
+  }
+
+  .btn-group {
+    margin-left: 0;
+  }
+
+  .gamename-input {
+    width: 65%;
+  }
+
+  #game_title{
+    width: 268px;
+    text-align: center;
+    margin-top: 2px;
+  }
+  #game_genre, #game_platform, #game_progress, #game_release_date{
+    width: 150px;
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  //add game page
+  input.addgamefield, select {
+    height: 25px;
+    border: 1px solid lightgrey;
+    text-align: center !important;
+    background: white !important;
+    border-radius: 2px !important;
+    margin-top: 0px !important;
+  }
+
+  //edit game page
+  .panel {
+    min-height: auto !important;
+  }
+
+  .deleteGame {
+    margin-bottom: 0;
+  }
+
+  .panel-body {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .add_game_button {
+    padding: 8px 21px !important;
+  }
+
+  //account pages
+  .sign_up_form {
+    text-align: center;
+    margin-top: 0px;
+  }
+  .edit_form {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .login_form {
+    text-align: center;
+    margin-top: 0px;
+  }
+  .sign_up_field {
+    margin-bottom: 0px;
+  }
+
+}
+
+@media (max-width: 375px) {
+  #h1-playing {
+    text-align: center;
+    margin: 26px;
+    margin-bottom: 25px;
+    font-size: 23px !important;
+  }
+  .add-game {
+    padding: 5px 11px;
+    font-size: 12px;;
+  }
+  .navbar-navright {
+    color: white;
+    font-family: 'Raleway';
+    text-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+    -webkit-text-shadow: none !important;
+    -moz-text-shadow: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+  }
+}
+
+@media (max-width: 333px) {
+  .navbar-brand {
+    font-size: 10px;
+  }
+  .navbar-right .a {
+    font-size: 10px !important;
+  }
+  .welcome-title {
+    padding: 0;
+  }
+  .welcone-div {
+    margin-top: 60px;
+  }
+  .welcome-img img {
+    width: 65px;
+    margin-top: 20px;
+  }
+
+}
+
+
+@media (max-width: 320px) {
+  .navbar-brand {
+    font-size: 12px !important;
+  }
+  .navbar-right .a {
+    font-size: 10px !important;
+  }
+  .welcone-div {
+    margin-top: 60px;
+  }
+  .welcome-img img {
+    width: 65px;
+    margin-top: 20px;
+  }
+
+  .navbar-navright {
+    color: white;
+    font-family: 'Raleway';
+    text-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+    -webkit-text-shadow: none !important;
+    -moz-text-shadow: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+  }
+
+
+  // Add game page
+  #game_title {
+    width: 155px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .add_game_button {
+    margin-bottom: 20px;
+  }
+  #h1-game {
+    margin: 14px;
+  }
+  #h1-playing {
+    text-align: center;
+    margin: 26px;
+    margin-bottom: 25px;
+    font-size: 23px !important;
+  }
+  #h1-plan {
+    text-align: center;
+    margin: 26px;
+    margin-bottom: 25px;
+    font-size: 29px !important;
+  }
+  .add-game {
+    padding: 5px 11px;
+  }
+
+  input.addgamefield, select {
+    height: 20px;
+    border: 1px solid lightgrey;
+    text-align: center !important;
+    background: white !important;
+    border-radius: 2px !important;
+    margin-top: 0px !important;
+  }
+
+  //edit game page
+  .panel-body {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .add_game_button {
+    padding: 5px 21px !important;
+    margin-bottom: 10px !important;
+  }
+
+
+}

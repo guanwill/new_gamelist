@@ -1,0 +1,23 @@
+<% if flash[:errors] %>
+  <p><%= flash[:errors] %></p>
+<%end%>
+
+<h1 id="h1-game"> Add Game </h1>
+
+<div id='game-container'>
+<%= form_for :game, url: games_path do |f| %>
+  Title: <br />
+  <%= f.autocomplete_field :title, autocomplete_gamesapi_name_games_path, :update_elements => {} %> <br /><br />
+  Genre: <br />
+  <%= f.collection_select :genre, Game::GENRES, :to_s, :to_s, :include_blank => true %> <br /><br />   <!--create select drop down button. selection defined in game model -->
+  Platform: <br />
+  <%= f.collection_select :platform, Game::PLATFORMS, :to_s, :to_s, :include_blank => true%> <br /><br />
+  Progress (%): <br />
+  <%= f.collection_select :progress, Game::PROGRESS, :to_s, :to_s%> <br /><br />
+  Release Date: <br />
+  <%= f.date_field :release_date %> <br /><br />
+  <%= f.hidden_field :rating %> <br />
+
+  <%= f.submit 'Add Game', class: 'btn btn-primary add_game_button' %>
+<%end%>
+</div>

@@ -1,0 +1,539 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active {
+  color: rgb(84, 171, 219) !important;
+}
+
+a:focus {
+  background: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+  border: none !important;
+}
+
+.navbar {
+  // background: rgb(51, 27, 103);
+  background: #150832 !important;
+  width: 100%;
+  border-radius: 0 !important;
+}
+
+.flash-notice {
+  color: red;
+  margin: auto 20px;
+}
+
+.navbar-brand {
+  font-size: 14px !important;
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+  font-family: 'Press Start 2P', cursive;
+  padding: 15px 10px !important;
+  margin-left: auto !important;
+}
+
+.navbar-navright {
+  color: white;
+  font-family: 'Raleway';
+  text-shadow: none !important;
+  animation: none !important;
+  transition: none !important;
+  -webkit-text-shadow: none !important;
+  -moz-text-shadow: none !important;
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+
+}
+
+.dropdown-game-menu {
+  min-width: 100px!important;
+}
+
+.dropdown-game-menu .dropdown-item {
+  text-align: center;
+  color: #422895;
+}
+
+.dropup, .dropdown {
+    position: relative;
+    // float: left;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:visited {
+  background: none !important;
+}
+
+.dropdown-menu.dropdown-game-menu > li {
+  padding-left: 20px;
+  padding-right: 20px;;
+}
+
+.btn-group {
+  margin-left: 10px;
+}
+
+.fa-gamepad {
+  font-size: 27px !important;
+  color: white !important;
+}
+
+.fa-gamepad:hover {
+  color: #54abdb !important;
+}
+
+.fa {
+  outline-style: none !important;
+}
+
+.glyphicon.glyphicon-user {
+  font-size: 19px !important;
+  text-shadow: none;
+}
+
+.glyphicon-edit, .edit-title {
+  color: rgb(196, 196, 196) !important;
+  // font-size: 12px !important;
+}
+
+.navbar-right .dropdown-menu {
+  right: 0 !important;
+  left: auto;
+}
+
+@media (min-width: 768px) {
+  .navbar-right {
+      float: right !important;
+      margin-right: 0px !important;
+  }
+
+  .navbar-right .dropdown-menu {
+    right: 0 !important;
+    left: auto;
+
+  }
+}
+
+/*glow*/
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px rgb(24, 104, 177), 0 0 20px rgb(24, 104, 177), 0 0 30px rgb(24, 104, 177), 0 0 40px rgb(50, 143, 201)
+, 0 0 70px rgb(50, 143, 201)
+, 0 0 80px rgb(50, 143, 201)
+, 0 0 100px rgb(50, 143, 201)
+, 0 0 150px rgb(50, 143, 201)
+;
+  }
+  to {
+    text-shadow: 0 0 5px rgb(24, 104, 177), 0 0 10px rgb(24, 104, 177), 0 0 15px rgb(24, 104, 177), 0 0 20px rgb(50, 143, 201)
+, 0 0 35px rgb(50, 143, 201)
+, 0 0 40px rgb(50, 143, 201)
+, 0 0 50px rgb(50, 143, 201)
+, 0 0 75px rgb(50, 143, 201)
+;
+  }
+}
+
+.navbar-brand:hover {
+  // color: rgb(23, 181, 134);
+}
+
+.nav-name > a {
+  color: white;
+}
+
+
+//--INDEX--//
+#h1-playing {
+  text-align: center;
+  margin: 50px;
+  margin-bottom: 25px;
+  font-size: 29px !important;
+}
+
+#index-container   {
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+}
+
+#index-container table td {
+  padding: 3px !important;
+}
+
+.add-game-container {
+  display: block;
+  text-align: center;
+  margin: 40px;
+}
+.add-game {
+  text-align: center;
+}
+
+//--PLAN--//
+#h1-plan {
+  text-align: center;
+  margin: 50px;
+  margin-bottom: 25px;
+  font-size: 29px !important;
+}
+
+#plan-container   {
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+}
+
+#plan-container table td {
+  padding: 3px !important;
+}
+
+.add-game-container {
+  display: block;
+  text-align: center;
+  margin: 11px;
+}
+.add-game {
+  text-align: center;
+}
+
+//--EDIT AND ADD PAGES--//
+#h1-game {
+  text-align: center;
+  margin: 50px;
+}
+#game-container   {
+  // width: 70%;
+  display: block;
+  margin: 14px auto;
+  text-align: center;
+}
+
+#game_title{
+  width: 268px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#game_genre, #game_platform, #game_progress, #game_release_date{
+  width: 268px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#game_release_date {
+  border-radius: 7px;
+}
+
+.add_game_button {
+  margin-bottom: 20px !important;
+  margin-top: 6px;
+}
+
+.panel-default > .panel-heading {
+  font-weight: bold;
+  // background: none !important;
+  background: #193892 !important;
+  color: white !important;
+  // border: 1px solid #193892 !important;
+}
+
+.modal-header {
+  background: #193892;
+  color: white;
+  border: 0 !important;
+}
+
+.close {
+  color: white !important;
+}
+
+
+//--ABOUT/HOME PAGE--//
+.welcome-title {
+  text-align: center;
+  font-family: 'Press Start 2P', sans-serif;
+  padding: 10px;
+  color: rgb(56, 76, 145);
+  font-size: 80px;
+}
+.welcome-p {
+  text-align: center;
+  font-family: 'raleway', sans-serif;
+  margin: 0;
+  color: rgb(57, 97, 191);
+  // font-weight: bold;
+}
+.welcome-paragraph {
+  text-align: center;
+  margin: 10px auto;
+  margin-bottom: 40px;
+  width: 40%;
+  font-size: 12px;
+}
+.welcome-div {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+.welcome-img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background: none;
+  border: none;
+}
+.ui-autocomplete {
+  z-index: 9999 !important;
+  width: auto !important;
+  margin: 0 auto !important;
+
+}
+.ui-menu-item {
+  // width: 268px !important;
+}
+
+.welcome-img:focus {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: white;
+}
+.welcome-img:visited {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+.welcome-img:visited:focus {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+.modal {
+  margin-top: 7%;
+}
+.api_form_modal {
+  text-align: center;
+}
+.gamename-input {
+  width: 40%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(43, 98, 133);
+  text-align: center;
+}
+.modal-p {
+  // font-family: 'raleway', sans-serif;
+  font-size: 18px;
+}
+
+
+//--SEARCH FORM AND SEARCH RESULTS--
+.api_form {
+  text-align: center;
+}
+
+.btn-primary {
+  padding: 11px 20px 11px !important;
+  vertical-align: baseline !important;
+}
+
+.api-image {
+  // width: 300px;
+  height: 300px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+.api-heading {
+  text-align: center;
+  margin: 25px;
+  // margin-top: 50px;
+  font-family: 'Raleway', sans-serif;
+  // font-weight: bold;
+  // color: rgb(61, 61, 61);
+  font-size: 40px;
+
+}
+.api-paragraph {
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+  color: rgb(117, 117, 117);
+}
+
+.release_date_div {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+//below is the css for the search icon in the nav bar
+.welcome-img2 {
+  display: block;
+  background: none;
+  border: none;
+}
+.welcome-img2:focus {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: white;
+}
+.welcome-img2:visited {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+.welcome-img2:visited:focus {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+.jumbotron {
+  display: block;
+  margin: 0 auto;
+  // width: 75%;
+  width: 90%;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#plan-container, #index-container {
+  margin-bottom: 70px;
+}
+
+// GAME PAGE & TABLES
+.panel {
+  margin: 30px;
+  border-radius: 10px !important;
+  // background: #150832 !important;
+  min-height: 680px;
+}
+
+.table {
+  border-left: 1px solid #193892;
+  border-right: 1px solid #193892;
+  border-bottom: 1px solid #193892 !important;
+}
+.table-responsive {
+  min-height: 400px !important;
+  background: white;
+  border: 0 !important;
+}
+.content-wrapper {
+  padding: 20px 100px;
+}
+
+.table th {
+  background: #193892;
+  color: white;
+  border: 0 !important;
+}
+.table td {
+  border: 0 !important;
+}
+
+.fixed-table-container {
+  border: 0 !important;
+}
+
+tr[data-link] {
+  cursor: pointer;
+}
+
+// bootstrap sortable table
+table.sortable > thead th:hover:not([data-defaultsort=disabled]) {
+  background: #193892 !important;
+  // color: #337ab7;
+  color: white !important;
+}
+
+// Btn Default
+.btn-default {
+  color: #1868b1 !important;
+  font-weight: bold;
+  background-color: #fff;
+  border-color: #1868b1 !important;
+}
+.btn-default:hover {
+  background: #193892 !important;
+  color: white !important;
+}
+.btn-default:focus {
+  background: white !important;
+  outline-style: none;
+  color: #1868b1 !important;
+}
+
+// Nav Tabs
+.nav-tabs {
+  border-bottom: 0 !important;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus {
+  color: #1868b1 !important;
+  // background-color: #193892 !important;
+  border: 1px solid #193892 !important;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+.nav-tabs > li.active > a:hover {
+  color: white!important;
+}
+.nav-tabs > li > a {
+  // border-bottom: 1px solid #1868b1 !important;
+}
+.nav-tabs > li:hover > a {
+  // background: #e8deff !important;
+  background: #193892 !important;
+  color:white;
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+}
+
+.deleteGame {
+  margin-bottom: 20px;
+}
+
+input.addgamefield, select {
+  height: 35px;
+  border: 1px solid lightgrey;
+  text-align: center !important;
+  background: white !important;
+  border-radius: 2px !important;
+}
+
+// Disqus
+.disqus_accordion {
+  text-decoration: none;
+  text-align: center;
+}
+
+ .disqus_accordion_div {
+   width: 100%;
+   text-align: center;
+ }
+
+ a.disqus_accordion.collapsed:before {
+   content: 'Show comments'
+ }
+
+ a.disqus_accordion:before {
+   content: "Hide comments"
+ }

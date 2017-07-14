@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <% if current_user %>
+    <title><%= current_user.name.capitalize%>'s Gamelist</title>
+  <% else %>
+    <title>My Games list</title>
+  <% end %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!-- To make it mobile-like -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- To make mobile chrome browser a specific color  -->
+  <!-- <meta name="theme-color" content="#YOUR_COLOUR_HERE">  -->
+  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title">
+</head>
+<body>
+
+  <nav class="navbar navbar-inversee navbar-fixed-topp">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to 'My Games List', root_path, class: 'navbar-brand' %>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+
+                <!-- Link to Games' list -->
+                <div class="btn-group">
+                  <%= link_to games_path, class: 'gamepad-a' do %>
+                  <i class="fa fa-gamepad" aria-hidden="true"></i>
+                  <%end%>
+                </div>
+
+          <!-- <%= link_to new_game_path, class: 'navbar-brand' do %>
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          <%end%> -->
+
+          <!-- <button class="welcome-img2 navbar-brand" type="button" data-toggle="modal" data-target="#myModal">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </button> -->
+
+          <!-- <%= link_to games_path, class: 'navbar-brand' do %>
+            <span class="glyphicon glyphicon-expand" aria-hidden="true"></span>
+          <%end%>
+
+          <%= link_to plan_path, class: 'navbar-brand' do %>
+            <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+          <%end%>
+
+          <%= link_to completed_path, class: 'navbar-brand' do %>
+            <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+          <%end%> -->
+        <%end%>
+
+        <% if user_signed_in? %>
+          <div class="btn-group">
+            <a  href="#" class="navbar-brand nav-dropdown" id="dropdownAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            </a>
+
+            <ul class="dropdown-menu dropdown-game-menu" aria-labelledby="dropdownAccount">
+              <li>
+                <%= link_to edit_user_registration_path, class: 'navbar-brand navbar-navright' do %>
+                  <!-- <span class="glyphicon glyphicon-user" aria-hidden="true"></span> -->
+                  My Account
+                <%end%>
+              </li>
+              <li>
+                <%= link_to destroy_user_session_path, :data => {:confirm => 'Are you sure you want to log out?'}, method: :delete, class: 'navbar-brand navbar-navright' do %>
+                  <!-- <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> -->
+                  Logout
+                <%end%>
+              </li>
+            </ul>
+          </div>
+
+          <!-- <%= link_to edit_user_registration_path, class: 'navbar-brand navbar-navright' do %>
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            My Account
+          <%end%>
+
+          <%= link_to destroy_user_session_path, :data => {:confirm => 'Are you sure you want to log out?'}, method: :delete, class: 'navbar-brand navbar-navright' do %>
+            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+            Logout
+          <%end%> -->
+
+        <% else %>
+          <!-- <button class="welcome-img2 navbar-brand" type="button" data-toggle="modal" data-target="#myModal">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </button> -->
+
+          <%= link_to new_user_session_path, class: 'navbar-brand navbar-navright' do %>
+            <!-- <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>  -->
+            Login
+          <%end%>
+
+          <%= link_to new_user_registration_path, class: 'navbar-brand navbar-navright' do %>
+            <!-- <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span> -->
+            Sign Up
+          <%end%>
+        <% end %>
+    <!-- </div> --> <!--end btn group-->
+  </nav>
+
+  <!-- Modal to search for game -->
+  <!-- <div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+
+        <div class="modal-body api_form_modal">
+          <p class="modal-p"> Looking for information on a game? Here is the right place. </p>
+          <form class="api_form" action = "/search" method = "POST">
+            <input data-autocomplete="/games/autocomplete_gamesapi_name" data-update-elements="{}" type="text" name="gameName" class="ui-autocomplete-input gamename-input" autocomplete="off", placeholder="Search for a game">
+            <button class="btn btn-primary" type="submit" name="button" >Search</button>
+          </form>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <% if flash[:notice] %>
+    <p class="flash-notice"><%= flash[:notice] %></p>
+  <%end%>
+
+<%= yield %>
+
+</body>
+</html>

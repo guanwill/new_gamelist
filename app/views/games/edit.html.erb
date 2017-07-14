@@ -1,0 +1,37 @@
+<% if flash[:errors] %>
+  <p><%= flash[:errors] %></p>
+<%end%>
+
+<div class="panel panel-default">
+  <div style="text-align:center" class="panel-heading">Edit Game</div>
+  <div class="panel-body">
+    <div id='game-container'>
+    <%= form_for @game, method: :patch do |f| %>
+      Title: <br />
+      <%= f.text_field :title, class: 'addgamefield' %> <br /><br />
+      <!--create select drop down button. selection defined in game model -->
+      Genre: <br />
+      <%= f.collection_select :genre, Game::GENRES, :to_s, :to_s, :include_blank => true %> <br /><br />
+      Platform: <br />
+      <%= f.collection_select :platform, Game::PLATFORMS, :to_s, :to_s, :include_blank => true%> <br /><br />
+      Release Date: <br />
+      <%= f.date_field :release_date, class: 'addgamefield' %> <br /><br />
+      Progress (%): <br />
+      <%= f.collection_select :progress, Game::PROGRESS, :to_s, :to_s%> <br /><br />
+
+      <%= f.hidden_field :rating %>
+
+      <%= f.submit 'Submit', class: 'btn btn-primary add_game_button' %><br/>
+
+      <div class="deleteGame">
+        <%= link_to 'Delete', @game, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+
+    <%end%>
+    <div>
+
+
+  </div>
+</div>
+
+<!-- <h1 id="h1-game"> Edit Game </h1> -->
