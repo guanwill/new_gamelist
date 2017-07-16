@@ -8,6 +8,7 @@ gem 'momentjs-rails'
 gem 'rails_bootstrap_sortable'
 # gem 'bootstrap-table-rails'
 
+gem 'pry'
 gem 'devise'
 gem 'ratyrate'
 gem 'bootstrap-sass', '~> 3.3.6'
@@ -57,3 +58,5 @@ group :development do
 end
 
 gem 'react_on_rails', '6.4.2'
+
+gem 'mini_racer', platforms: :ruby
