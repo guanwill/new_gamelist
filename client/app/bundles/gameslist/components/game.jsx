@@ -2,49 +2,45 @@ import React, { PropTypes } from 'react';
 // import { Link } from 'react-router-dom'; //this is a react link library to create links. similar to a tag
 // import { formatDate } from '../utils/format';
 
-
 export default class Game extends React.Component {
-  // constructor (props) {
-  //   super(props)
-  //   this.state = {
-  //     game: props.game
-  //   }
-  // }
-  //
-  // // setting default prop
-  // static defaultProps = {
-  //   game: {}
-  // }
-
-  // componentDidMount () {
-  //   if(this.props.match){
-  //     $.ajax({
-  //       type: "GET",
-  //       url: `/games/${this.props.match.params.id}`,
-  //       datatype: "JSON"
-  //     }).done((data) => {
-  //       console.log('show page data in json')
-  //       console.log(data)
-  //       this.setState({appointment: data});
-  //     })
-  //   }
-  // }
-
   render () {
     return (
-      <div className='game'>
-        <p>{this.props.game.title}</p>
-      </div>
+      <tr>
+        <td>{this.props.game.title}</td>
+        <td>{this.props.game.genre}</td>
+        <td>{this.props.game.platform}</td>
+        <td>{this.props.game.progress}</td>
+        <td>{this.props.game.release_date}</td>
+        <td><a onClick={this.handleToggle}> <i className="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+        <td><a onClick={this.handleDelete}> <i className="fa fa-trash-o" aria-hidden="true"></i></a></td>
+      </tr>
     )
   }
 }
 
-// export const Appointment = ({appointment}) =>
-//   <div className='appointment'>
+
+// constructor (props) {
+//   super(props)
+//   this.state = {
+//     game: props.game
+//   }
+// }
 //
-//     <Link to={ `/appointments/${appointment.id}` }>
-//       <h3>{appointment.title}</h3>
-//     </Link>
-//
-//     <p>{formatDate(appointment.appt_time)}</p>
-//   </div>
+// // setting default prop
+// static defaultProps = {
+//   game: {}
+// }
+
+// componentDidMount () {
+//   if(this.props.match){
+//     $.ajax({
+//       type: "GET",
+//       url: `/games/${this.props.match.params.id}`,
+//       datatype: "JSON"
+//     }).done((data) => {
+//       console.log('show page data in json')
+//       console.log(data)
+//       this.setState({game: data});
+//     })
+//   }
+// }

@@ -4,7 +4,7 @@ class Api::GamesapiController < ApplicationController
     @games = Game.all
     # @gamelist = HTTParty.get "http://www.giantbomb.com/api/games/?api_key=cf71909f53e1497132eb781d7aab4d0936bfb352&format=json&field_list=name&offset=100"
     # if user_signed_in?
-      render json: @games, status: 200
+    render json: @games, status: 200
     # else
     #   redirect_to new_user_session_path
     # end

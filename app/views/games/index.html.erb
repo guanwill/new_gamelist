@@ -1,9 +1,2 @@
 <h1>Games Home Page</h1>
-
-<%@games.limit(3).each do |g|%>
-  <p><%=g.title%></p>
-<%end%>
-
 <%= react_component('AppRouter', props: { games: @games }) %>
-
-<!-- <%= react_component('Games', { games: @games }) %> -->
