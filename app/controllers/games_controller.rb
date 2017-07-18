@@ -77,17 +77,18 @@ end
 def destroy
   @game = Game.find(params[:id])
   @game.destroy
+
   if @game.destroy
-    redirect_to games_path, notice: '*Game sucessfully deleted'
-  # if @game.progress != 100 && @game.progress != 200 && @game.progress != 0
-  #   redirect_to games_path
-  # elsif @game.valid? && @game.progress == 100 || @game.progress == 200
-  #   redirect_to completed_path
-  # elsif @game.valid? && @game.progress == 0
-  #   redirect_to plan_path
+    head :no_content, status: :ok
   else
-    redirect_to :back, notice: '*Game could not be deleted successfully'
+    render json: @game.errors, status: :unprocessable_entity
   end
+
+  # if @game.destroy
+  #   redirect_to games_path, notice: '*Game sucessfully deleted'
+  # else
+  #   redirect_to :back, notice: '*Game could not be deleted successfully'
+  # end
   # render 'back'
 end
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import {GamesList} from './GamesList'; //braces because its a name import. an es6 thing
 import update from 'immutability-helper';
+import AddGameForm from './AddGameForm';
 
 export default class Games extends React.Component{
   static defaultProps = {
@@ -32,7 +33,7 @@ export default class Games extends React.Component{
     }
   }
 
-  addGame= (game) => {
+  addGame = (game) => {
     const game_data = update(this.state.game_data, { $push: [game]});
     this.setState({
       game_data: game_data
@@ -53,6 +54,7 @@ export default class Games extends React.Component{
 
     return (
       <div>
+        <AddGameForm handleNewGame={this.addGame}/>
         <GamesList games={this.state.game_data} />
       </div>
     )
