@@ -178,7 +178,7 @@ export default class AddGameForm extends React.Component{
 
           <input type="date" className="form-control add-game-field" name="release_date" placeholder="release_date" value={this.state.release_date} onChange={this.handleChange}/><br/>
 
-          <input type="submit" value={this.state.editing ? 'Update game' : 'Add game'} className="btn btn-primary add-game-button" />
+          <input disabled={disabled} type="submit" value={this.state.editing ? 'Update game' : 'Add game'} className="btn btn-primary add-game-button" />
         </form>
         {this.state.editing && (<button onClick={this.deleteGame}>Delete</button>)}
 
