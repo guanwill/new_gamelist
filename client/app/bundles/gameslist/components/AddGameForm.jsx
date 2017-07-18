@@ -32,6 +32,10 @@ export default class AddGameForm extends React.Component{
         console.log(data)
         this.setState({
           title: data.title,
+          genre: data.genre,
+          platform: data.platform,
+          progress: data.progress,
+          release_date: data.release_date,
           editing: this.props.match.path === '/games/:id/edit'
         });
       })
@@ -97,7 +101,10 @@ export default class AddGameForm extends React.Component{
   updateGame = () => {
     const game = {
       title: this.state.title,
-      // appt_time: this.state.appt_time.value
+      genre: this.state.genre,
+      platform: this.state.platform,
+      progress: this.state.progress,
+      release_date: this.state.release_date,
     };
     $.ajax({
           type: "PUT",
@@ -126,9 +133,12 @@ export default class AddGameForm extends React.Component{
         <h2>{this.state.editing ? 'Update Game' : 'Add Game'}</h2>
 
         <form onSubmit={this.handleSubmit}>
-          <input name="title" placeholder="Title"
-            value={this.state.title}
-            onChange={this.handleChange}/>
+          <input name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange}/>
+          <input name="genre" placeholder="genre" value={this.state.genre} onChange={this.handleChange}/>
+          <input name="platform" placeholder="platform" value={this.state.platform} onChange={this.handleChange}/>
+          <input name="progress" placeholder="progress" value={this.state.progress} onChange={this.handleChange}/>
+          <input name="release_date" placeholder="release_date" value={this.state.release_date} onChange={this.handleChange}/>
+
           <input type="submit" value={this.state.editing ? 'Update game' : 'Add game'} className="btn btn-primary add-game-button" />
         </form>
         {this.state.editing && (<button onClick={this.deleteGame}>Delete</button>)}
