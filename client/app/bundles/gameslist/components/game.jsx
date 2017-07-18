@@ -22,15 +22,11 @@ export default class Game extends React.Component {
   render () {
     return (
       <tr>
-        <td>{this.props.game.title}</td>
+        <td><Link to={ `/games/${this.props.game.id}/edit` }>{this.props.game.title}</Link></td>
         <td>{this.props.game.genre}</td>
         <td>{this.props.game.platform}</td>
         <td>{this.props.game.progress}</td>
         <td>{this.props.game.release_date}</td>
-
-        <td><Link to={ `/games/${this.props.game.id}/edit` }>Edit<i className="fa fa-pencil-square-o" aria-hidden="true"></i></Link> </td>
-
-        <td><a onClick={this.deleteGame}> <i className="fa fa-trash-o" aria-hidden="true"></i></a></td>
       </tr>
     )
   }
