@@ -7,6 +7,8 @@ import update from 'immutability-helper';
 export default class AddGameForm extends React.Component{
   constructor(props, _railsContext){
       super(props)
+      console.log('addgameform props')
+      console.log(props)
       this.state = {
         title: '',
         genre: '',
@@ -80,6 +82,7 @@ export default class AddGameForm extends React.Component{
         console.log(data)
         this.setState({
           title: data.title,
+          editing: this.props.match.path === '/games/:id/edit'
         });
       })
     }
@@ -95,7 +98,6 @@ export default class AddGameForm extends React.Component{
     this.state.editing ? this.updateGame() : this.addGame();
   }
 
-  // ///////// WIP///////
   updateGame () {
     const game = {
       title: this.state.title,
@@ -103,7 +105,7 @@ export default class AddGameForm extends React.Component{
     };
     $.ajax({
           type: "PATCH",
-          url: window.location.origin + `/api/gamesapi/${this.props.match.params.id}/edit`,
+          url: `http://localhost:3000/api/gamesapi/${this.props.match.params.id}`,
           data: {game: game}
           })
           .done( (data) => {
@@ -139,8 +141,7 @@ export default class AddGameForm extends React.Component{
           <input type="submit" value="add game" className="btn btn-primary add-game-button" />
         </form>
 
-        <button onClick={this.deleteGame}>Delete</button>
-
+        {this.state.editing && (<button onClick={this.deleteGame}>Delete</button>)}
 
       </div>
     )
