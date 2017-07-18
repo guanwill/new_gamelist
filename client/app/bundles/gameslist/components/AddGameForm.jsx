@@ -2,6 +2,7 @@ import React from 'react';
 import Datetime from 'react-datetime';
 import moment from 'moment';
 import update from 'immutability-helper';
+import { Link } from 'react-router-dom';
 
 
 export default class AddGameForm extends React.Component{
@@ -19,6 +20,24 @@ export default class AddGameForm extends React.Component{
       }
   }
 
+  // Preload existing fields when editing a selected game
+  componentDidMount () {
+    if(this.props.match){
+      $.ajax({
+        type: "GET",
+        url: `http://localhost:3000/api/gamesapi/${this.props.match.params.id}`,
+        datatype: "JSON"
+      }).done((data) => {
+        console.log('Print data from add game form via componentDidMount')
+        console.log(data)
+        this.setState({
+          title: data.title,
+          editing: this.props.match.path === '/games/:id/edit'
+        });
+      })
+    }
+  }
+
   handleChange = (e) => {
     var name = e.target.name;
     var obj = {};
@@ -26,8 +45,13 @@ export default class AddGameForm extends React.Component{
     this.setState(obj)
   }
 
-  addGame = (e) => {
+  handleSubmit = (e) => {
     e.preventDefault();
+    this.state.editing ? this.updateGame() : this.addGame();
+  }
+
+  addGame = () => {
+    // e.preventDefault();
     $.ajax({
       url: window.location.origin + '/api/gamesapi/',
       type: 'POST',
@@ -70,57 +94,24 @@ export default class AddGameForm extends React.Component{
     }
   }
 
-  // Preload existing fields when editing a selected game
-  componentDidMount () {
-    if(this.props.match){
-      $.ajax({
-        type: "GET",
-        url: `http://localhost:3000/api/gamesapi/${this.props.match.params.id}`,
-        datatype: "JSON"
-      }).done((data) => {
-        console.log('Print data from add game form via componentDidMount')
-        console.log(data)
-        this.setState({
-          title: data.title,
-          editing: this.props.match.path === '/games/:id/edit'
-        });
-      })
-    }
-  }
-
-  // handleUserInput = (fieldName, fieldValue) => {
-  //   const newFieldState = update(this.state[fieldName], {value: {$set: fieldValue}})
-  //   this.setState({[fieldName]: newFieldState}, () => {this.validateField(fieldName, fieldValue, validations)} );
-  // }
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.state.editing ? this.updateGame() : this.addGame();
-  }
-
-  updateGame () {
+  updateGame = () => {
     const game = {
       title: this.state.title,
       // appt_time: this.state.appt_time.value
     };
     $.ajax({
-          type: "PATCH",
+          type: "PUT",
           url: `http://localhost:3000/api/gamesapi/${this.props.match.params.id}`,
           data: {game: game}
           })
           .done( (data) => {
             alert('Game updated')
+            this.props.history.push('/games')
           })
           .fail( (response) => {
             console.log(response)
           })
   }
-
-  // handleChange = (e) => {
-  //   const fieldName = this.titleInput.name;
-  //   const fieldValue = this.titleInput.value;
-  //   this.handleUserInput(fieldName, fieldValue);
-  // }
 
   render () {
     if (this.state.title != "" && this.state.progress != "") {
@@ -132,17 +123,15 @@ export default class AddGameForm extends React.Component{
 
     return (
       <div>
-        <h2>Add Game</h2>
+        <h2>{this.state.editing ? 'Update Game' : 'Add Game'}</h2>
 
         <form onSubmit={this.handleSubmit}>
           <input name="title" placeholder="Title"
             value={this.state.title}
             onChange={this.handleChange}/>
-          <input type="submit" value="add game" className="btn btn-primary add-game-button" />
+          <input type="submit" value={this.state.editing ? 'Update game' : 'Add game'} className="btn btn-primary add-game-button" />
         </form>
-
         {this.state.editing && (<button onClick={this.deleteGame}>Delete</button>)}
-
       </div>
     )
   }
