@@ -13,7 +13,7 @@ def index
 end
 
 def plan
-  @games = Game.average(:rating)
+  @games = Game.all
   if user_signed_in?
     render 'plan'
   else
@@ -22,7 +22,7 @@ def plan
 end
 
 def completed
-  @games = Game.average(:rating)
+  @games = Game.all
   if user_signed_in?
     render 'completed'
   else

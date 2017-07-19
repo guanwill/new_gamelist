@@ -25,7 +25,7 @@ export default class AddGameForm extends React.Component{
     if(this.props.match){
       $.ajax({
         type: "GET",
-        url: `http://localhost:3000/api/gamesapi/${this.props.match.params.id}`,
+        url: window.location.origin + `/api/gamesapi/${this.props.match.params.id}`,
         datatype: "JSON"
       }).done((data) => {
         console.log('Print data from add game form via componentDidMount')
@@ -108,7 +108,7 @@ export default class AddGameForm extends React.Component{
     };
     $.ajax({
           type: "PUT",
-          url: `http://localhost:3000/api/gamesapi/${this.props.match.params.id}`,
+          url: window.location.origin + `/api/gamesapi/${this.props.match.params.id}`,
           data: {game: game}
           })
           .done( (data) => {

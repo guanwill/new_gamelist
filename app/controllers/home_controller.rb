@@ -2,6 +2,7 @@ class HomeController < ApplicationController
 skip_before_filter :verify_authenticity_token
 
   def index
+    @games = Game.all
     @currentUser = current_user
     @GB_GAMES_API_URL = ENV['GB_GAMES_API_URL']
     @GB_SEARCH_API_URL = ENV['GB_SEARCH_API_URL']

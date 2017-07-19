@@ -7,7 +7,5 @@ class Game < ActiveRecord::Base
   validates :title, presence: true, :uniqueness => true
   # validates :platform, presence: true
 
-  ratyrate_rateable "rating"
-
 
 end

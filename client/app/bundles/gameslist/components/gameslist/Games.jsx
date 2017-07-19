@@ -24,7 +24,7 @@ export default class Games extends React.Component{
     if(this.props.match){
       $.ajax({
         type: "GET",
-        url: "http://localhost:3000/api/gamesapi",
+        url: window.location.origin + "/api/gamesapi",
         datatype: "JSON"
       }).done((data) => {
         console.log("Updated data")

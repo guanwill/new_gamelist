@@ -7,7 +7,5 @@ class User < ActiveRecord::Base
   validates :name, :presence => true, :uniqueness => {:case_sensitive => false}
 
 
-  ratyrate_rater
-
 
 end
