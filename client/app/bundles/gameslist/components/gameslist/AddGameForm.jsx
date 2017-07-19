@@ -121,12 +121,8 @@ export default class AddGameForm extends React.Component{
   }
 
   render () {
-    if (this.state.title != "" && this.state.progress != "") {
-      var disabled = false
-    }
-    else {
-      var disabled = true
-    }
+    const disabledSubmitStatus = (this.state.title != "" && this.state.progress != "") ? false : true
+    const disabledInputStatus = this.state.editing ? true : false
 
     return (
       <div>
@@ -136,7 +132,8 @@ export default class AddGameForm extends React.Component{
 
 
         <form id="add_game" className={this.state.editing ? 'form-group' : 'form-group collapse'} onSubmit={this.handleSubmit}>
-          <input className="form-control add-game-field" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange}/><br/>
+
+          <input disabled={disabledInputStatus} className="form-control add-game-field" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange}/><br/>
 
           <select className="form-control add-game-field" placeholder="Genre" name="genre" value={this.state.genre} onChange={this.handleChange}>
             <option value="Select"> Select Genre </option>
@@ -178,7 +175,7 @@ export default class AddGameForm extends React.Component{
 
           <input type="date" className="form-control add-game-field" name="release_date" placeholder="release_date" value={this.state.release_date} onChange={this.handleChange}/><br/>
 
-          <input disabled={disabled} type="submit" value={this.state.editing ? 'Update game' : 'Add game'} className="btn btn-primary add-game-button" />
+          <input disabled={disabledSubmitStatus} type="submit" value={this.state.editing ? 'Update game' : 'Add game'} className="btn btn-primary add-game-button" />
         </form>
         {this.state.editing && (<button onClick={this.deleteGame}>Delete</button>)}
 

@@ -1,18 +1,16 @@
 source 'https://rubygems.org'
 
 gem 'httparty'
-gem 'rails4-autocomplete'
 gem 'jquery-ui-rails'
-
-gem 'momentjs-rails'
-gem 'rails_bootstrap_sortable'
-# gem 'bootstrap-table-rails'
-
+gem 'rack-cors', :require => 'rack/cors'
+gem 'gon'
+gem "figaro"
+gem "rest-client"
 gem 'pry'
 gem 'devise'
-gem 'ratyrate'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'materialize-sass'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record

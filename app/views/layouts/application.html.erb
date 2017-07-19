@@ -30,32 +30,13 @@
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
 
-                <!-- Link to Games' list -->
-                <div class="btn-group">
-                  <%= link_to games_path, class: 'gamepad-a' do %>
-                  <i class="fa fa-gamepad" aria-hidden="true"></i>
-                  <%end%>
-                </div>
+            <!-- Link to Games' list -->
+            <div class="btn-group">
+              <%= link_to games_path, class: 'gamepad-a' do %>
+              <i class="fa fa-gamepad" aria-hidden="true"></i>
+              <%end%>
+            </div>
 
-          <!-- <%= link_to new_game_path, class: 'navbar-brand' do %>
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          <%end%> -->
-
-          <!-- <button class="welcome-img2 navbar-brand" type="button" data-toggle="modal" data-target="#myModal">
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-          </button> -->
-
-          <!-- <%= link_to games_path, class: 'navbar-brand' do %>
-            <span class="glyphicon glyphicon-expand" aria-hidden="true"></span>
-          <%end%>
-
-          <%= link_to plan_path, class: 'navbar-brand' do %>
-            <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
-          <%end%>
-
-          <%= link_to completed_path, class: 'navbar-brand' do %>
-            <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
-          <%end%> -->
         <%end%>
 
         <% if user_signed_in? %>
@@ -105,27 +86,7 @@
             Sign Up
           <%end%>
         <% end %>
-    <!-- </div> --> <!--end btn group-->
   </nav>
-
-  <!-- Modal to search for game -->
-  <!-- <div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-
-        <div class="modal-body api_form_modal">
-          <p class="modal-p"> Looking for information on a game? Here is the right place. </p>
-          <form class="api_form" action = "/search" method = "POST">
-            <input data-autocomplete="/games/autocomplete_gamesapi_name" data-update-elements="{}" type="text" name="gameName" class="ui-autocomplete-input gamename-input" autocomplete="off", placeholder="Search for a game">
-            <button class="btn btn-primary" type="submit" name="button" >Search</button>
-          </form>
-        </div>
-
-        </div>
-      </div>
-    </div>
-  </div> -->
 
   <% if flash[:notice] %>
     <p class="flash-notice"><%= flash[:notice] %></p>
