@@ -7,6 +7,7 @@
   <% else %>
     <title>My Games list</title>
   <% end %>
+  <%= include_gon(init: true, watch: true) %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -18,30 +19,36 @@
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title">
+
+  <!-- Apple touch icon -->
+  <link rel="apple-touch-icon" href="/images/controller.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/controller76.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/controller120.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/controller152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/controller180.png" />
+
+  <!-- Light slider -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js" charset="utf-8"></script>
+
 </head>
 <body>
 
   <nav class="navbar navbar-inversee navbar-fixed-topp">
     <div class="container">
-      <div class="navbar-header">
+      <!-- <div class="navbar-header">
         <%= link_to 'My Games List', root_path, class: 'navbar-brand' %>
-      </div>
+      </div> -->
 
       <ul class="nav navbar-nav navbar-right">
-        <% if current_user %>
-
-            <!-- Link to Games' list -->
-            <div class="btn-group">
-              <%= link_to games_path, class: 'gamepad-a' do %>
-              <i class="fa fa-gamepad" aria-hidden="true"></i>
-              <%end%>
-            </div>
-
-        <%end%>
-
         <% if user_signed_in? %>
           <div class="btn-group">
-            <a  href="#" class="navbar-brand nav-dropdown" id="dropdownAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="/" class="navbar-brand">
+              <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+            </a>
+            
+            <a href="#" class="navbar-brand nav-dropdown" id="dropdownAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
             </a>
 
@@ -61,31 +68,18 @@
             </ul>
           </div>
 
-          <!-- <%= link_to edit_user_registration_path, class: 'navbar-brand navbar-navright' do %>
-            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-            My Account
-          <%end%>
-
-          <%= link_to destroy_user_session_path, :data => {:confirm => 'Are you sure you want to log out?'}, method: :delete, class: 'navbar-brand navbar-navright' do %>
-            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
-            Logout
-          <%end%> -->
-
         <% else %>
-          <!-- <button class="welcome-img2 navbar-brand" type="button" data-toggle="modal" data-target="#myModal">
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-          </button> -->
-
           <%= link_to new_user_session_path, class: 'navbar-brand navbar-navright' do %>
-            <!-- <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>  -->
-            Login
+            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+            <!-- Login -->
           <%end%>
 
           <%= link_to new_user_registration_path, class: 'navbar-brand navbar-navright' do %>
-            <!-- <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span> -->
-            Sign Up
+            <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+            <!-- Sign Up -->
           <%end%>
         <% end %>
+    <!-- </div> --> <!--end btn group-->
   </nav>
 
   <% if flash[:notice] %>

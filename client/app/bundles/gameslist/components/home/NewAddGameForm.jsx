@@ -16,31 +16,8 @@ export default class NewAddGameForm extends React.Component{
         platform: '',
         progress: '',
         release_date: this.props.gameDate,
-        editing: false
       }
   }
-
-  // // Preload existing fields when editing a selected game
-  // componentDidMount () {
-  //   if(this.props.match){
-  //     $.ajax({
-  //       type: "GET",
-  //       url: window.location.origin + `/api/gamesapi/${this.props.match.params.id}`,
-  //       datatype: "JSON"
-  //     }).done((data) => {
-  //       console.log('Print data from add game form via componentDidMount')
-  //       console.log(data)
-  //       this.setState({
-  //         title: data.title,
-  //         genre: data.genre,
-  //         platform: data.platform,
-  //         progress: data.progress,
-  //         release_date: data.release_date,
-  //         editing: this.props.match.path === '/games/:id/edit'
-  //       });
-  //     })
-  //   }
-  // }
 
   handleChange = (e) => {
     var name = e.target.name;
@@ -55,7 +32,6 @@ export default class NewAddGameForm extends React.Component{
   }
 
   addGame = () => {
-    // e.preventDefault();
     $.ajax({
       url: window.location.origin + '/api/gamesapi/',
       type: 'POST',
@@ -69,7 +45,8 @@ export default class NewAddGameForm extends React.Component{
         var formid = '#gameid' + this.props.gameResult.id
         $(formid).removeClass('in')
       },
-      error: () => {
+      error: (data) => {
+        console.log(data)
         alert('This game already exists in your games list')
         var formid = '#gameid' + this.props.gameResult.id
         $(formid).removeClass('in')
@@ -87,13 +64,10 @@ export default class NewAddGameForm extends React.Component{
     console.log(this.props.currentUser)
 
     return (
-      <div>
-
-        {this.props.currentUser && (<a className="game_results_add game_status_title_last" data-toggle="collapse" data-target={data_target_name}>Add</a>)}
-
+      <div className="add-game-container">
         <form id={form_target_id} className='form-group collapse' onSubmit={this.handleSubmit}>
-          <input disabled={disabledInputStatus} className="form-control add-game-field" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange}/><br/>
-          <select className="form-control add-game-field" placeholder="progress" name="progress" value={this.state.progress} onChange={this.handleChange}>
+          <input disabled={disabledInputStatus} className="form-control add-game-field2" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange}/>
+          <select className="form-control add-game-field2" placeholder="progress" name="progress" value={this.state.progress} onChange={this.handleChange}>
             <option value="Select"> Select Progress </option>
             <option value="0%"> 0% </option>
             <option value="25% "> 25% </option>
@@ -104,9 +78,9 @@ export default class NewAddGameForm extends React.Component{
             <option value="Wish"> Wish </option>
             <option value="Contemplating"> Contemplating </option>
             <option value="On hold"> On Hold </option>
-          </select><br/>
-          <input readOnly="readOnly" type="hidden" className="form-control add-game-field" name="release_date" placeholder="release_date" name={this.props.gameDate} value={this.props.gameDate} onChange={this.handleChange}/>
-          <input disabled={disabledSubmitStatus} type="submit" value='Add Game' className="btn btn-primary add-game-button" />
+          </select>
+          <input readOnly="readOnly" type="hidden" className="form-control add-game-field" name="release_date" placeholder="release_date" value={this.props.gameDate} onChange={this.handleChange}/>
+          <input disabled={disabledSubmitStatus} type="submit" value='Add Game' className="btn btn-primary add-game-button-2" />
         </form>
       </div>
     )

@@ -34,8 +34,7 @@ export default class ResultItems extends React.Component{
 
     return(
       <div className="game_record_container">
-        <div className="row row-eq-height">
-
+        <div className="row-eq-height">
           <div className='col-md-2 col-sm-2 image-col'>
             <img className="api-image=" src={game_image_url}/>
           </div>
@@ -44,14 +43,14 @@ export default class ResultItems extends React.Component{
             <h4><a target="_blank" href={game.site_detail_url}>{game.name}</a></h4>
             <p className="game_platform_results">{platform_array.join(', ')}</p>
             {game.deck}
-
-            <div className="row">
-              <div className='col-md-12 col-sm-12'>
-                <NewAddGameForm gameResult={game} gameDate={gameDate} currentUser={this.props.currentUser} />
-              </div>
-            </div>
+            {this.props.currentUser && (<a className="game_results_add game_status_title_last" data-toggle="collapse" data-target={data_target_name}>Add</a>)}
           </div>
+        </div>
 
+        <div className="row">
+          <div className='col-md-12 col-sm-12'>
+            <NewAddGameForm gameResult={game} gameDate={gameDate} currentUser={this.props.currentUser} />
+          </div>
         </div>
       </div>
     )

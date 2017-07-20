@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import AddGameForm from '../gameslist/AddGameForm';
 import SearchForm from './SearchForm';
 import Results from './Results';
+import { Header } from '../Header';
 
 export default class Home extends React.Component{
   static defaultProps = {
@@ -25,14 +26,6 @@ export default class Home extends React.Component{
       }
   }
 
-  //for testing purposes for addgameform component, to test currentUser
-  addGame = (game) => {
-    const game_data = update(this.state.game_data, { $push: [game]});
-    this.setState({
-      game_data: game_data
-    });
-  }
-
   getQuery = (query) => {
     this.setState({
       query_array: query
@@ -45,14 +38,10 @@ export default class Home extends React.Component{
     })
   }
 
-  // searchthis: function(URL, query){
   searchthis = (query) => {
     $.ajax({
       crossDomain: true,
       method: 'get',
-      // dataType: 'jsonp',
-      // jsonp: 'json_callback',
-      // url: URL,
       url: window.location.origin + '/getsearchresults/' + query,
       success: function(response){
         var results_count = response.results.length
@@ -74,18 +63,13 @@ export default class Home extends React.Component{
   }
 
   render() {
-
-    console.log('home.jsx')
     console.log(this.state.currentUser)
 
     return (
       <div>
-        {this.state.currentUser && (<Link to={ `/games/` }>See Gameslist</Link>)}
-        {!this.state.currentUser && (<AddGameForm handleNewGame={this.addGame}/>)}
-
+        <Header/>
         <SearchForm getQuery={this.getQuery} searchthis={this.searchthis} />
         <Results currentUser={this.state.currentUser} searchResults={this.state.searchResults}/>
-
       </div>
     )
   }

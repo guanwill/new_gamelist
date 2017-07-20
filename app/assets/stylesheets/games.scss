@@ -37,7 +37,7 @@ a:hover {
   -moz-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;
   font-family: 'Press Start 2P', cursive;
-  padding: 15px 10px !important;
+  // padding: 15px 10px !important;
   margin-left: auto !important;
 }
 
@@ -95,8 +95,8 @@ a:hover {
 }
 
 .glyphicon.glyphicon-user {
-  font-size: 19px !important;
-  text-shadow: none;
+  font-size: 15px !important;
+  // text-shadow: none;
 }
 
 .glyphicon-edit, .edit-title {
@@ -280,9 +280,7 @@ a:hover {
   font-size: 12px;
 }
 .welcome-div {
-    position: relative;
-    top: 30%;
-    width: 100%;
+
 }
 .welcome-img {
   display: block;
@@ -324,7 +322,7 @@ a:hover {
   text-align: center;
 }
 .gamename-input {
-  width: 40%;
+  width: 400px;
   padding: 10px;
   margin: 10px;
   border-radius: 5px;

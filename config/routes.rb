@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get '/getsearchresults/:query' => 'home#getsearchresults'
   get '/getnewgames' => 'home#getnewgames'
   get '/games' => 'games#index'
-
+  
 end
 
 

@@ -1,0 +1,177 @@
+:active, :focus {
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+}
+
+// NAVBAR, HEADER, AND HOME PAGE
+.gameslist_link {
+  font-size: 18px !important;
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+  font-family: 'Press Start 2P', cursive;
+  padding: 15px 10px !important;
+  margin-left: auto !important;
+}
+
+.gameslist_link:hover, .gameslist_link:active, .gameslist_link:focus{
+  color: white !important;
+}
+
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+  background: none !important;
+  color: white;
+}
+
+.navbar {
+  margin: 0 !important;
+  min-height: auto !important;
+  background: #221e2d !important;
+}
+
+.navbar-brand {
+  height: auto !important;
+  padding: 4px 10px !important;
+}
+
+.home_header_bar {
+  width: 100%;
+  text-align: center;
+  background: #253950 !important; //#25416f !important;
+  padding: 15px;
+  border-bottom: 1px dotted white;
+}
+
+.api_form {
+  width: 100%;
+}
+
+.welcome-div {
+  height: 400px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search-game-button {
+  background: none !important;
+  color: #2e6da4 !important;
+  border: 0 !important;
+  padding: 0 !important;
+  font-size: 20px;
+}
+
+.search-div {
+  background: url("http://s33.postimg.org/b129uaelr/SRBackground.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.gamename-input {
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.divider-top {
+  text-align: center;
+  font-size: 16px;
+  font-family: monospace;
+  padding: 11px;
+  border-top: 1px solid #123d63;
+  color: #123d63;
+}
+
+// Search Results
+.search-container2 {
+  // background: url("http://s33.postimg.org/b129uaelr/SRBackground.png") !important;
+  // background-repeat: no-repeat !important;
+  // background-size: cover !important;
+}
+
+.search-container2-overlay {
+  // background: rgba(255, 255, 255, 0.75)
+}
+
+.search-results-container {
+  padding: 0px 20px;
+  // background: rgba(211, 211, 211, 0.64)
+}
+
+.game_record_container {
+  padding-bottom: 25px;
+  padding-top: 25px;
+  border-bottom: 1px solid #a2a2a2;
+}
+
+.search-results-container div:last-child {
+  border-bottom: 0 !important;
+}
+
+.row-eq-height {
+  display: flex;
+  align-items: center;
+}
+
+.game-record-container div img{
+  height: 150px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.image-col {
+  text-align: right;
+}
+
+.divider-second-top {
+  text-align: center;
+  font-size: 16px;
+  font-family: monospace;
+  color: #fff;
+  cursor: pointer;
+  // background: #5e89b9;
+  background: #5987a5;
+}
+
+.divider-top p, .divider-second-top p {
+  margin-bottom: 0;
+}
+
+.add_search_add {
+  font-size: 8px;
+}
+
+.game_results_add {
+  font-style: italic;
+  font-size: 12px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.game_platform_results {
+  color: #b9a982;
+  margin-bottom: 3px;
+}
+
+.add-game-container {
+  display: block;
+  text-align: center;
+  margin: 30px auto;
+}
+
+.add-game-field2 {
+  width: 265px !important;
+  margin: 0 auto;
+  font-size: 12px !important;
+  margin-bottom: 5px;
+  height: 25px !important;
+}
+
+.add-game-button-2, .add-game-button-2:hover {
+  padding: 7px !important;
+  font-size: 12px !important;
+}

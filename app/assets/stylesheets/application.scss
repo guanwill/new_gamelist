@@ -86,12 +86,6 @@
 
 // ///////////////////// RESPONSIVENESS //////////
 
-// @media (max-width: 1199px) {
-//   .welcome-div {
-//     margin-top: 380px;
-//   }
-// }
-
 @media (max-width: 1070px) {
   .content-wrapper {
     padding: 20px;
@@ -101,11 +95,6 @@
 @media (max-width: 916px) {
   table tr th[data-field="rating"], table tr td:nth-child(6) {
     display: none;
-  }
-
-  .welcome-div {
-    // margin-top: 220px;
-    // margin-bottom: 220px;
   }
 }
 

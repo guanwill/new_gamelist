@@ -133,7 +133,7 @@ export default class AddGameForm extends React.Component{
 
         <form id="add_game" className={this.state.editing ? 'form-group' : 'form-group collapse'} onSubmit={this.handleSubmit}>
 
-          <input disabled={disabledInputStatus} className="form-control add-game-field" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange}/><br/>
+          <input className="form-control add-game-field" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange}/><br/>
 
           <select className="form-control add-game-field" placeholder="Genre" name="genre" value={this.state.genre} onChange={this.handleChange}>
             <option value="Select"> Select Genre </option>

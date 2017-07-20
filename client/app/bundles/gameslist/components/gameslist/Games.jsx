@@ -2,6 +2,8 @@ import React from 'react';
 import {GamesList} from './GamesList'; //braces because its a name import. an es6 thing
 import update from 'immutability-helper';
 import AddGameForm from './AddGameForm';
+import { Header } from '../Header'
+import { Link } from 'react-router-dom';
 
 export default class Games extends React.Component{
   static defaultProps = {
@@ -56,6 +58,8 @@ export default class Games extends React.Component{
 
     return (
       <div>
+        <Header/>
+        <p><Link to={ `/` }>Home</Link></p>
         <AddGameForm handleNewGame={this.addGame}/>
         <GamesList games={this.state.game_data} />
       </div>

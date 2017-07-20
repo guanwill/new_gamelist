@@ -1,6 +1,6 @@
 import React from 'react';
 import ResultItems from './ResultItems';
-
+import { Link } from 'react-router-dom'
 
 export default class Results extends React.Component{
   render() {
@@ -22,23 +22,19 @@ export default class Results extends React.Component{
 
     return (
       <div className="search-container">
-
         <div className="divider-second-top">
           <p></p>
         </div>
-
         <div className="search-container2">
-        <div className="search-container2-overlay">
-          <div className="search-results-container">
-            {resultItems}
+          <div className="search-container2-overlay">
+            <div className="search-results-container">
+              {resultItems}
+            </div>
           </div>
         </div>
-        </div>
-
         <div className="divider-top">
-          <p><span> Build your own game list <a href="/games_index">here</a> </span></p>
+          <p><span> Build your own game list <Link to={ `/games/` }>here</Link> </span></p>
         </div>
-
       </div>
     );
 

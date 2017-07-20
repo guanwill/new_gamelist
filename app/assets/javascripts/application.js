@@ -16,3 +16,10 @@
 //= require jquery_ujs
 // require turbolinks
 //= require_tree .
+
+// For toggling search results container
+$(function(){
+  $( ".divider-second-top" ).click(function() {
+    $( ".search-container2" ).toggle( "slow" );
+  });
+})

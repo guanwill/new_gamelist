@@ -33,5 +33,4 @@ skip_before_filter :verify_authenticity_token
     render :json => gameresults
   end
 
-
 end
