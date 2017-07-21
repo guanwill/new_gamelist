@@ -5,6 +5,7 @@ import AddGameForm from '../gameslist/AddGameForm';
 import SearchForm from './SearchForm';
 import Results from './Results';
 import { Header } from '../Header';
+import Footer from '../footer/Footer'
 
 export default class Home extends React.Component{
   static defaultProps = {
@@ -70,6 +71,8 @@ export default class Home extends React.Component{
         <div className="home_header_bar">
           <Link className='gameslist_link' to={ `/games/` }>My Games List</Link>
         </div>
+
+        <Footer />
         <SearchForm getQuery={this.getQuery} searchthis={this.searchthis} />
         <Results currentUser={this.state.currentUser} searchResults={this.state.searchResults}/>
       </div>
