@@ -50,7 +50,7 @@ export default class Footer extends React.Component{
 
   render() {
     return (
-      <div>
+      <div className="footer-container">
         <div className="home-divider">
           <p className="latest-games-heading">Latest Games</p>
           <FooterGamesList latestGames={this.state.latestGames}/>

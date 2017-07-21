@@ -45,6 +45,7 @@
   background: #253950 !important; //#25416f !important;
   padding: 15px;
   border-bottom: 1px dotted white;
+  border-top: 1px dotted white;
 }
 
 .api_form {
@@ -52,7 +53,7 @@
 }
 
 .welcome-div {
-  height: 400px;
+  height: 500px;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -84,6 +85,12 @@
   padding: 11px;
   border-top: 1px solid #123d63;
   color: #123d63;
+}
+
+.footer-container {
+  position: relative;
+  width: 100%;
+  bottom: 0;
 }
 
 // Search Results
@@ -174,4 +181,269 @@
 .add-game-button-2, .add-game-button-2:hover {
   padding: 7px !important;
   font-size: 12px !important;
+}
+
+// light Slider / Footer
+
+.home-divider {
+    text-align: center;
+    padding: 9px;
+    background: #0e081f;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 280px;
+}
+
+.latest-games-heading{
+  margin-bottom: 0;
+  margin-top: 5px;
+  color: #fff;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.footer-row p {
+  font-size: 11px;
+  font-family: Arial;
+  color: grey !important;
+  margin-top: 5px !important;
+  margin-bottom: 2px !important;
+}
+
+.footer-row a{
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial;
+  color: rgb(223, 161, 87) !important;
+  margin-top: 5px !important;
+  margin-bottom: 2px !important;
+}
+
+.home-divider img{
+  height: 153px;
+  width: 230px;
+  object-fit: cover;
+  border: 1px solid #563737;
+}
+
+.footer-row {
+  // width: 90%;
+  margin: 15px auto !important;
+  height: 212px !important;
+}
+
+.lSPager.lSpg {
+  display: none;
+}
+
+.lSAction>a {
+  top: 40% !important;
+  width: 31px !important;
+  display: none !important;
+}
+
+.lSSlideOuter {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.footer-bottom {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background: #221e2d;
+  height: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px dotted white;
+}
+
+.footer-a {
+  color: white;
+}
+
+.fa-github{
+  padding: 20px;
+  color:white;
+}
+
+
+// --------------  RESPONSIVENESS ------------------
+
+// For Footer Game
+@media (min-width: 1199px) {
+  // Gamelist container
+  .gameslist.container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1375px) {
+  .home-divider img{
+    height: 153px;
+    width: 220px;
+  }
+}
+
+@media (max-width: 1374px) {
+  .home-divider img{
+    height: 153px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 1222px) {
+  .home-divider img{
+    height: 153px;
+    width: 180px;
+  }
+}
+
+@media (max-width: 1153px) {
+  .home-divider img{
+    height: 139px;
+    width: 155px;
+  }
+}
+
+@media (max-width: 967px) {
+  .home-divider img{
+    height: 131px;
+    width: 121px;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-divider img{
+    height: 80px;
+    width: 100px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 736px) {
+  a.game_status_title, a.game_status_title:hover, a.game_status_title_last, a.game_status_title_last:hover {
+    margin-left: 7px;
+    padding-right: 7px;
+    font-size: 13px;
+  }
+
+  .home-divider img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    margin-bottom: 13px;
+    margin-top: 16px;
+  }
+  .footer-row a {
+    font-size: 10px;
+    font-weight: normal;
+  }
+}
+
+// -------
+
+
+@media (max-width: 414px) {
+  #plan-container table tr td:nth-child(4),  #index-container table tr td:nth-child(4) {
+    text-align: center;
+  }
+
+  #game_title{
+    width: 268px;
+    text-align: center;
+    margin-top: 2px;
+  }
+  #game_genre, #game_platform, #game_progress, #game_release_date{
+    width: 150px;
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  //add game page
+  input.addgamefield, select {
+    height: 25px;
+    border: 1px solid lightgrey;
+    text-align: center !important;
+    background: white !important;
+    border-radius: 2px !important;
+    margin-top: 0px !important;
+  }
+
+  //account pages
+  .sign_up_form {
+    text-align: center;
+    margin-top: 0px;
+  }
+  .edit_form {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .login_form {
+    text-align: center;
+    margin-top: 0px;
+  }
+  .sign_up_field {
+    margin-bottom: 0px;
+  }
+
+}
+
+@media (max-width: 375px) {
+  .add-game {
+    padding: 5px 11px;
+    font-size: 12px;;
+  }
+
+
+  // Add game page
+  #game_title {
+    width: 155px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .add_game_button {
+    margin-bottom: 20px;
+  }
+  #h1-game {
+    margin: 14px;
+  }
+  #h1-playing {
+    text-align: center;
+    margin: 26px;
+    margin-bottom: 25px;
+    font-size: 23px !important;
+  }
+  #h1-plan {
+    text-align: center;
+    margin: 26px;
+    margin-bottom: 25px;
+    font-size: 29px !important;
+  }
+  .add-game {
+    padding: 5px 11px;
+  }
+
+  input.addgamefield, select {
+    height: 20px;
+    border: 1px solid lightgrey;
+    text-align: center !important;
+    background: white !important;
+    border-radius: 2px !important;
+    margin-top: 0px !important;
+  }
+
+  //edit game page
+  .panel-body {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .add_game_button {
+    padding: 5px 21px !important;
+    margin-bottom: 10px !important;
+  }
+
 }

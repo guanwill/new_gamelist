@@ -4,6 +4,7 @@ import update from 'immutability-helper';
 import AddGameForm from './AddGameForm';
 import { Header } from '../Header'
 import { Link } from 'react-router-dom';
+import { FooterBottom } from '../footer/FooterBottom'
 
 export default class Games extends React.Component{
   static defaultProps = {
@@ -63,6 +64,7 @@ export default class Games extends React.Component{
         </div>
         <AddGameForm handleNewGame={this.addGame}/>
         <GamesList games={this.state.game_data} />
+        <FooterBottom/>
       </div>
     )
   }
