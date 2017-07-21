@@ -58,8 +58,9 @@ export default class Games extends React.Component{
 
     return (
       <div>
-        <Header/>
-        <p><Link to={ `/` }>Home</Link></p>
+        <div className="home_header_bar">
+          <Link className='gameslist_link' to={ `/` }>My Games List</Link>
+        </div>
         <AddGameForm handleNewGame={this.addGame}/>
         <GamesList games={this.state.game_data} />
       </div>

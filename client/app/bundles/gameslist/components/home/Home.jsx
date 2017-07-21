@@ -67,7 +67,9 @@ export default class Home extends React.Component{
 
     return (
       <div>
-        <Header/>
+        <div className="home_header_bar">
+          <Link className='gameslist_link' to={ `/games/` }>My Games List</Link>
+        </div>
         <SearchForm getQuery={this.getQuery} searchthis={this.searchthis} />
         <Results currentUser={this.state.currentUser} searchResults={this.state.searchResults}/>
       </div>
