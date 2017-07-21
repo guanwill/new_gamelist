@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import { FooterGamesList } from './FooterGamesList'
 
 export default class Footer extends React.Component{
-  static defaultProps = {
-    latestGames: []
-  }
-
   constructor(props, _railsContext){
       super(props)
       console.log('footer props')
@@ -27,11 +23,7 @@ export default class Footer extends React.Component{
       url: '/getnewgames',
       success: function(response){
         this.showLatestGames(response);
-
-        // this.setState({latestGames: response.results})
-
         console.log(response)
-
         $("#lightSlider").lightSlider({
           item: 5,
           autoWidth: false,

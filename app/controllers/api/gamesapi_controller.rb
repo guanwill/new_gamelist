@@ -3,8 +3,7 @@ class Api::GamesapiController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    @games = Game.all
-    # @gamelist = HTTParty.get "http://www.giantbomb.com/api/games/?api_key=cf71909f53e1497132eb781d7aab4d0936bfb352&format=json&field_list=name&offset=100"
+    @games = Game.where(:user_id => current_user.id)
     render json: @games, status: 200
   end
 

@@ -62,6 +62,15 @@ export default class Games extends React.Component{
         <div className="home_header_bar">
           <Link className='gameslist_link' to={ `/` }>My Games List</Link>
         </div>
+
+        <div className="game_status_title_container">
+            <a className="game_status_title" data-toggle="tab" href="#game_playing">Playing</a>
+            <a className="game_status_title" data-toggle="tab" href="#game_start">Planning</a>
+            <a className="game_status_title" data-toggle="tab" href="#game_completed">Completed</a>
+            <a className="game_status_title" data-toggle="tab" href="#game_wish">Wishlist</a>
+            <a className="game_status_title_last" data-toggle="collapse" data-target="#add_game">Add</a>
+        </div>
+
         <AddGameForm handleNewGame={this.addGame}/>
         <GamesList games={this.state.game_data} />
         <FooterBottom/>
