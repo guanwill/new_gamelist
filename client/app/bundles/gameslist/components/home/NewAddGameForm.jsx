@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom';
 export default class NewAddGameForm extends React.Component{
   constructor(props, _railsContext){
       super(props)
-      console.log('addgameform props')
-      console.log(props)
       this.state = {
         title: this.props.gameResult.name,
         genre: '',
@@ -40,7 +38,6 @@ export default class NewAddGameForm extends React.Component{
         game: this.state
       },
       success: (data) => {
-        console.log(data);
         alert('Success')
         var formid = '#gameid' + this.props.gameResult.id
         $(formid).removeClass('in')
@@ -60,8 +57,6 @@ export default class NewAddGameForm extends React.Component{
     const game = this.props.gameResult;
     const data_target_name = "#gameid" + game.id
     const form_target_id = "gameid" + game.id
-
-    console.log(this.props.currentUser)
 
     return (
       <div className="add-game-container">

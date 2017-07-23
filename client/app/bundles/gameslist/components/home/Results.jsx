@@ -6,8 +6,6 @@ export default class Results extends React.Component{
   render() {
 
     if (this.props.currentUser != null) {
-      console.log('results.jsx')
-      console.log(this.props.currentUser)
       var currentUserName = this.props.currentUser
     }
     else {

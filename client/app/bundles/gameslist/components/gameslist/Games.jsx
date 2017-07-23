@@ -14,9 +14,6 @@ export default class Games extends React.Component{
   // Grab initial state of data and past them to GamesList component
   constructor(props, _railsContext){
       super(props)
-      console.log('props of games and upcgames')
-      console.log(props)
-      console.log(props.games)
       this.state = {
         game_data: this.props.games,
       }
@@ -31,8 +28,6 @@ export default class Games extends React.Component{
         datatype: "JSON"
       }).done((data) => {
         console.log("Updated data")
-        console.log(data)
-        console.log('data count is ' + data.length)
         this.setState({game_data: data});
       })
     }

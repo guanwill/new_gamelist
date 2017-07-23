@@ -5,8 +5,6 @@ import { FooterGamesList } from './FooterGamesList'
 export default class Footer extends React.Component{
   constructor(props, _railsContext){
       super(props)
-      console.log('footer props')
-      console.log(props)
       this.state = {
         latestGames: []
       }
@@ -23,7 +21,6 @@ export default class Footer extends React.Component{
       url: '/getnewgames',
       success: function(response){
         this.showLatestGames(response);
-        console.log(response)
         $("#lightSlider").lightSlider({
           item: 5,
           autoWidth: false,

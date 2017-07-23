@@ -7,7 +7,6 @@ export default class ResultItems extends React.Component{
     var game = this.props.gameResult;
     if (this.props.gameResult.original_release_date != ""){
       var gameDate = moment(this.props.gameResult.original_release_date).local().format('DD/MM/YYYY')
-      console.log('date ' + gameDate)
     }
 
     // Return an array of consoles

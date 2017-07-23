@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 export default class AddGameForm extends React.Component{
   constructor(props, _railsContext){
       super(props)
-      console.log('addgameform props')
+      console.log('addgameform')
       console.log(props)
       this.state = {
         title: '',
@@ -28,14 +28,12 @@ export default class AddGameForm extends React.Component{
         url: window.location.origin + `/api/gamesapi/${this.props.match.params.id}`,
         datatype: "JSON"
       }).done((data) => {
-        console.log('Print data from add game form via componentDidMount')
-        console.log(data)
         this.setState({
-          title: data.title,
-          genre: data.genre,
-          platform: data.platform,
-          progress: data.progress,
-          release_date: data.release_date,
+          title: data.title || "",
+          genre: data.genre || "",
+          platform: data.platform || "",
+          progress: data.progress || "",
+          release_date: data.release_date || "",
           editing: this.props.match.path === '/games/:id/edit'
         });
       })

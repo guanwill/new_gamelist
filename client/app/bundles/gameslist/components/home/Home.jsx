@@ -18,9 +18,6 @@ export default class Home extends React.Component{
   // Grab initial state of data and past them to GamesList component
   constructor(props, _railsContext){
       super(props)
-      console.log('props')
-      console.log(props)
-      console.log(props.games)
       this.state = {
         searchResults: [],
         query_array: [],
@@ -65,8 +62,6 @@ export default class Home extends React.Component{
   }
 
   render() {
-    console.log(this.state.currentUser)
-
     return (
       <div>
         <div className="home_header_bar">
