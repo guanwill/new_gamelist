@@ -8,13 +8,13 @@ import { FooterBottom } from '../footer/FooterBottom'
 
 export default class Games extends React.Component{
   static defaultProps = {
-    game_data: []
+    game_data: [],
   }
 
   // Grab initial state of data and past them to GamesList component
   constructor(props, _railsContext){
       super(props)
-      console.log('props')
+      console.log('props of games and upcgames')
       console.log(props)
       console.log(props.games)
       this.state = {

@@ -151,8 +151,8 @@ export default class AddGameForm extends React.Component{
           <select className="form-control add-game-field" placeholder="Platform" name="platform" value={this.state.platform} onChange={this.handleChange}>
             <option value="Select"> Select Platform </option>
             <option value="PS4"> PS4 </option>
-            <option value="PS Vita "> PS Vita </option>
-            <option value="Nin 3DS "> Nin 3DS </option>
+            <option value="PS Vita"> PS Vita </option>
+            <option value="Nin 3DS"> Nin 3DS </option>
             <option value="Nin Switch"> Nin Switch </option>
             <option value="XBOX One"> XBOX One </option>
             <option value="PC"> PC </option>

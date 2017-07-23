@@ -4,6 +4,7 @@ class Game < ActiveRecord::Base
   PLATFORMS = ['3DS', 'WII U', 'Switch', 'PC', 'PS4', 'XBOX', 'PS Vita', 'Mobile', 'Others']
   PROGRESS = ['0%', '10%', '25%', '50%', '75%', '100%', '200%', 'Wish', 'Contemplating', 'Paused']
 
-  validates :title, presence: true
+  validates :title, presence: true, :uniqueness => {:scope => :user_id}
+  # make game unique for each user
 
 end
