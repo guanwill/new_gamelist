@@ -25,21 +25,27 @@ export default class Game extends React.Component {
       var game_release_date = ""
     }
     else {
-      var game_release_date = moment(this.props.game.release_date).format('MMMM Do YYYY')
+      var game_release_date = moment(this.props.game.release_date).format('Do MMMM YYYY')
     }
 
     return (
       <tr>
         <td><Link to={ `/games/${this.props.game.id}/edit` }>{this.props.game.title}</Link></td>
-        <td>{this.props.game.genre}</td>
-        <td>{this.props.game.platform}</td>
-        <td>{this.props.game.progress}</td>
         <td>{game_release_date}</td>
       </tr>
     )
   }
 }
 
+// return (
+//   <tr>
+//     <td><Link to={ `/games/${this.props.game.id}/edit` }>{this.props.game.title}</Link></td>
+//     <td>{this.props.game.genre}</td>
+//     <td>{this.props.game.platform}</td>
+//     <td>{this.props.game.progress}</td>
+//     <td>{game_release_date}</td>
+//   </tr>
+// )
 // constructor (props) {
 //   super(props)
 //   this.props = {

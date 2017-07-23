@@ -5,55 +5,45 @@ export const GamesList = ({games}) =>
 <div className="tab-content">
 
   <div id="game_playing" className="tab-pane fade in active">
+    <div className="col-md-6">
+      <table className="table table-bordered">
+        <thead>
+          <tr>
+            <th className="col-md-6 col-sm-6 playing-th">PS4 </th>
+            <th className="col-md-6 col-sm-6">Release Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {games.map(function(game) {
+            if (game.platform == 'PS4' && game.progress != '0%' && game.progress != '100% Storyline' && game.progress != '100% Completion' && game.progress != 'Wish' && game.progress != 'Contemplating' && game.progress != 'On hold') {
+              return (
+                  <Game game={game} key={game.id} />
+              )
+            }
+          })}
+        </tbody>
+      </table>
+    </div>
 
-    <table className="tablee table-bordered">
+<div className="col-md-6">
+    <table className="table table-bordered">
       <thead>
         <tr>
-          <th className="col-md-4 col-sm-4 playing-th"> Currently Playing PS4 </th>
-          <th className="col-md-2 col-sm-2">Genre</th>
-          <th className="col-md-2 col-sm-2">Platform</th>
-          <th className="col-md-2 col-sm-2">Progress</th>
-          <th className="col-md-2 col-sm-2">Release Date</th>
-          <th></th>
-          <th></th>
+          <th className="col-md-6 col-sm-6 playing-th">PC</th>
+          <th className="col-md-6 col-sm-6">Release Date</th>
         </tr>
       </thead>
       <tbody>
         {games.map(function(game) {
-          if (game.platform == 'PS4' && game.progress != '0%' && game.progress != '100% Storyline' && game.progress != '100% Completion' && game.progress != 'Wish' && game.progress != 'Contemplating' && game.progress != 'On hold') {
+          if (game.platform == "PC" && game.progress != '0%' && game.progress != '100% Storyline' && game.progress != '100% Completion' && game.progress != 'Wish' && game.progress != 'Contemplating' && game.progress != 'On hold') {
             return (
                 <Game game={game} key={game.id} />
-
             )
           }
         })}
       </tbody>
     </table>
-
-    <table className="tablee table-bordered">
-      <thead>
-        <tr>
-          <th className="col-md-4 col-sm-4 playing-th"> NIN 3DS</th>
-          <th className="col-md-2 col-sm-2">Genre</th>
-          <th className="col-md-2 col-sm-2">Platform</th>
-          <th className="col-md-2 col-sm-2">Progress</th>
-          <th className="col-md-2 col-sm-2">Release Date</th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        {games.map(function(game) {
-          if (game.platform == "Nin 3DS " && game.progress != '0%' && game.progress != '100% Storyline' && game.progress != '100% Completion' && game.progress != 'Wish' && game.progress != 'Contemplating' && game.progress != 'On hold') {
-            return (
-                <Game game={game} key={game.id} />
-
-            )
-          }
-        })}
-      </tbody>
-    </table>
-
+</div>
 
   </div>
 
@@ -62,12 +52,7 @@ export const GamesList = ({games}) =>
       <thead>
         <tr>
           <th className="col-md-4 col-sm-4 playing-th"> Currently Playing </th>
-          <th className="col-md-2 col-sm-2">Genre</th>
-          <th className="col-md-2 col-sm-2">Platform</th>
-          <th className="col-md-2 col-sm-2">Progress</th>
           <th className="col-md-2 col-sm-2">Release Date</th>
-          <th></th>
-          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -88,12 +73,7 @@ export const GamesList = ({games}) =>
       <thead>
         <tr>
           <th className="col-md-4 col-sm-4 playing-th"> Currently completed </th>
-          <th className="col-md-2 col-sm-2">Genre</th>
-          <th className="col-md-2 col-sm-2">Platform</th>
-          <th className="col-md-2 col-sm-2">Progress</th>
           <th className="col-md-2 col-sm-2">Release Date</th>
-          <th></th>
-          <th></th>
         </tr>
       </thead>
       <tbody>

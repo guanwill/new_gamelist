@@ -126,8 +126,6 @@ export default class AddGameForm extends React.Component{
       <div>
 
         {this.state.editing && (<h2>Update Game</h2>)}
-        {!this.state.editing && (<a className="game_status_title_last" data-toggle="collapse" data-target="#add_game">Add Game</a>)}
-
 
         <form id="add_game" className={this.state.editing ? 'form-group' : 'form-group collapse'} onSubmit={this.handleSubmit}>
 
@@ -182,3 +180,5 @@ export default class AddGameForm extends React.Component{
     )
   }
 };
+
+// {!this.state.editing && (<a className="game_status_title_last" data-toggle="collapse" data-target="#add_game">Add Game</a>)}
