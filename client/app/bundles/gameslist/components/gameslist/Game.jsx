@@ -21,13 +21,20 @@ export default class Game extends React.Component {
   }
 
   render () {
+    if (this.props.game.release_date == null) {
+      var game_release_date = ""
+    }
+    else {
+      var game_release_date = moment(this.props.game.release_date).format('MMMM Do YYYY')
+    }
+
     return (
       <tr>
         <td><Link to={ `/games/${this.props.game.id}/edit` }>{this.props.game.title}</Link></td>
         <td>{this.props.game.genre}</td>
         <td>{this.props.game.platform}</td>
         <td>{this.props.game.progress}</td>
-        <td>{moment(this.props.game.release_date).format('MMMM Do YYYY')}</td>
+        <td>{game_release_date}</td>
       </tr>
     )
   }
