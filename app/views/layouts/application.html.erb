@@ -69,6 +69,11 @@
           </div>
 
         <% else %>
+
+          <a href="/" class="navbar-brand navbar-navright">
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+          </a>
+
           <%= link_to new_user_session_path, class: 'navbar-brand navbar-navright' do %>
             <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
             <!-- Login -->

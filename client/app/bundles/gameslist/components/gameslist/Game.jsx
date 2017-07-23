@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 export default class Game extends React.Component {
 
@@ -26,7 +27,7 @@ export default class Game extends React.Component {
         <td>{this.props.game.genre}</td>
         <td>{this.props.game.platform}</td>
         <td>{this.props.game.progress}</td>
-        <td>{this.props.game.release_date}</td>
+        <td>{moment(this.props.game.release_date).format('MMMM Do YYYY')}</td>
       </tr>
     )
   }

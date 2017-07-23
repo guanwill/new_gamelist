@@ -31,7 +31,7 @@ export default class Results extends React.Component{
           </div>
         </div>
         <div className="divider-top">
-          <p><span> Build your own game list <Link to={ `/games/` }>here</Link> </span></p>
+          <p><span> Build your own game list {this.props.currentUser ? <Link to={ `/games/` }>here</Link> : <a href="/users/sign_up">by signing up</a>} </span></p>
         </div>
       </div>
     );

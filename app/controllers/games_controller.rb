@@ -3,7 +3,7 @@ class GamesController < ApplicationController
 # before_action :authenticate_user!
 
 def index
-  @games = Game.all
+  @games =  Game.where(:user_id => current_user.id)
   # @gamelist = HTTParty.get "http://www.giantbomb.com/api/games/?api_key=cf71909f53e1497132eb781d7aab4d0936bfb352&format=json&field_list=name&offset=100"
   if user_signed_in?
     render 'index'

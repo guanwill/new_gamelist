@@ -4,6 +4,12 @@
   outline: none;
 }
 
+a:hover, a:active, a:focus {
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
 // NAVBAR, HEADER, AND HOME PAGE
 .gameslist_link {
   font-size: 18px !important;

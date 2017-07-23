@@ -6,7 +6,7 @@ import SearchForm from './SearchForm';
 import Results from './Results';
 import { Header } from '../Header';
 import Footer from '../footer/Footer'
-import { FooterBottom } from '../footer/FooterBottom'
+import  FooterBottom  from '../footer/FooterBottom'
 
 export default class Home extends React.Component{
   static defaultProps = {
@@ -65,13 +65,13 @@ export default class Home extends React.Component{
     return (
       <div>
         <div className="home_header_bar">
-          <Link className='gameslist_link' to={ `/games/` }>My Games List</Link>
+          { this.state.currentUser ? <Link className='gameslist_link' to={ `/games/` }>My Games List</Link> : <Link className='gameslist_link' to={ `/` }>My Games List</Link>  }
         </div>
 
         <SearchForm getQuery={this.getQuery} searchthis={this.searchthis} />
         <Results currentUser={this.state.currentUser} searchResults={this.state.searchResults}/>
         <Footer />
-        <FooterBottom />
+        <FooterBottom currentUser={this.state.currentUser} />
       </div>
     )
   }
