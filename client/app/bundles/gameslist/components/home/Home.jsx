@@ -61,7 +61,14 @@ export default class Home extends React.Component{
     });
   }
 
+  componentDidMount () {
+    $( ".divider-second-top" ).click(function() {
+      $( ".search-container2" ).toggle( "slow" );
+    });
+  }
+
   render() {
+
     return (
       <div>
         <div className="home_header_bar">

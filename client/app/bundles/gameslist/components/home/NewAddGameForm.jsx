@@ -52,7 +52,7 @@ export default class NewAddGameForm extends React.Component{
   }
 
   render () {
-    const disabledSubmitStatus = (this.state.title != "" && this.state.progress != "") ? false : true
+    const disabledSubmitStatus = (this.state.title != "" && this.state.progress != "" && this.state.platform != "") ? false : true
     const disabledInputStatus = this.state.editing ? true : false
     const game = this.props.gameResult;
     const data_target_name = "#gameid" + game.id
@@ -62,6 +62,17 @@ export default class NewAddGameForm extends React.Component{
       <div className="add-game-container">
         <form id={form_target_id} className='form-group collapse' onSubmit={this.handleSubmit}>
           <input disabled={disabledInputStatus} className="form-control add-game-field2" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange}/>
+          <select className="form-control add-game-field" placeholder="Platform" name="platform" value={this.state.platform} onChange={this.handleChange}>
+            <option value="Select"> Select Platform </option>
+            <option value="PS4"> PS4 </option>
+            <option value="PS Vita"> PS Vita </option>
+            <option value="Nin 3DS"> Nin 3DS </option>
+            <option value="Nin Switch"> Nin Switch </option>
+            <option value="XBOX One"> XBOX One </option>
+            <option value="PC"> PC </option>
+            <option value="Mobile"> Mobile </option>
+            <option value="Other"> Other </option>
+          </select><br/>
           <select className="form-control add-game-field2" placeholder="progress" name="progress" value={this.state.progress} onChange={this.handleChange}>
             <option value="Select"> Select Progress </option>
             <option value="0%"> 0% </option>

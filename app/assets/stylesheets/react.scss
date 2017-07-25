@@ -127,7 +127,7 @@ a:hover, a:active, a:focus {
 
 .row-eq-height {
   display: flex;
-  align-items: center;
+  align-items: top;
 }
 
 .game-record-container div img{
@@ -201,7 +201,7 @@ a.game_status_title, a.game_status_title:hover {
 }
 
 a.game_status_title:active, a.game_status_title:focus {
-  color: #38d1d4 !important;
+  color: #d28622 !important;
 }
 
 a.game_status_title_last,  a.game_status_title_last:hover {
@@ -312,6 +312,13 @@ a.game_status_title_last,  a.game_status_title_last:hover {
   padding: 20px;
   color:white;
 }
+
+// Game list panels
+
+.ps-playing-th, .x-playing-th, .nin-playing-th, .pc-playing-th {
+  cursor: pointer;
+}
+
 
 
 // --------------  RESPONSIVENESS ------------------

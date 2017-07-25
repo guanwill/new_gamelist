@@ -119,7 +119,7 @@ export default class AddGameForm extends React.Component{
   }
 
   render () {
-    const disabledSubmitStatus = (this.state.title != "" && this.state.progress != "") ? false : true
+    const disabledSubmitStatus = (this.state.title != "" && this.state.progress != "" && this.state.platform != "") ? false : true
     const disabledInputStatus = this.state.editing ? true : false
 
     return (

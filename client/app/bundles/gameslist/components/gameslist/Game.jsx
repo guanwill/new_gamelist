@@ -31,7 +31,6 @@ export default class Game extends React.Component {
     return (
       <tr>
         <td><Link to={ `/games/${this.props.game.id}/edit` }>{this.props.game.title}</Link></td>
-        <td>{game_release_date}</td>
       </tr>
     )
   }

@@ -32,6 +32,44 @@ export default class Games extends React.Component{
         this.setState({game_data: data});
       })
     }
+
+    //hide and show functionality to game list
+    $( ".ps-playing-th" ).click(function() {
+      $( ".ps-playing-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
+    $( ".x-playing-th" ).click(function() {
+      $( ".x-playing-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
+    $( ".nin-playing-th" ).click(function() {
+      $( ".nin-playing-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
+    $( ".pc-playing-th" ).click(function() {
+      $( ".pc-playing-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
+
+    $( ".ps-start-th" ).click(function() {
+      $( ".ps-start-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
+    $( ".x-start-th" ).click(function() {
+      $( ".x-start-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
+    $( ".nin-start-th" ).click(function() {
+      $( ".nin-start-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
+    $( ".pc-start-th" ).click(function() {
+      $( ".pc-start-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
+
+
+
   }
 
   addGame = (game) => {
