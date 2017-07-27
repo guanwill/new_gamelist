@@ -14,28 +14,28 @@ export default class Footer extends React.Component{
     this.setState({latestGames: response.results})
   }
 
-  componentDidMount() {
-    $.ajax({
-      method: 'get',
-      crossDomain: true,
-      url: '/getnewgames',
-      success: function(response){
-        this.showLatestGames(response);
-        $("#lightSlider").lightSlider({
-          item: 5,
-          autoWidth: false,
-          enableDrag:true,
-          loop: true,
-          mode: "slide",
-          useCSS: true,
-          cssEasing: 'ease',
-          easing: 'linear',
-          auto: true,
-          speed: 1000,
-        });
-      }.bind(this)
-    });
-  }
+  // componentDidMount() {
+  //   $.ajax({
+  //     method: 'get',
+  //     crossDomain: true,
+  //     url: '/getnewgames',
+  //     success: function(response){
+  //       this.showLatestGames(response);
+  //       $("#lightSlider").lightSlider({
+  //         item: 5,
+  //         autoWidth: false,
+  //         enableDrag:true,
+  //         loop: true,
+  //         mode: "slide",
+  //         useCSS: true,
+  //         cssEasing: 'ease',
+  //         easing: 'linear',
+  //         auto: true,
+  //         speed: 1000,
+  //       });
+  //     }.bind(this)
+  //   });
+  // }
 
   render() {
     return (

@@ -3,7 +3,8 @@ class Api::GamesapiController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    @games = Game.where(:user_id => current_user.id)
+    @games = Game.where(:user_id => current_user.id).order("title ASC, release_date ASC NULLS LAST")
+
     render json: @games, status: 200
   end
 

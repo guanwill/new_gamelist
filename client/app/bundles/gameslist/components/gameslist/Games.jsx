@@ -68,8 +68,39 @@ export default class Games extends React.Component{
       console.log('toggle')
     });
 
+    $( ".ps-complete-th" ).click(function() {
+      $( ".ps-complete-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
+    $( ".x-complete-th" ).click(function() {
+      $( ".x-complete-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
+    $( ".nin-complete-th" ).click(function() {
+      $( ".nin-complete-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
+    $( ".pc-complete-th" ).click(function() {
+      $( ".pc-complete-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
 
-
+    $( ".ps-wish-th" ).click(function() {
+      $( ".ps-wish-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
+    $( ".x-wish-th" ).click(function() {
+      $( ".x-wish-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
+    $( ".nin-wish-th" ).click(function() {
+      $( ".nin-wish-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
+    $( ".pc-wish-th" ).click(function() {
+      $( ".pc-wish-body" ).toggle( "fast" );
+      console.log('toggle')
+    });
   }
 
   addGame = (game) => {
@@ -80,16 +111,28 @@ export default class Games extends React.Component{
   }
 
   render() {
-    // Sort by alphbet
-    const game_data = this.state.game_data
-    game_data.sort(compare)
-    function compare(a,b) {
-      if (a.title < b.title)
-        return -1;
-      if (a.title > b.title)
-        return 1;
-      return 0;
-    }
+    // // Sort by alphbet
+    // const game_data = this.state.game_data
+    // game_data.sort(compare)
+    // function compare(a,b) {
+    //
+    //   // sorts by date. oldest to newest
+    //   var adate = new Date(a.release_date)
+    //   console.log(adate)
+    //   var bdate = new Date(b.release_date)
+    //   console.log(bdate)
+    //   if (adate < bdate)
+    //     return -1;
+    //   if (adate > bdate)
+    //     return 1;
+    //
+    //   if (a.title < b.title)
+    //     return -1;
+    //   if (a.title > b.title)
+    //     return 1;
+    //
+    //   return 0;
+    // }
 
     return (
       <div>
@@ -101,7 +144,6 @@ export default class Games extends React.Component{
             <a className="game_status_title" data-toggle="tab" href="#game_playing">Playing</a>
             <a className="game_status_title" data-toggle="tab" href="#game_start">Planning</a>
             <a className="game_status_title" data-toggle="tab" href="#game_completed">Completed</a>
-            <a className="game_status_title" data-toggle="tab" href="#game_wish">Wishlist</a>
             <a className="game_status_title_last" data-toggle="collapse" data-target="#add_game">Add</a>
         </div>
 

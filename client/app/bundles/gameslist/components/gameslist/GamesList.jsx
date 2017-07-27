@@ -10,7 +10,7 @@ export const GamesList = ({games}) =>
         <table className="table table-bordered">
           <thead>
             <tr>
-              <th className="col-md-6 col-sm-6 ps-playing-th">PLAYSTATION </th>
+              <th className="col-md-6 col-sm-6 ps-playing-th">PLAYSTATION</th>
             </tr>
           </thead>
           <tbody className="ps-playing-body">
@@ -171,10 +171,10 @@ export const GamesList = ({games}) =>
         <table className="table table-bordered">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 playing-th">PLAYSTATION</th>
+              <th className="col-md-4 col-sm-4 ps-complete-th">PLAYSTATION</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="ps-complete-body">
             {games.map(function(game) {
               if ((game.platform == 'PS4' || game.platform == 'PS Vita') && (game.progress == '100% Storyline' || game.progress == '100% Completion')) {
                 return (
@@ -189,10 +189,10 @@ export const GamesList = ({games}) =>
         <table className="table table-bordered">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 playing-th">XBOX</th>
+              <th className="col-md-4 col-sm-4 x-complete-th">XBOX</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="x-complete-body">
             {games.map(function(game) {
               if ((game.platform == 'XBOX One') && (game.progress == '100% Storyline' || game.progress == '100% Completion')) {
                 return (
@@ -207,10 +207,10 @@ export const GamesList = ({games}) =>
         <table className="table table-bordered">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 playing-th">NINTENDO</th>
+              <th className="col-md-4 col-sm-4 nin-complete-th">NINTENDO</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="nin-complete-body">
             {games.map(function(game) {
               if ((game.platform == "Nin 3DS" || game.platform == "Nin Switch" ) && (game.progress == '100% Storyline' || game.progress == '100% Completion')) {
                 return (
@@ -225,89 +225,12 @@ export const GamesList = ({games}) =>
         <table className="table table-bordered">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 playing-th">PC</th>
+              <th className="col-md-4 col-sm-4 pc-complete-th">PC</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="pc-complete-body">
             {games.map(function(game) {
               if ((game.platform == 'PC') && (game.progress == '100% Storyline' || game.progress == '100% Completion')) {
-                return (
-                    <Game game={game} key={game.id} />
-                )
-              }
-            })}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <div id="game_wish" className="tab-pane fade in">
-    <div className="row row-eq-height">
-      <div className="col-md-3">
-        <table className="table table-bordered">
-          <thead>
-            <tr>
-              <th className="col-md-4 col-sm-4 playing-th">PLAYSTATION</th>
-            </tr>
-          </thead>
-          <tbody>
-            {games.map(function(game) {
-              if ((game.platform == 'PS4' || game.platform == 'PS Vita') && (game.progress == 'Wish' || game.progress == 'Contemplating')) {
-                return (
-                    <Game game={game} key={game.id} />
-                )
-              }
-            })}
-          </tbody>
-        </table>
-      </div>
-      <div className="col-md-3">
-        <table className="table table-bordered">
-          <thead>
-            <tr>
-              <th className="col-md-4 col-sm-4 playing-th">XBOX</th>
-            </tr>
-          </thead>
-          <tbody>
-            {games.map(function(game) {
-              if ((game.platform == 'XBOX One') && (game.progress == 'Wish' || game.progress == 'Contemplating')) {
-                return (
-                    <Game game={game} key={game.id} />
-                )
-              }
-            })}
-          </tbody>
-        </table>
-      </div>
-      <div className="col-md-3">
-        <table className="table table-bordered">
-          <thead>
-            <tr>
-              <th className="col-md-4 col-sm-4 playing-th">NINTENDO</th>
-            </tr>
-          </thead>
-          <tbody>
-            {games.map(function(game) {
-              if ((game.platform == "Nin 3DS" || game.platform == "Nin Switch" ) && (game.progress == 'Wish' || game.progress == 'Contemplating')) {
-                return (
-                    <Game game={game} key={game.id} />
-                )
-              }
-            })}
-          </tbody>
-        </table>
-      </div>
-      <div className="col-md-3">
-        <table className="table table-bordered">
-          <thead>
-            <tr>
-              <th className="col-md-4 col-sm-4 playing-th">PC</th>
-            </tr>
-          </thead>
-          <tbody>
-            {games.map(function(game) {
-              if ((game.platform == 'PC') && (game.progress == 'Wish' || game.progress == 'Contemplating')) {
                 return (
                     <Game game={game} key={game.id} />
                 )
