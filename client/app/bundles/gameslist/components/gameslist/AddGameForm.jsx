@@ -122,13 +122,11 @@ export default class AddGameForm extends React.Component{
     const disabledSubmitStatus = (this.state.title != "" && this.state.progress != "" && this.state.platform != "") ? false : true
     const disabledInputStatus = this.state.editing ? true : false
 
+    // {this.state.editing && (<h2>Update Game</h2>)} //put title out of the form
     return (
-      <div>
-
-        {this.state.editing && (<h2>Update Game</h2>)}
+      <div className={this.state.editing ? 'edit-game-form' : 'add-game-form'}>
 
         <form id="add_game" className={this.state.editing ? 'form-group' : 'form-group collapse'} onSubmit={this.handleSubmit}>
-
           <input className="form-control add-game-field" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange}/><br/>
 
           <select className="form-control add-game-field" placeholder="Genre" name="genre" value={this.state.genre} onChange={this.handleChange}>
@@ -171,11 +169,14 @@ export default class AddGameForm extends React.Component{
 
           <input type="date" className="form-control add-game-field" name="release_date" placeholder="release_date" value={this.state.release_date} onChange={this.handleChange}/><br/>
 
-          <input disabled={disabledSubmitStatus} type="submit" value={this.state.editing ? 'Update game' : 'Add game'} className="btn btn-primary add-game-button" />
-        </form>
-        {this.state.editing && (<button onClick={this.deleteGame}>Delete</button>)}
+          <input disabled={disabledSubmitStatus} type="submit" value={this.state.editing ? 'Update Game' : 'Add Game'} className="btn btn-primary add-game-button" />
 
-        {this.state.editing && (<p><Link to={ `/games` }>Back</Link></p>)}
+          {!this.state.editing && <a className="btn btn-danger close-after-add-button"  data-toggle="collapse" data-target="#add_game">Close </a>}
+        </form>
+
+
+        {this.state.editing && (<button className="btn btn-danger delete-game-button" onClick={this.deleteGame}>Delete</button>)}
+        {this.state.editing && (<p className="back-from-update-button"><Link to={ `/games` }>Back</Link></p>)}
       </div>
     )
   }

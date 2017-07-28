@@ -85,12 +85,12 @@ export const GamesList = ({games}) =>
 
 
   <div id="game_start" className="tab-pane fade in">
-    <div className="row row-eq-height">
-      <div className="col-md-3">
+    <div className="row  ">
+      <div className="col-md-3 col-sm-12">
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 ps-start-th"><img className="console-icons" src="https://s12.postimg.org/fawhlmetp/ps3.png"/>PLAYSTATION</th>
+              <th className="col-md-6 col-sm-6 ps-start-th"><img className="console-icons" src="https://s12.postimg.org/fawhlmetp/ps3.png"/>PLAYSTATION</th>
             </tr>
           </thead>
           <tbody className="ps-start-body">
@@ -104,11 +104,11 @@ export const GamesList = ({games}) =>
           </tbody>
         </table>
       </div>
-      <div className="col-md-3">
+      <div className="col-md-3 col-sm-12">
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 x-start-th"><img className="console-icons" src="https://s17.postimg.org/kaa37ogbj/image.png"/>XBOX</th>
+              <th className="col-md-6 col-sm-6 x-start-th"><img className="console-icons" src="https://s17.postimg.org/kaa37ogbj/image.png"/>XBOX</th>
             </tr>
           </thead>
           <tbody className="x-start-body">
@@ -122,11 +122,11 @@ export const GamesList = ({games}) =>
           </tbody>
         </table>
       </div>
-      <div className="col-md-3">
+      <div className="col-md-3 col-sm-12">
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 nin-start-th"><img className="console-icons" src="https://s4.postimg.org/plm3mbpf1/nin2.png"/>NINTENDO</th>
+              <th className="col-md-6 col-sm-6 nin-start-th"><img className="console-icons" src="https://s4.postimg.org/plm3mbpf1/nin2.png"/>NINTENDO</th>
             </tr>
           </thead>
           <tbody className="nin-start-body">
@@ -140,11 +140,11 @@ export const GamesList = ({games}) =>
           </tbody>
         </table>
       </div>
-      <div className="col-md-3">
+      <div className="col-md-3 col-sm-12">
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 pc-start-th"><img className="console-icons" src="https://s17.postimg.org/wqsfz0fsv/image.png"/>PC</th>
+              <th className="col-md-6 col-sm-6 pc-start-th"><img className="console-icons" src="https://s17.postimg.org/wqsfz0fsv/image.png"/>PC</th>
             </tr>
           </thead>
           <tbody className="pc-start-body">
@@ -166,12 +166,12 @@ export const GamesList = ({games}) =>
 
 
   <div id="game_completed" className="tab-pane fade in">
-    <div className="row row-eq-height">
-      <div className="col-md-3">
+    <div className="row  ">
+      <div className="col-md-3 col-sm-12">
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 ps-complete-th"><img className="console-icons" src="https://s12.postimg.org/fawhlmetp/ps3.png"/>PLAYSTATION</th>
+              <th className="col-md-6 col-sm-6 ps-complete-th"><img className="console-icons" src="https://s12.postimg.org/fawhlmetp/ps3.png"/>PLAYSTATION</th>
             </tr>
           </thead>
           <tbody className="ps-complete-body">
@@ -185,11 +185,11 @@ export const GamesList = ({games}) =>
           </tbody>
         </table>
       </div>
-      <div className="col-md-3">
+      <div className="col-md-3 col-sm-12">
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 x-complete-th"><img className="console-icons" src="https://s17.postimg.org/kaa37ogbj/image.png"/>XBOX</th>
+              <th className="col-md-6 col-sm-6 x-complete-th"><img className="console-icons" src="https://s17.postimg.org/kaa37ogbj/image.png"/>XBOX</th>
             </tr>
           </thead>
           <tbody className="x-complete-body">
@@ -203,11 +203,11 @@ export const GamesList = ({games}) =>
           </tbody>
         </table>
       </div>
-      <div className="col-md-3">
+      <div className="col-md-3 col-sm-12">
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 nin-complete-th"><img className="console-icons" src="https://s4.postimg.org/plm3mbpf1/nin2.png"/>NINTENDO</th>
+              <th className="col-md-6 col-sm-6 nin-complete-th"><img className="console-icons" src="https://s4.postimg.org/plm3mbpf1/nin2.png"/>NINTENDO</th>
             </tr>
           </thead>
           <tbody className="nin-complete-body">
@@ -221,11 +221,11 @@ export const GamesList = ({games}) =>
           </tbody>
         </table>
       </div>
-      <div className="col-md-3">
+      <div className="col-md-3 col-sm-12">
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 pc-complete-th"><img className="console-icons" src="https://s17.postimg.org/wqsfz0fsv/image.png"/>PC</th>
+              <th className="col-md-6 col-sm-6 pc-complete-th"><img className="console-icons" src="https://s17.postimg.org/wqsfz0fsv/image.png"/>PC</th>
             </tr>
           </thead>
           <tbody className="pc-complete-body">
@@ -245,12 +245,12 @@ export const GamesList = ({games}) =>
 
 
   <div id="game_wish" className="tab-pane fade in">
-    <div className="row row-eq-height">
-      <div className="col-md-3">
+    <div className="row  ">
+      <div className="col-md-3 col-sm-12">
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 ps-wish-th"><img className="console-icons" src="https://s12.postimg.org/fawhlmetp/ps3.png"/>PLAYSTATION</th>
+              <th className="col-md-6 col-sm-6 ps-wish-th"><img className="console-icons" src="https://s12.postimg.org/fawhlmetp/ps3.png"/>PLAYSTATION</th>
             </tr>
           </thead>
           <tbody className="ps-wish-body">
@@ -264,11 +264,11 @@ export const GamesList = ({games}) =>
           </tbody>
         </table>
       </div>
-      <div className="col-md-3">
+      <div className="col-md-3 col-sm-12">
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 x-wish-th"><img className="console-icons" src="https://s17.postimg.org/kaa37ogbj/image.png"/>XBOX</th>
+              <th className="col-md-6 col-sm-6 x-wish-th"><img className="console-icons" src="https://s17.postimg.org/kaa37ogbj/image.png"/>XBOX</th>
             </tr>
           </thead>
           <tbody className="x-wish-body">
@@ -282,11 +282,11 @@ export const GamesList = ({games}) =>
           </tbody>
         </table>
       </div>
-      <div className="col-md-3">
+      <div className="col-md-3 col-sm-12">
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 nin-wish-th"><img className="console-icons" src="https://s4.postimg.org/plm3mbpf1/nin2.png"/>NINTENDO</th>
+              <th className="col-md-6 col-sm-6 nin-wish-th"><img className="console-icons" src="https://s4.postimg.org/plm3mbpf1/nin2.png"/>NINTENDO</th>
             </tr>
           </thead>
           <tbody className="nin-wish-body">
@@ -300,11 +300,11 @@ export const GamesList = ({games}) =>
           </tbody>
         </table>
       </div>
-      <div className="col-md-3">
+      <div className="col-md-3 col-sm-12">
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-4 col-sm-4 pc-wish-th"><img className="console-icons" src="https://s17.postimg.org/wqsfz0fsv/image.png"/>PC</th>
+              <th className="col-md-6 col-sm-6 pc-wish-th"><img className="console-icons" src="https://s17.postimg.org/wqsfz0fsv/image.png"/>PC</th>
             </tr>
           </thead>
           <tbody className="pc-wish-body">

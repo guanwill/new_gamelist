@@ -12,7 +12,7 @@ a:hover, a:active, a:focus {
 
 // NAVBAR, HEADER, AND HOME PAGE
 .gameslist_link {
-  font-size: 18px !important;
+  font-size: 25px !important;
   color: #fff;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -21,7 +21,7 @@ a:hover, a:active, a:focus {
   -moz-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;
   font-family: 'Press Start 2P', cursive;
-  padding: 15px 10px !important;
+  // padding: 15px 10px !important;
   margin-left: auto !important;
 }
 
@@ -49,7 +49,7 @@ a:hover, a:active, a:focus {
   width: 100%;
   text-align: center;
   background: #253950 !important; //#25416f !important;
-  padding: 24px;
+  padding: 17px;
   border-bottom: 1px dotted white;
   border-top: 1px dotted white;
 }
@@ -224,7 +224,7 @@ a.game_status_title_last,  a.game_status_title_last:hover {
 
 .tab-content {
   margin: 40px;
-  min-height: 500px
+  min-height: 556px
 }
 
 // light Slider / Footer
@@ -344,6 +344,54 @@ a.game_status_title_last,  a.game_status_title_last:hover {
   border-bottom: 1px dotted #d5d5da !important;
 }
 
+// add and edit game forms
+.add-game-form {
+  width: 280px;
+  text-align: center;
+  margin-top: 30px;
+  background: white;
+  z-index: 5;
+  border-radius: 20px;
+  /* width: 100%; */
+  // background: #b1aaaa;
+  background: #e8e5e5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+#add_game {
+  padding: 20px;
+  padding-bottom: 2px;
+}
+.edit-game-form {
+  width: 340px;
+  text-align: center;
+  z-index: 5;
+  background: #e8e5e5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.delete-game-button {
+  padding: 6px 10px 6px !important;
+  width: 140px;
+}
+.add-game-button {
+  width: 140px;
+  padding: 6px 10px 6px !important;
+}
+.back-from-update-button {
+  margin-top: 10px;
+}
+.close-after-add-button {
+  margin-top: 10px;
+  width: 140px;
+  padding: 6px 10px 6px !important;
+}
 
 // --------------  RESPONSIVENESS ------------------
 
@@ -418,10 +466,20 @@ a.game_status_title_last,  a.game_status_title_last:hover {
   }
 }
 
-// -------
-
-
 @media (max-width: 414px) {
+
+  .gameslist_link {
+    font-size: 18px !important;
+  }
+
+  .divider-top {
+    font-size: 13px;
+  }
+
+  .welcome-div {
+    height: 400px;
+  }
+
   #plan-container table tr td:nth-child(4),  #index-container table tr td:nth-child(4) {
     text-align: center;
   }
