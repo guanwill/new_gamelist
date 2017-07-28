@@ -207,25 +207,6 @@
 
 }
 
-@media (max-width: 736px) {
-  table tr th[data-field="rating"], table tr td:nth-child(6) {
-    display: none;
-  }
-  table tr th[data-field="genre"], table tr td:nth-child(2) {
-    display: none;
-  }
-  table tr th[data-field="platform"], table tr td:nth-child(3) {
-    display: none;
-  }
-  table tr th[data-field="release_date"], table tr td:nth-child(5) {
-    display: none;
-  }
-
-  table tr th[data-field="progress"], table tr td:nth-child(4) {
-    text-align: center;
-  }
-}
-
 @media (max-width: 500px) {
   .navbar-right {
     // float: left;
@@ -296,10 +277,6 @@
 
   .welcome-paragraph {
     font-size: 11px;
-  }
-
-  #plan-container table tr td:nth-child(4),  #index-container table tr td:nth-child(4) {
-    text-align: center;
   }
 
   .nav-tabs > li > a {

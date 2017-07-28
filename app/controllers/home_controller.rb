@@ -4,6 +4,7 @@ skip_before_filter :verify_authenticity_token
   def index
     if user_signed_in?
       @games = Game.where(:user_id => current_user.id).order("title ASC, release_date ASC NULLS LAST")
+      @games_date_sort = Game.where(:user_id => current_user.id).order("release_date ASC NULLS LAST")
     else
       @games = ""
     end

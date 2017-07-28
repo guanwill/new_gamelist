@@ -4,6 +4,29 @@ import moment from 'moment';
 
 export default class Game extends React.Component {
 
+  // componentDidMount() {
+  //   if (this.props.game.release_date == null) {
+  //     var game_release_date = ""
+  //   }
+  //   else {
+  //     var time_now = moment()
+  //     // console.log('time now' + moment().format('MMMM Do YYYY'))
+  //     var game_release_date = moment(this.props.game.release_date)
+  //     // console.log('release date' + moment(this.props.game.release_date).format('MMMM Do YYYY'))
+  //     var answer = (time_now - game_release_date) / (1000*60*60*24)
+  //     // console.log(answer)
+  //     var comparison = (answer < 7 && answer > 0)
+  //     // console.log(comparison)
+  //
+  //     if ( answer < 7 && answer > 0 )  {
+  //       var final_game_release_date = moment(this.props.game.release_date).format('Do MMMM YYYY')
+  //     }
+  //     else if  ( answer >= 0 ) {
+  //       var final_game_release_date = ""
+  //     }
+  //   }
+  // }
+
   deleteGame = () => {
     if(confirm("Are you sure?")) {
       $.ajax({
@@ -25,12 +48,27 @@ export default class Game extends React.Component {
       var game_release_date = ""
     }
     else {
-      var game_release_date = moment(this.props.game.release_date).format('Do MMMM YYYY')
+      var time_now = moment()
+      // console.log('time now' + moment().format('MMMM Do YYYY'))
+      var game_release_date = moment(this.props.game.release_date)
+      // console.log('release date' + moment(this.props.game.release_date).format('MMMM Do YYYY'))
+      var answer = (game_release_date - time_now) / (1000*60*60*24)
+      // console.log(answer)
+      var comparison = (answer < 7 && answer > 0)
+      // console.log(this.props.game.title)
+      // console.log(comparison)
+
+      if ( answer < 7 && answer > 0 )  {
+        var final_game_release_date = moment(this.props.game.release_date).format('Do MMMM YYYY')
+      }
+      else if  ( answer <= 0 ) {
+        var final_game_release_date = ""
+      }
     }
 
     return (
       <tr>
-        <td><Link to={ `/games/${this.props.game.id}/edit` }>{this.props.game.title}</Link></td>
+        <td><Link to={ `/games/${this.props.game.id}/edit` }>{this.props.game.title} </Link> <span className="close_release_date"> {final_game_release_date} </span></td>
       </tr>
     )
   }
