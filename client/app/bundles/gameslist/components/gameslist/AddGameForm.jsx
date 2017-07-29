@@ -16,6 +16,8 @@ export default class AddGameForm extends React.Component{
         platform: '',
         progress: '',
         release_date: '',
+        review: '',
+        comments: '',
         editing: false
       }
   }
@@ -34,6 +36,8 @@ export default class AddGameForm extends React.Component{
           platform: data.platform || "",
           progress: data.progress || "",
           release_date: data.release_date || "",
+          review: data.review || "",
+          comments: data.comments || "",
           editing: this.props.match.path === '/games/:id/edit'
         });
       })
@@ -69,6 +73,8 @@ export default class AddGameForm extends React.Component{
           platform: '',
           progress: '',
           release_date: '',
+          review: '',
+          comments: '',
         })
         alert('Success')
         $('#add_game').removeClass('in')
@@ -103,6 +109,8 @@ export default class AddGameForm extends React.Component{
       platform: this.state.platform,
       progress: this.state.progress,
       release_date: this.state.release_date,
+      review: this.state.review,
+      comments: this.state.comments,
     };
     $.ajax({
           type: "PUT",
@@ -119,6 +127,7 @@ export default class AddGameForm extends React.Component{
   }
 
   render () {
+
     const disabledSubmitStatus = (this.state.title != "" && this.state.progress != "" && this.state.platform != "") ? false : true
     const disabledInputStatus = this.state.editing ? true : false
 
@@ -175,6 +184,9 @@ export default class AddGameForm extends React.Component{
             </select><br/>
 
             <input type="date" className="form-control add-game-field" name="release_date" placeholder="release_date" value={this.state.release_date} onChange={this.handleChange}/><br/>
+
+            <textarea className="form-control add-game-field" name="review" placeholder="Review" value={this.state.review} onChange={this.handleChange}></textarea><br/>
+            <textarea className="form-control add-game-field" name="comments" placeholder="Comments" value={this.state.comments} onChange={this.handleChange}></textarea><br/>
 
             <input disabled={disabledSubmitStatus} type="submit" value={this.state.editing ? 'Update Game' : 'Add Game'} className="btn btn-primary add-game-button" />
 

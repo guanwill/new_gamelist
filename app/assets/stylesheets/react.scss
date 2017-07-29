@@ -366,15 +366,13 @@ a.game_status_title_last,  a.game_status_title_last:hover {
   padding-bottom: 2px;
 }
 .edit-game-form {
-  width: 300px;
+  width: 370px;
   text-align: center;
   z-index: 5;
   background: #e8e5e5;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 40px;
+  position: relative;
+  top: 80px;
+  margin: 0 auto;
 }
 
 .delete-game-button {
@@ -386,7 +384,7 @@ a.game_status_title_last,  a.game_status_title_last:hover {
   padding: 6px 10px 6px !important;
 }
 .back-from-update-button {
-  margin-top: 10px;
+  padding: 10px;
 }
 .close-after-add-button {
   margin-top: 10px;
@@ -481,8 +479,14 @@ a.game_status_title_last,  a.game_status_title_last:hover {
     height: 400px;
   }
 
-  #plan-container table tr td:nth-child(4),  #index-container table tr td:nth-child(4) {
+  .edit-game-form {
+    width: 280px;
     text-align: center;
+    z-index: 5;
+    background: #e8e5e5;
+    position: relative;
+    top: 23px;
+    margin: 0 auto;
   }
 
   #game_title{

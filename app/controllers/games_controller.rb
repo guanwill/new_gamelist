@@ -98,7 +98,7 @@ end
 private
 
 def game_params
-  params.required(:game).permit(:title, :genre, :platform, :release_date, :progress, :rating)
+  params.required(:game).permit(:title, :genre, :platform, :release_date, :progress, :rating, :review, :comments)
 end
 
 
