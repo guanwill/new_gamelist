@@ -366,7 +366,7 @@ a.game_status_title_last,  a.game_status_title_last:hover {
   padding-bottom: 2px;
 }
 .edit-game-form {
-  width: 340px;
+  width: 300px;
   text-align: center;
   z-index: 5;
   background: #e8e5e5;
@@ -374,6 +374,7 @@ a.game_status_title_last,  a.game_status_title_last:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-top: 40px;
 }
 
 .delete-game-button {
