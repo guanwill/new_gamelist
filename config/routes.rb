@@ -11,13 +11,12 @@ Rails.application.routes.draw do
   root to: "home#index"
   get '/getsearchresults/:query' => 'home#getsearchresults'
   get '/getnewgames' => 'home#getnewgames'
-  get '/games' => 'games#index'
-  
+
 end
 
 
 
-
+# get '/games' => 'games#index'
 # resources :games do
 #   get :autocomplete_gamesapi_name, :on => :collection
 # end

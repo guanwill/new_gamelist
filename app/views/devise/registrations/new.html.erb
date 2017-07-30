@@ -1,5 +1,5 @@
 <div class="panel panel-default">
-  <div style="text-align:center" class="panel-heading">Sign Up</div>
+  <!-- <div style="text-align:center" class="panel-heading">Sign Up</div> -->
   <div class="panel-body">
 
     <div class="sign_up_form sign_bg">
@@ -11,12 +11,12 @@
 
       <div class="form-group">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, class: 'sign_up_field' %>
+        <%= f.email_field :email, autofocus: true, class: 'sign_up_field form-control' %>
       </div>
 
       <div class="form-group">
         <%= f.label :Username %><br />
-        <%= f.text_field :name, class: 'sign_up_field' %>
+        <%= f.text_field :name, class: 'sign_up_field form-control' %>
       </div>
 
       <div class="form-group">
@@ -24,21 +24,23 @@
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %><br />
-        <%= f.password_field :password, autocomplete: "off", class: 'sign_up_field' %>
+        <%= f.password_field :password, autocomplete: "off", class: 'sign_up_field form-control' %>
       </div>
 
       <div class="form-group">
         <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'sign_up_field' %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'sign_up_field form-control' %>
       </div>
 
-      <div class="actions">
-        <%= f.submit "Sign up", class: 'btn btn-primary' %>
+      <div style="text-align:center" class="actions">
+        <%= f.submit "Sign Up", class: 'btn btn-primary add-game-button' %>
       </div>
     <br/>
     <% end %>
 
-    <%= render "devise/shared/links" %>
+    <div style="text-align:center" class="actions">
+      <%= render "devise/shared/links" %>
+    </div>
     <br/>
 
     </div>

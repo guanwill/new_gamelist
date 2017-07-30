@@ -1,20 +1,25 @@
-<div class="sign_up_form sign_bg">
+<div class="panel panel-default">
+  <!-- <div style="text-align:center" class="panel-heading">Sign In</div> -->
+  <div class="panel-body">
+      <div class="sign_up_form sign_bg">
 
-<h2>Forgot your password?</h2></br>
+        <h2 class="forgotpw-heading" style="text-align:center" >Forgot Your Password?</h2></br>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= devise_error_messages! %>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, class: 'sign_up_field' %>
+          </div><br/>
+          <div style="text-align:center" class="actions">
+            <%= f.submit "Reset Password", class: 'btn btn-primary' %>
+          </div>
+        <% end %><br/>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, class: 'sign_up_field' %>
-  </div><br/>
+        <div style="text-align:center" class="actions">
+          <%= render "devise/shared/links" %>
+        </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions", class: 'btn btn-default' %>
+      </div>
   </div>
-<% end %><br/><br/>
-
-<%= render "devise/shared/links" %>
-
 </div>

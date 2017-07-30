@@ -1,5 +1,5 @@
 <div class="panel panel-default">
-  <div style="text-align:center" class="panel-heading">Edit Account</div>
+  <!-- <div style="text-align:center" class="panel-heading">Edit Account</div> -->
   <div class="panel-body">
 
     <div class="edit_form edit_bg">
@@ -38,16 +38,20 @@
         <%= f.password_field :current_password, autocomplete: "off", class: 'edit_field' %>
       </div>
 
-      <div class="actions">
-        <%= f.submit "Update", class: 'btn btn-primary' %>
+      <div style="text-align: center" class="actions">
+        <%= f.submit "Update Profile", class: 'btn btn-primary add-game-button' %>
       </div>
     <% end %>
 
     <br />
-    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, class: 'btn btn-default', method: :delete %>
+    <div style="text-align: center" class="actions">
+      <%= button_to "Cancel Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, class: 'btn btn-danger delete-game-button', method: :delete %>
+    </div>
     <br />
-    <%= link_to "Back", :back %>
-    <br/></br/>
+    <div style="text-align: center" class="actions">
+      <%= link_to "Back", :back %>
+    </div>
+
 
     </div>
 

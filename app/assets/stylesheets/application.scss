@@ -20,70 +20,6 @@
  @import "bootstrap";
 
 
- // SIGN UP FORM: ;
- .sign_up_form {
-   text-align: center;
-   margin-top: 50px;
- }
- .sign_up_field {
-   width: 23%;
-   text-align: center;
-   border: 1px solid #193892;
-   border-radius: 3px;
-   height: 30px;
-   margin-bottom: 10px;
- }
- // .sign_bg {
- //   background: rgba(221, 221, 221, 0.7);
- //   border: 2px solid gray;
- //   padding: 30px 0px 30px 0px;
- //   border-radius: 20px;
- // }
- // EDIT FORM
- .edit_form {
-   text-align: center;
-   margin-top: 50px;
- }
- .edit_field {
-   width: 25%;
-   text-align: center;
-   border: 1px solid #193892;
-   border-radius: 3px;
-   height: 30px;
- }
- // .edit_bg {
- //   background: rgba(221, 221, 221, 0.7);
- //   border: 2px solid gray;
- //   padding: 30px 0px 30px 0px;
- //   border-radius: 20px;
- // }
- // LOGIN FORM
- .login_form {
-   text-align: center;
-   margin-top: 50px;
- }
- .login_field {
-     width: 23%;
-     text-align: center;
-     padding: 7px;
-     border-radius: 5px;
-     border: 1px solid #2b6285;
- }
-
-  h2 {
-    color: #384c91;
-    font-family: 'raleway';
-    font-weight: bold;
-  }
-
- // .login-bg {
- //   background: rgba(221, 221, 221, 0.7);
- //   border: 2px solid gray;
- //   padding: 30px 0px 30px 0px;
- //   border-radius: 20px;
- // }
-
-
 // ///////////////////// RESPONSIVENESS //////////
 
 @media (max-width: 1070px) {
@@ -149,13 +85,9 @@
 
   // EDIT PROFILE PAGE
   .edit_form {
-    text-align: center;
     margin-bottom: 10px;
   }
 
-  form.edit_user div.form-group input {
-    width: 50%;
-  }
 
   // SIGN UP FORM
   .sign_up_form {
@@ -165,20 +97,12 @@
     margin-bottom: 10px;
   }
 
-  .sign_up_field {
-    width: 50%;
-  }
-
   // LOG IN FORM
   .login_form {
     text-align: center;
     position: relative;
     top: 32px;
     margin-bottom: 10px;
-  }
-
-  .login_field {
-    width: 50%;
   }
 
   // GAME SEARCH RESULTS
@@ -240,11 +164,7 @@
   }
   // EDIT PROFILE PAGE
   .edit_form {
-    text-align: center;
     margin-bottom: 10px;
-  }
-  form.edit_user div.form-group input {
-    width: 70%;
   }
 
   // SIGN UP FORM
@@ -255,10 +175,6 @@
     margin-bottom: 10px;
   }
 
-  .sign_up_field {
-    width: 70%;
-  }
-
   // LOG IN FORM
   .login_form {
     text-align: center;
@@ -267,9 +183,6 @@
     margin-bottom: 10px;
   }
 
-  .login_field {
-    width: 70%;
-  }
 
 }
 
@@ -326,11 +239,6 @@
     margin-bottom: 0;
   }
 
-  .panel-body {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-
   .add_game_button {
     padding: 8px 21px !important;
   }
@@ -339,10 +247,6 @@
   .sign_up_form {
     text-align: center;
     margin-top: 0px;
-  }
-  .edit_form {
-    text-align: center;
-    margin-top: 20px;
   }
   .login_form {
     text-align: center;
@@ -465,10 +369,6 @@
   }
 
   //edit game page
-  .panel-body {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
 
   .add_game_button {
     padding: 5px 21px !important;

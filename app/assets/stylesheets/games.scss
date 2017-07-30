@@ -238,20 +238,6 @@ a:hover {
   margin-top: 6px;
 }
 
-.panel-default > .panel-heading {
-  font-weight: bold;
-  // background: none !important;
-  background: #193892 !important;
-  color: white !important;
-  // border: 1px solid #193892 !important;
-}
-
-.modal-header {
-  background: #193892;
-  color: white;
-  border: 0 !important;
-}
-
 .close {
   color: white !important;
 }
@@ -415,13 +401,20 @@ a:hover {
   margin-bottom: 70px;
 }
 
-// GAME PAGE & TABLES
-.panel {
-  margin: 30px;
-  border-radius: 10px !important;
-  // background: #150832 !important;
-  min-height: 680px;
-}
+// GAME PAGE PANELS & TABLES
+// .panel-default > .panel-heading {
+//   font-weight: bold;
+//   // background: none !important;
+//   background: #193892 !important;
+//   color: white !important;
+//   // border: 1px solid #193892 !important;
+// }
+//
+// .modal-header {
+//   background: #193892;
+//   color: white;
+//   border: 0 !important;
+// }
 
 .table {
   // background: rgba(247, 247, 247, 0.78);
@@ -461,11 +454,11 @@ tr[data-link] {
 }
 
 // bootstrap sortable table
-table.sortable > thead th:hover:not([data-defaultsort=disabled]) {
-  background: #193892 !important;
-  // color: #337ab7;
-  color: white !important;
-}
+// table.sortable > thead th:hover:not([data-defaultsort=disabled]) {
+//   background: #193892 !important;
+//   // color: #337ab7;
+//   color: white !important;
+// }
 
 // Btn Default
 .btn-default {
@@ -474,14 +467,14 @@ table.sortable > thead th:hover:not([data-defaultsort=disabled]) {
   background-color: #fff;
   border-color: #1868b1 !important;
 }
-.btn-default:hover {
-  background: #193892 !important;
-  color: white !important;
-}
+// .btn-default:hover {
+//   background: #193892 !important;
+//   color: white !important;
+// }
 .btn-default:focus {
-  background: white !important;
+  // background: white !important;
   outline-style: none;
-  color: #1868b1 !important;
+  // color: #1868b1 !important;
 }
 
 // Nav Tabs

@@ -3,7 +3,8 @@ import Datetime from 'react-datetime';
 import moment from 'moment';
 import update from 'immutability-helper';
 import { Link } from 'react-router-dom';
-
+import autosize from 'autosize';
+import  FooterBottom  from '../footer/FooterBottom'
 
 export default class AddGameForm extends React.Component{
   constructor(props, _railsContext){
@@ -127,6 +128,14 @@ export default class AddGameForm extends React.Component{
   }
 
   render () {
+    autosize($('textarea.edit-textarea'));
+    // $('textarea').each(function () {
+    //   this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+    //   console.log(this.scrollHeight)
+    // }).on('click', function () {
+    //   this.style.height = 'auto';
+    //   this.style.height = (this.scrollHeight) + 'px';
+    // });
 
     const disabledSubmitStatus = (this.state.title != "" && this.state.progress != "" && this.state.platform != "") ? false : true
     const disabledInputStatus = this.state.editing ? true : false
@@ -185,8 +194,10 @@ export default class AddGameForm extends React.Component{
 
             <input type="date" className="form-control add-game-field" name="release_date" placeholder="release_date" value={this.state.release_date} onChange={this.handleChange}/><br/>
 
-            <textarea className="form-control add-game-field" name="review" placeholder="Review" value={this.state.review} onChange={this.handleChange}></textarea><br/>
-            <textarea className="form-control add-game-field" name="comments" placeholder="Comments" value={this.state.comments} onChange={this.handleChange}></textarea><br/>
+            {this.state.editing && <textarea className="form-control add-game-field edit-textarea" name="review" placeholder="Write a review" value={this.state.review} onChange={this.handleChange}></textarea>}
+            {this.state.editing && <p><a className="my-review-button" data-toggle="modal" data-target="#myReview">View Review</a></p>}
+            {this.state.editing && <textarea className="form-control add-game-field edit-textarea" name="comments" placeholder="Notes" value={this.state.comments} onChange={this.handleChange}></textarea>}
+            {this.state.editing && <p className="review-button-p"><a className="my-review-button" data-toggle="modal" data-target="#myNotes">View Notes</a></p>}
 
             <input disabled={disabledSubmitStatus} type="submit" value={this.state.editing ? 'Update Game' : 'Add Game'} className="btn btn-primary add-game-button" />
 
@@ -196,7 +207,33 @@ export default class AddGameForm extends React.Component{
 
           {this.state.editing && (<button className="btn btn-danger delete-game-button" onClick={this.deleteGame}>Delete</button>)}
           {this.state.editing && (<p className="back-from-update-button"><Link to={ `/games` }>Back</Link></p>)}
+
+          {this.state.editing &&
+            <div id="myReview" className="modal fade" role="dialog">
+              <div className="modal-dialog">
+                <div className="modal-content">
+                  <div className="modal-body">
+                    <p className="modal-p">{this.state.review}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
+
+          {this.state.editing &&
+            <div id="myNotes" className="modal fade" role="dialog">
+              <div className="modal-dialog">
+                <div className="modal-content">
+                  <div className="modal-body">
+                    <p className="modal-p">{this.state.comments}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
+
         </div>
+        
       </div>
     )
   }

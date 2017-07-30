@@ -1,21 +1,21 @@
 <div class="panel panel-default">
-  <div style="text-align:center" class="panel-heading">Sign In</div>
+  <!-- <div style="text-align:center" class="panel-heading">Sign In</div> -->
   <div class="panel-body">
 
     <div class="login_form login-bg">
 
-    
+
     <br/>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, class: 'login_field' %>
+        <%= f.email_field :email, autofocus: true, class: 'login_field form-control' %>
       </div></br>
 
       <div class="field">
         <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off", class: 'login_field' %>
+        <%= f.password_field :password, autocomplete: "off", class: 'login_field form-control' %>
       </div></br>
 
       <% if devise_mapping.rememberable? -%>
@@ -25,12 +25,15 @@
         </div></br>
       <% end -%>
 
-      <div class="actions">
-        <%= f.submit "Login", class: 'btn btn-primary' %>
+      <div style="text-align:center" class="actions">
+        <%= f.submit "Login", class: 'btn btn-primary add-game-button' %>
       </div><br/>
     <% end %>
 
-    <%= render "devise/shared/links" %>
+    <div style="text-align:center" class="actions">
+      <%= render "devise/shared/links" %>
+    </div>
+    
     <br/>
     </div>
 
