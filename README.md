@@ -1,47 +1,33 @@
-#MY GAMES LIST
+# MY GAMES LIST 2.0
 
-##Website
-Heroku: https://stark-retreat-73573.herokuapp.com/
+## Website
+Heroku: https://nameless-forest-56676.herokuapp.com/
 
-##Purpose
+## Purpose
 * Tracks the status of all your video games
 * Search for information on any game that you want
 
-##Inspiration
-There are indeed a lot of websites out there that provide similar features, however, I still end up using Ms Excel at the end of the day to track my games. Why? Because Excel is simple and very easy on the eyes. That was all I needed and thus this app was created to solve this (personal) problem. I hope those who share a similar opinion find this app useful.
-
-##Features
+## Features
 * Users are required to create an account in order to view and create their own list
-* Users are also able to edit and delete their individual game entries
+* Users are able to edit and delete their individual game entries
 * Users can specify a progress percentage for each game that they have on their list
-* Users can also specify a game's release date and platform if they choose to
-* Games are categorized into three categories: Planning to play, Currently playing, and finished playing
-* Users can search for information on a particular game
+* Users can specify a game's release date, platform, or even write a review or notes if they choose to
+* Games are categorized into the following categories: Playing, Planning to play, Completed, Wishlist
+* Users can search for information on a particular game and add them to their list if they like
 
-##Technologies Used
-* Ruby on Rails
-* Postgresql
+## Technologies Used
+* [React on Rails Gem](https://github.com/shakacode/react_on_rails) (Packs with Babel, Webpacks, React, Redux)
+* [React Router DOM](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
+* Ruby on Rails (Serves Games API and Devise)
+* PostgreSQL
 * HTML5/CSS3/Bootstrap
 * Google Fonts
-* HTTParty
-* [RatyRate Gem](https://github.com/wazery/ratyrate)
+* [Rest-client](https://github.com/rest-client/rest-client)
+* [Moment.js](https://momentjs.com/)
 * [Devise Gem](https://github.com/plataformatec/devise)
-* [Rails4-autocomplete Gem](https://github.com/peterwillcn/rails4-autocomplete)
 * [GiantBomb's API](http://www.giantbomb.com/api/)
 
-##Future Considerations
-* ~~Use an external API to store names of all existing games into the database~~
-* ~~Integrate autofill feature so that users don't have to type the whole name of the game~~
-* Integrate an info page for each game
-
-##Update 1.2 29/7/2016
-* Incorporated GiantBomb's API so users can search for information on any game
-* Users can search for games by clicking on the search icon in the nav bar or joystick icon on the home page
-
-##Update 1.1 27/7/2016
-* Seeded a csv file with a massive list of games into postgreSQL
-* Implemented an autofill feature when users try to add a game
-
-##Update 1.1 23/12/2016 - 2/1/2016
-* Re-designed website layout
-* Added sortable columns
+## Update 7/2017
+* This is a redevelopment of [My Games List](https://github.com/guanwill/gamelist)
+* Migrated from React-rails gem to react_on_rails gem
+* New designs
