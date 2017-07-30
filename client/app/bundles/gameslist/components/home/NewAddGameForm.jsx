@@ -8,12 +8,13 @@ import { Link } from 'react-router-dom';
 export default class NewAddGameForm extends React.Component{
   constructor(props, _railsContext){
       super(props)
+      console.log(this.props.gameResult.original_release_date)
       this.state = {
         title: this.props.gameResult.name,
         genre: '',
         platform: '',
         progress: '',
-        release_date: this.props.gameDate,
+        release_date: this.props.gameResult.original_release_date,
       }
   }
 
