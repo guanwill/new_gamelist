@@ -1,6 +1,6 @@
 class AboutController < ApplicationController
 skip_before_filter :verify_authenticity_token
-autocomplete :gamesapi, :name, :full => true
+
 
 def about
 end
