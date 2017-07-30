@@ -62,7 +62,7 @@ export default class NewAddGameForm extends React.Component{
       <div className="add-game-container">
         <form id={form_target_id} className='form-group collapse' onSubmit={this.handleSubmit}>
           <input disabled={disabledInputStatus} className="form-control add-game-field2" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange}/>
-          <select className="form-control add-game-field" placeholder="Platform" name="platform" value={this.state.platform} onChange={this.handleChange}>
+          <select className="form-control add-game-field2" placeholder="Platform" name="platform" value={this.state.platform} onChange={this.handleChange}>
             <option value="Select"> Select Platform </option>
             <option value="PS4"> PS4 </option>
             <option value="PS Vita"> PS Vita </option>
@@ -70,18 +70,22 @@ export default class NewAddGameForm extends React.Component{
             <option value="Nin Switch"> Nin Switch </option>
             <option value="XBOX One"> XBOX One </option>
             <option value="PC"> PC </option>
-            <option value="Mobile"> Mobile </option>
-            <option value="Other"> Other </option>
-          </select><br/>
+          </select>
           <select className="form-control add-game-field2" placeholder="progress" name="progress" value={this.state.progress} onChange={this.handleChange}>
             <option value="Select"> Select Progress </option>
             <option value="0%"> 0% </option>
-            <option value="25% "> 25% </option>
+            <option value="10%"> 10% </option>
+            <option value="20% "> 20% </option>
+            <option value="30% "> 30% </option>
+            <option value="40% "> 40% </option>
             <option value="50% "> 50% </option>
-            <option value="75%"> 75% </option>
+            <option value="60% "> 60% </option>
+            <option value="70% "> 70% </option>
+            <option value="80% "> 80% </option>
+            <option value="90% "> 90% </option>
             <option value="100% Storyline"> 100% Storyline </option>
             <option value="100% Completion"> 100% Completion </option>
-            <option value="Wish"> Wish </option>
+            <option value="Wish"> Wishlist </option>
             <option value="Contemplating"> Contemplating </option>
             <option value="On hold"> On Hold </option>
           </select>
