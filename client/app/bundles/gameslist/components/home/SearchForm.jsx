@@ -4,7 +4,14 @@ import { Link } from 'react-router-dom'
 export default class SearchForm extends React.Component{
 
   createAjax = () => {
-    const query = this.titleInput.value
+
+    if (this.titleInput.value.trim() == "") {
+      var query = "Nothing"
+    }
+    else {
+      var query = this.titleInput.value
+    }
+
     this.props.getQuery(query)
     this.props.searchthis(query)
     console.log(query)
