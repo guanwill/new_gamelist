@@ -55,6 +55,10 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'pg'
+end
+
 gem 'react_on_rails', '6.4.2'
 
 gem 'mini_racer', platforms: :ruby
