@@ -55,9 +55,9 @@ group :development do
   gem 'spring'
 end
 
-group :production do
-  gem 'pg'
-end
+# group :production do
+#   gem 'pg'
+# end
 
 gem 'react_on_rails', '6.4.2'
 
