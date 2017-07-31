@@ -560,7 +560,7 @@ a.game_status_title_last,  a.game_status_title_last:hover {
 
   .edit-game-form {
     top: 50px;
-    margin-bottom: 40px;
+    margin-bottom: 40px !important;
   }
 }
 
@@ -580,14 +580,14 @@ a.game_status_title_last,  a.game_status_title_last:hover {
   }
 
   .edit-game-form {
-    width: 280px;
+    width: 375px;
     text-align: center;
     z-index: 5;
     background: #e8e5e5;
     position: relative;
     top: 23px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px !important;
   }
 
   // ACCOUNT FORMS
@@ -630,7 +630,7 @@ a.game_status_title_last,  a.game_status_title_last:hover {
   }
 
   .modal-dialog {
-    margin: 25px;
+    margin: 30px !important;
   }
 
   #game_title{
@@ -723,4 +723,11 @@ a.game_status_title_last,  a.game_status_title_last:hover {
     margin-bottom: 10px !important;
   }
 
+}
+
+@media (max-width: 320px) {
+  .edit-game-form {
+    width: 280px !important;
+    margin-bottom: 40px !important;
+  }
 }
