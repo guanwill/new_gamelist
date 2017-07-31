@@ -237,6 +237,8 @@ export default class AddGameForm extends React.Component{
           }
 
         </div>
+        <br/>
+        <p></p>
 
       </div>
     )

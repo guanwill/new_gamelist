@@ -364,6 +364,7 @@ a.game_status_title_last,  a.game_status_title_last:hover {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
+  border: 1px solid grey;
 }
 #add_game {
   padding: 20px;
