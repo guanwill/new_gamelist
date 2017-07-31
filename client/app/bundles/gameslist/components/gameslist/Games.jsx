@@ -36,6 +36,7 @@ export default class Games extends React.Component{
     //hide and show functionality to game list
     $( ".ps-playing-th" ).click(function() {
       $( ".ps-playing-body" ).toggle( "fast" );
+      $( ".ps-playing-th" ).toggleClass( "red-platform" )
       console.log('toggle')
     });
     $( ".x-playing-th" ).click(function() {
