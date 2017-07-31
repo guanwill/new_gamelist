@@ -10,6 +10,10 @@ a:hover, a:active, a:focus {
   outline: none !important;
 }
 
+input[type="date"] {
+  width: 100% !important;
+}
+
 // NAVBAR, HEADER, AND HOME PAGE
 .gameslist_link {
   font-size: 25px !important;
@@ -546,9 +550,14 @@ a.game_status_title_last,  a.game_status_title_last:hover {
 }
 
 @media (max-width: 667px) {
+
+  .panel {
+    top: 40px;
+    margin-bottom: 60px !important;
+  }
+
   .panel-body {
     padding: 15px;
-    padding-bottom: 60px !important;
   }
   .forgotpw-heading {
     margin-top: 0 !important;
@@ -609,12 +618,12 @@ a.game_status_title_last,  a.game_status_title_last:hover {
 
   .panel {
     position: relative;
-    top: 20px;
+    top: 70px;
     margin: 0 auto;
   }
 
   .panel-default {
-    width: 298px;
+    width: 340px;
     margin: 0 auto;
     background: #e8e5e5 !important;
     border: 0 !important;
@@ -677,6 +686,11 @@ a.game_status_title_last,  a.game_status_title_last:hover {
   .add-game {
     padding: 5px 11px;
     font-size: 12px;;
+  }
+
+  .edit-game-form {
+    width: 349px;
+    margin-bottom: 40px !important;
   }
 
 
