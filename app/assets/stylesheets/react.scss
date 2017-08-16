@@ -228,7 +228,8 @@ a.game_status_title_last,  a.game_status_title_last:hover {
 
 .tab-content {
   margin: 40px;
-  min-height: 556px
+  min-height: 556px;
+  margin-top: 0;
 }
 
 // light Slider / Footer
@@ -350,24 +351,28 @@ a.game_status_title_last,  a.game_status_title_last:hover {
 
 // add and edit game forms
 .add-game-form {
-  width: 280px;
+  // width: 280px;
+  width: 310px;
   text-align: center;
-  margin-top: 30px;
+  // margin-top: 30px;
+  margin: 0 auto;
   background: white;
   z-index: 5;
-  border-radius: 20px;
+  margin-top: 20px;
+  // border-radius: 20px;
   /* width: 100%; */
   // background: #b1aaaa;
-  background: #b1b1b1;
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  // background: #b1b1b1;
+  // position: fixed;
+  // top: 50%;
+  // left: 50%;
   /* bring your own prefixes */
-  transform: translate(-50%, -50%);
+  // transform: translate(-50%, -50%);
 }
 #add_game {
   padding: 20px;
-  padding-bottom: 2px;
+  // padding-bottom: 2px;
+  margin-bottom: 0 !important;
 }
 
 .edit-game-form {

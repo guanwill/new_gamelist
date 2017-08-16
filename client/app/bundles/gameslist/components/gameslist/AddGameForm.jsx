@@ -205,7 +205,6 @@ export default class AddGameForm extends React.Component{
 
             <input disabled={disabledSubmitStatus} type="submit" value={this.state.editing ? 'Update Game' : 'Add Game'} className="btn btn-primary add-game-button" />
 
-            {!this.state.editing && <a className="btn btn-danger close-after-add-button"  data-toggle="collapse" data-target="#add_game">Close </a>}
           </form>
 
 
@@ -246,3 +245,4 @@ export default class AddGameForm extends React.Component{
 };
 
 // {!this.state.editing && (<a className="game_status_title_last" data-toggle="collapse" data-target="#add_game">Add Game</a>)}
+// {!this.state.editing && <a className="btn btn-danger close-after-add-button"  data-toggle="collapse" data-target="#add_game">Close </a>}
