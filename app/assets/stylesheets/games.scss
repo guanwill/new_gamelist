@@ -2,24 +2,61 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+:active, :focus {
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background: none !important;
+  border: none !important;
+}
+
+// NAVBAR, HEADER, AND HOME PAGE
+.gameslist_link {
+  font-size: 25px !important;
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+  font-family: 'Press Start 2P', cursive;
+  margin-left: auto !important;
+}
+
+.gameslist_link:hover, .gameslist_link:active, .gameslist_link:focus{
+  color: white !important;
+}
+
+.home_header_bar {
+  width: 100%;
+  text-align: center;
+  background: #253950 !important;
+  padding: 17px;
+  border-bottom: 1px dotted white;
+}
+
 a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active {
   color: rgb(84, 171, 219) !important;
 }
 
-a:focus {
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
   background: none !important;
-}
-
-a:hover {
-  text-decoration: none !important;
-  border: none !important;
+  color: white;
 }
 
 .navbar {
-  // background: rgb(51, 27, 103);
-  background: #150832 !important;
   width: 100%;
   border-radius: 0 !important;
+  background: #221e2d !important;
+  margin: 0 !important;
+  min-height: auto !important;
 }
 
 .flash-notice {
@@ -28,6 +65,8 @@ a:hover {
 }
 
 .navbar-brand {
+  height: auto !important;
+  padding: 4px 10px !important;
   font-size: 14px !important;
   color: #fff;
   -webkit-transition: all 0.5s;
@@ -37,7 +76,6 @@ a:hover {
   -moz-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;
   font-family: 'Press Start 2P', cursive;
-  // padding: 15px 10px !important;
   margin-left: auto !important;
 }
 
@@ -51,7 +89,6 @@ a:hover {
   -moz-text-shadow: none !important;
   -webkit-animation: none !important;
   -moz-animation: none !important;
-
 }
 
 .dropdown-game-menu {
@@ -65,7 +102,6 @@ a:hover {
 
 .dropup, .dropdown {
     position: relative;
-    // float: left;
 }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:visited {
@@ -94,32 +130,13 @@ a:hover {
   outline-style: none !important;
 }
 
-.glyphicon.glyphicon-user {
-  // font-size: 15px !important;
-  // text-shadow: none;
-}
-
 .glyphicon-edit, .edit-title {
   color: rgb(196, 196, 196) !important;
-  // font-size: 12px !important;
 }
 
 .navbar-right .dropdown-menu {
   right: 0 !important;
   left: auto;
-}
-
-@media (min-width: 768px) {
-  .navbar-right {
-      float: right !important;
-      margin-right: 0px !important;
-  }
-
-  .navbar-right .dropdown-menu {
-    right: 0 !important;
-    left: auto;
-
-  }
 }
 
 /*glow*/
@@ -142,22 +159,19 @@ a:hover {
   }
 }
 
-.navbar-brand:hover {
-  // color: rgb(23, 181, 134);
-}
-
 .nav-name > a {
   color: white;
 }
+// END // NAVBAR, HEADER, AND HOME PAGE
 
 
-//--INDEX--//
-#h1-playing {
-  text-align: center;
-  margin: 50px;
-  margin-bottom: 25px;
-  font-size: 29px !important;
-}
+// INDEX PAGE
+// #h1-playing {
+//   text-align: center;
+//   margin: 50px;
+//   margin-bottom: 25px;
+//   font-size: 29px !important;
+// }
 
 #index-container   {
   width: 85%;
@@ -453,13 +467,6 @@ tr[data-link] {
   cursor: pointer;
 }
 
-// bootstrap sortable table
-// table.sortable > thead th:hover:not([data-defaultsort=disabled]) {
-//   background: #193892 !important;
-//   // color: #337ab7;
-//   color: white !important;
-// }
-
 // Btn Default
 .btn-default {
   color: #1868b1 !important;
@@ -467,14 +474,9 @@ tr[data-link] {
   background-color: #fff;
   border-color: #1868b1 !important;
 }
-// .btn-default:hover {
-//   background: #193892 !important;
-//   color: white !important;
-// }
+
 .btn-default:focus {
-  // background: white !important;
   outline-style: none;
-  // color: #1868b1 !important;
 }
 
 // Nav Tabs
@@ -491,9 +493,7 @@ tr[data-link] {
 .nav-tabs > li.active > a:hover {
   color: white!important;
 }
-.nav-tabs > li > a {
-  // border-bottom: 1px solid #1868b1 !important;
-}
+
 .nav-tabs > li:hover > a {
   // background: #e8deff !important;
   background: #193892 !important;
