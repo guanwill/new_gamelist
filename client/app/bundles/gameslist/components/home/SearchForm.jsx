@@ -18,8 +18,6 @@ export default class SearchForm extends React.Component{
     $('.divider-second-top p').text("Searching...")
   }
 
-  // <h1 className="welcome-title"> MGL </h1>
-
   render() {
     return (
       <div className="search-div">

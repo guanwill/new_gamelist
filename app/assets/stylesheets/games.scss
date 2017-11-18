@@ -1,6 +1,21 @@
-// Place all the styles related to the games controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// ---- SEARCH FOR THE FOLLOWING SECTIONS: ---- //
+// NAVBAR, HEADER, AND HOME PAGE
+// GAMES INDEX PAGE
+// GAME PANELS
+// GAME TABS
+// ADD GAME FORM AND EDIT GAME FORM
+// FOOTER AND LIGHT SLIDER
+// SEARCH FORM AND SEARCH RESULTS AND OTHER FORMS
+// ACCOUNT FORMS
+// TABLES
+// BUTTONS
+// DISQUS
+
+h2 {
+  color: #384c91;
+  font-family: 'raleway';
+  font-weight: bold;
+}
 
 :active, :focus {
   text-decoration: none;
@@ -162,165 +177,126 @@ a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active {
 .nav-name > a {
   color: white;
 }
-// END // NAVBAR, HEADER, AND HOME PAGE
 
-
-// INDEX PAGE
-// #h1-playing {
-//   text-align: center;
-//   margin: 50px;
-//   margin-bottom: 25px;
-//   font-size: 29px !important;
-// }
-
-#index-container   {
-  width: 85%;
+// GAMES INDEX PAGE
+.add-game-container {
   display: block;
-  margin: 0 auto;
+  text-align: center;
 }
 
-#index-container table td {
-  padding: 3px !important;
+.add-game {
+  text-align: center;
+}
+
+.modal-p {
+  font-size: 18px;
+}
+
+.modal {
+  margin-top: 7%;
+}
+
+// SEARCH FORM AND SEARCH RESULTS AND OTHER FORMS
+.search-results-container {
+  padding: 0px 20px;
+}
+
+.game_record_container {
+  padding-bottom: 25px;
+  padding-top: 25px;
+  border-bottom: 1px solid #a2a2a2;
+}
+
+.search-results-container div:last-child {
+  border-bottom: 0 !important;
+}
+
+.row-eq-height {
+  display: flex;
+  align-items: top;
+}
+
+.divider-top {
+  text-align: center;
+  font-size: 16px;
+  font-family: monospace;
+  padding: 11px;
+  border-top: 1px solid #123d63;
+  color: #123d63;
+}
+
+.divider-second-top {
+  text-align: center;
+  font-size: 16px;
+  font-family: monospace;
+  color: #565555;
+  cursor: pointer;
+  background: #dedede;
+}
+
+.divider-top p, .divider-second-top p {
+  margin-bottom: 0;
+}
+
+.game_results_add {
+  font-style: italic;
+  font-size: 11px !important;
+  margin-left: 6px;
+  cursor: pointer;
+  color: #337ab7 !important;
+}
+
+.game_platform_results {
+  color: #b9a982;
+  margin-bottom: 3px;
 }
 
 .add-game-container {
   display: block;
   text-align: center;
-  margin: 40px;
-}
-.add-game {
-  text-align: center;
 }
 
-//--PLAN--//
-#h1-plan {
-  text-align: center;
-  margin: 50px;
-  margin-bottom: 25px;
-  font-size: 29px !important;
-}
-
-#plan-container   {
-  width: 85%;
-  display: block;
+.add-game-field2 {
+  width: 265px !important;
   margin: 0 auto;
+  font-size: 12px !important;
+  margin-bottom: 5px;
+  height: 30px !important;
 }
 
-#plan-container table td {
-  padding: 3px !important;
+.add-game-button-2, .add-game-button-2:hover {
+  padding: 7px !important;
+  font-size: 12px !important;
 }
 
-.add-game-container {
-  display: block;
-  text-align: center;
-  margin: 11px;
-}
-.add-game {
-  text-align: center;
-}
-
-//--EDIT AND ADD PAGES--//
-#h1-game {
-  text-align: center;
-  margin: 50px;
-}
-#game-container   {
-  // width: 70%;
-  display: block;
-  margin: 14px auto;
-  text-align: center;
-}
-
-#game_title{
-  width: 268px;
-  text-align: center;
-  margin-top: 10px;
-}
-
-#game_genre, #game_platform, #game_progress, #game_release_date{
-  width: 268px;
-  text-align: center;
-  margin-top: 10px;
-}
-
-#game_release_date {
-  border-radius: 7px;
-}
-
-.add_game_button {
-  margin-bottom: 20px !important;
-  margin-top: 6px;
-}
-
-.close {
-  color: white !important;
-}
-
-
-//--ABOUT/HOME PAGE--//
-.welcome-title {
-  text-align: center;
-  font-family: 'Press Start 2P', sans-serif;
-  padding: 10px;
-  color: rgb(56, 76, 145);
-  font-size: 80px;
-}
-.welcome-p {
-  text-align: center;
-  font-family: 'raleway', sans-serif;
-  margin: 0;
-  color: rgb(57, 97, 191);
-  // font-weight: bold;
-}
-.welcome-paragraph {
-  text-align: center;
-  margin: 10px auto;
-  margin-bottom: 40px;
-  width: 40%;
-  font-size: 12px;
-}
 .welcome-div {
+  height: 500px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
 
+.search-game-button {
+  background: none !important;
+  color: #2e6da4 !important;
+  border: 0 !important;
+  padding: 0 !important;
+  font-size: 20px;
 }
-.welcome-img {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  background: none;
-  border: none;
+
+.search-div {
+  background: url("http://s33.postimg.org/b129uaelr/SRBackground.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
 }
+
 .ui-autocomplete {
   z-index: 9999 !important;
   width: auto !important;
   margin: 0 auto !important;
-
-}
-.ui-menu-item {
-  // width: 268px !important;
 }
 
-.welcome-img:focus {
-  text-decoration: none;
-  outline: none;
-  border: none;
-  color: white;
-}
-.welcome-img:visited {
-  text-decoration: none;
-  outline: none;
-  border: none;
-}
-.welcome-img:visited:focus {
-  text-decoration: none;
-  outline: none;
-  border: none;
-}
-.modal {
-  margin-top: 7%;
-}
-.api_form_modal {
-  text-align: center;
-}
 .gamename-input {
   width: 400px;
   padding: 10px;
@@ -328,25 +304,30 @@ a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active {
   border-radius: 5px;
   border: 1px solid rgb(43, 98, 133);
   text-align: center;
-}
-.modal-p {
-  // font-family: 'raleway', sans-serif;
-  font-size: 18px;
+  background: rgba(255, 255, 255, 0.62);
 }
 
-
-//--SEARCH FORM AND SEARCH RESULTS--
 .api_form {
   text-align: center;
+  width: 100%;
 }
 
-.btn-primary {
-  padding: 11px 20px 11px !important;
-  vertical-align: baseline !important;
+.image-col {
+  text-align: right;
+  margin-top: 15px;
+  margin-bottom: 15px
+}
+
+.para-col {
+  margin-top: 15px;
+  margin-bottom: 15px
+}
+
+.para-col h4 {
+  margin-top: 0;
 }
 
 .api-image {
-  // width: 300px;
   height: 300px;
   max-width: 100%;
   display: block;
@@ -355,119 +336,40 @@ a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active {
   margin-bottom: 30px;
   border-radius: 5px;
 }
-.api-heading {
-  text-align: center;
-  margin: 25px;
-  // margin-top: 50px;
-  font-family: 'Raleway', sans-serif;
-  // font-weight: bold;
-  // color: rgb(61, 61, 61);
-  font-size: 40px;
 
-}
-.api-paragraph {
-  text-align: center;
-  margin: 0 auto;
-  width: 50%;
-  color: rgb(117, 117, 117);
+input[type="date"] {
+  width: 100% !important;
 }
 
-.release_date_div {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-}
-
-//below is the css for the search icon in the nav bar
-.welcome-img2 {
-  display: block;
-  background: none;
-  border: none;
-}
-.welcome-img2:focus {
-  text-decoration: none;
-  outline: none;
-  border: none;
-  color: white;
-}
-.welcome-img2:visited {
-  text-decoration: none;
-  outline: none;
-  border: none;
-}
-.welcome-img2:visited:focus {
-  text-decoration: none;
-  outline: none;
-  border: none;
-}
-
-.jumbotron {
-  display: block;
-  margin: 0 auto;
-  // width: 75%;
-  width: 90%;
-  border-radius: 10px;
-  text-align: center;
-  border: 1px solid black;
-}
-
-#plan-container, #index-container {
-  margin-bottom: 70px;
-}
-
-// GAME PAGE PANELS & TABLES
-// .panel-default > .panel-heading {
-//   font-weight: bold;
-//   // background: none !important;
-//   background: #193892 !important;
-//   color: white !important;
-//   // border: 1px solid #193892 !important;
-// }
-//
-// .modal-header {
-//   background: #193892;
-//   color: white;
-//   border: 0 !important;
-// }
-
+// TABLES
 .table {
-  // background: rgba(247, 247, 247, 0.78);
   border: 1px dotted rgb(206, 205, 205);
-  // background: white;
 }
+
 .table-responsive {
   min-height: 400px !important;
   background: white;
   border: 0 !important;
 }
-.content-wrapper {
-  padding: 20px 100px;
-}
 
 .table th {
-  // background: #193892;
-  // color: white;
   border: 0 !important;
 }
+
+.table thead th {
+  font-size: 16px;
+  color: #1abd93;
+  font-weight: lighter;
+  border-bottom: 1px dotted #d5d5da !important;
+}
+
 .table td {
   border: 0 !important;
   padding: 7px !important;
   background: white;
 }
 
-.table td a {
-  // padding-left: 10px !important;
-}
-
-.fixed-table-container {
-  border: 0 !important;
-}
-
-tr[data-link] {
-  cursor: pointer;
-}
-
-// Btn Default
+// BUTTONS
 .btn-default {
   color: #1868b1 !important;
   font-weight: bold;
@@ -479,44 +381,75 @@ tr[data-link] {
   outline-style: none;
 }
 
-// Nav Tabs
-.nav-tabs {
-  border-bottom: 0 !important;
-}
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus {
-  color: #1868b1 !important;
-  // background-color: #193892 !important;
-  border: 1px solid #193892 !important;
-  border-bottom-color: transparent;
-  cursor: default;
-}
-.nav-tabs > li.active > a:hover {
-  color: white!important;
+.btn-primary {
+  padding: 11px 20px 11px !important;
+  vertical-align: baseline !important;
 }
 
-.nav-tabs > li:hover > a {
-  // background: #e8deff !important;
-  background: #193892 !important;
-  color:white;
-  border-top: 0 !important;
-  border-left: 0 !important;
+// GAME PANELS
+.ps-playing-th, .x-playing-th, .nin-playing-th, .pc-playing-th, .ps-start-th, .x-start-th, .nin-start-th, .pc-start-th, .ps-complete-th, .x-complete-th, .nin-complete-th, .pc-complete-th, .ps-wish-th, .x-wish-th, .nin-wish-th, .pc-wish-th  {
+  cursor: pointer;
+}
+
+.close_release_date {
+  font-size: 11px;
+  color: #e4841a;
+  margin-left: 5px;
+}
+
+.col-md-3.col-sm-12 {
+  padding-left: 9px !important;
+  padding-right: 9px !important;
+}
+
+.console-icons {
+  height: 18px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.red-platform {
+ color: #ca5833 !important;
+}
+
+// GAME TABS - PLAN, COMPLETED, WISHLIST, ETC
+a.game_status_title, a.game_status_title:hover {
+  color: #2a376d;
+  margin-left: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #337ab7 !important;
+  cursor: pointer;
+}
+
+a.game_status_title:active, a.game_status_title:focus {
+  color: #d28622 !important;
+}
+
+a.game_status_title_last,  a.game_status_title_last:hover {
+  color: #2a376d;
+  margin-left: 10px;
+  padding-right: 20px;
   border-right: 0 !important;
-  border-bottom: 0 !important;
+  cursor: pointer;
+  text-decoration: none
 }
 
-.deleteGame {
-  margin-bottom: 20px;
+.game_status_title_container {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 16px;
+  background: #e8e4e4;
 }
 
-input.addgamefield, select {
-  height: 35px;
-  border: 1px solid lightgrey;
-  text-align: center !important;
-  background: white !important;
-  border-radius: 2px !important;
+.tab-content {
+  margin: 40px;
+  min-height: 652px; //set min height for games list
+  margin-top: 0;
 }
 
-// Disqus
+// DISQUS
 .disqus_accordion {
   text-decoration: none;
   text-align: center;
@@ -533,4 +466,208 @@ input.addgamefield, select {
 
  a.disqus_accordion:before {
    content: "Hide comments"
+ }
+
+ // FOOTER AND LIGHT SLIDER
+ .footer-container {
+   position: relative;
+   width: 100%;
+   bottom: 0;
+ }
+
+ .home-divider {
+     text-align: center;
+     padding: 9px;
+     background: #0e081f;
+     position: relative;
+     bottom: 0;
+     width: 100%;
+     height: 300px;
+ }
+
+ .latest-games-heading{
+   margin-bottom: 0;
+   margin-top: 5px;
+   color: #fff;
+   font-family: monospace;
+   font-size: 16px;
+ }
+
+ .footer-row p {
+   font-size: 11px;
+   font-family: Arial;
+   color: grey !important;
+   margin-top: 5px !important;
+   margin-bottom: 2px !important;
+ }
+
+ .footer-row a{
+   font-size: 13px;
+   font-weight: bold;
+   font-family: Arial;
+   color: rgb(223, 161, 87) !important;
+   margin-top: 5px !important;
+   margin-bottom: 2px !important;
+ }
+
+ .home-divider img{
+   height: 153px;
+   width: 230px;
+   object-fit: cover;
+   border: 1px solid #563737;
+ }
+
+ .footer-row {
+   margin: 15px auto !important;
+   height: 212px !important;
+ }
+
+ .lSPager.lSpg {
+   display: none;
+ }
+
+ .lSAction>a {
+   top: 40% !important;
+   width: 31px !important;
+   display: none !important;
+ }
+
+ .lSSlideOuter {
+   width: 85%;
+   margin: 0 auto;
+ }
+
+ .footer-bottom {
+   position: relative;
+   bottom: 0;
+   width: 100%;
+   background: #221e2d;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-top: 1px dotted white;
+ }
+
+ .footer-a {
+   color: white;
+ }
+
+ .fa-github{
+   padding: 20px;
+   color:white;
+ }
+
+ // ADD GAME FORM AND EDIT GAME FORM
+ .add-game-form {
+   width: 310px;
+   text-align: center;
+   margin: 0 auto;
+   background: white;
+   z-index: 5;
+   margin-top: 20px;
+ }
+
+ #add_game {
+   padding: 20px;
+   margin-bottom: 0 !important;
+ }
+
+ .edit-game-form {
+   width: 450px;
+   text-align: center;
+   z-index: 5;
+   background: #e8e5e5;
+   position: relative;
+   top: 44px;
+   margin: 0 auto;
+ }
+
+ .delete-game-button {
+   padding: 6px 10px 6px !important;
+   width: 140px;
+ }
+
+ .add-game-button {
+   width: 140px;
+   padding: 6px 10px 6px !important;
+ }
+
+ .back-from-update-button {
+   padding: 10px;
+ }
+
+ .close-after-add-button {
+   margin-top: 10px;
+   width: 140px;
+   padding: 6px 10px 6px !important;
+ }
+
+ .edit-textarea {
+   overflow-y: hidden !important;
+ }
+
+ .modal-backdrop {
+   position: relative !important;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 1040;
+   background-color: #000;
+ }
+
+ .my-review-button {
+   cursor: pointer;
+   font-size: 9px;
+ }
+
+ #myNotes, #myReview {
+   margin-top: 0 !important;
+ }
+
+ #myNotes .modal-content, #myReview .modal-content  {
+   box-shadow: none !important
+ }
+
+ .modal-p {
+   word-wrap: break-word;
+   text-align: left;
+ }
+
+ .review-button-p {
+   margin-bottom: 15px;
+ }
+
+ // ACCOUNT FORMS
+ .sign_up_field {
+   width: 100%;
+   height: 30px;
+   margin-bottom: 10px;
+ }
+
+ .edit_field {
+   height: 33px;
+   width: 100%;
+ }
+
+ .login_field {
+   width: 100%;
+   padding: 7px;
+ }
+
+ .panel {
+   position: relative;
+   top: 80px;
+   margin: 0 auto;
+ }
+
+ .panel-default {
+   width: 500px;
+   margin: 0 auto;
+   background: #e8e5e5 !important;
+   border: 0 !important;
+ }
+
+ .panel-body {
+   padding: 27px !important;
  }
