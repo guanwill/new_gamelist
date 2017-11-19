@@ -1,20 +1,19 @@
-class Api::GamesapiController < ApplicationController
+class Api::GamesController < ApplicationController
   before_action :authenticate_user!
   skip_before_action :verify_authenticity_token
 
   def index
-    @games = Game.where(:user_id => current_user.id).order("title ASC, release_date ASC NULLS LAST")
-
+    @games = current_user.games.order("title ASC, release_date ASC NULLS LAST")
     render json: @games, status: 200
   end
 
   def show
-    @games = Game.find(params[:id])
+    @games = current_user.games.find(params[:id])
     render json: @games, status: 200
   end
 
   def create
-    game = Game.new(game_params)
+    game = current_user.games.new(game_params)
     game.user_id = current_user.id
     game.save
       if game.save
@@ -24,18 +23,8 @@ class Api::GamesapiController < ApplicationController
       end
   end
 
-  def new
-    @games = Game.new
-    render json: @games, status: 200
-  end
-
-  def edit
-    @game = Game.find(params[:id])
-    render json: @game, status: 200
-  end
-
   def update
-    @game = Game.find(params[:id])
+    @game = current_user.games.find(params[:id])
     @game.update(game_params)
     if @game.valid?
       render json: @game, status: 200
@@ -45,7 +34,7 @@ class Api::GamesapiController < ApplicationController
   end
 
   def destroy
-    @game = Game.find(params[:id])
+    @game = current_user.games.find(params[:id])
     @game.destroy
     if @game.destroy
       respond_to do |format|

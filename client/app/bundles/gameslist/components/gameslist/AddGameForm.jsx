@@ -28,7 +28,7 @@ export default class AddGameForm extends React.Component{
     if(this.props.match){
       $.ajax({
         type: "GET",
-        url: window.location.origin + `/api/gamesapi/${this.props.match.params.id}`,
+        url: window.location.origin + `/api/games/${this.props.match.params.id}`,
         datatype: "JSON"
       }).done((data) => {
         this.setState({
@@ -60,7 +60,7 @@ export default class AddGameForm extends React.Component{
   addGame = () => {
     // e.preventDefault();
     $.ajax({
-      url: window.location.origin + '/api/gamesapi/',
+      url: window.location.origin + '/api/games',
       type: 'POST',
       dataType: 'JSON',
       data: {
@@ -91,7 +91,7 @@ export default class AddGameForm extends React.Component{
     if(confirm("Are you sure?")) {
       $.ajax({
           type: "DELETE",
-          url: window.location.origin + `/api/gamesapi/${this.props.match.params.id}`,
+          url: window.location.origin + `/api/games/${this.props.match.params.id}`,
           })
           .done( (data) => {
             alert('Game deleted')
@@ -115,7 +115,7 @@ export default class AddGameForm extends React.Component{
     };
     $.ajax({
           type: "PUT",
-          url: window.location.origin + `/api/gamesapi/${this.props.match.params.id}`,
+          url: window.location.origin + `/api/games/${this.props.match.params.id}`,
           data: {game: game}
           })
           .done( (data) => {

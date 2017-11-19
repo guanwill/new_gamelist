@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   namespace :api do
-    resources :gamesapi, defaults: {format: :json} do
+    resources :games, defaults: {format: :json} do
     end
   end
 

@@ -32,13 +32,14 @@ export default class NewAddGameForm extends React.Component{
 
   addGame = () => {
     $.ajax({
-      url: window.location.origin + '/api/gamesapi/',
+      url: window.location.origin + '/api/games',
       type: 'POST',
       dataType: 'JSON',
       data: {
         game: this.state
       },
       success: (data) => {
+        console.log(data)
         alert('Success')
         var formid = '#gameid' + this.props.gameResult.id
         $(formid).removeClass('in')

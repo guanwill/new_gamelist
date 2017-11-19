@@ -202,8 +202,8 @@ a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active {
 }
 
 .game_record_container {
-  padding-bottom: 25px;
-  padding-top: 25px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   border-bottom: 1px solid #a2a2a2;
 }
 
@@ -382,8 +382,12 @@ input[type="date"] {
 }
 
 .btn-primary {
-  padding: 11px 20px 11px !important;
   vertical-align: baseline !important;
+  border: 0 !important;
+}
+
+.btn-primary:hover {
+  border: 0 !important;
 }
 
 // GAME PANELS
@@ -589,7 +593,7 @@ a.game_status_title_last,  a.game_status_title_last:hover {
 
  .add-game-button {
    width: 140px;
-   padding: 6px 10px 6px !important;
+   padding: 9px 10px 9px !important;
  }
 
  .back-from-update-button {

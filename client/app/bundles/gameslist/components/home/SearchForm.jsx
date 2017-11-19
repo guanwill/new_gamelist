@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 export default class SearchForm extends React.Component{
 
-  createAjax = () => {
-
+  createAjax = (e) => {
+    e.preventDefault()
     if (this.titleInput.value.trim() == "") {
       var query = "Nothing"
     }
@@ -23,8 +23,10 @@ export default class SearchForm extends React.Component{
       <div className="search-div">
           <div className="welcome-div">
             <div className="api_form">
-              <input type="text" ref={(input) => {this.titleInput = input}} className="ui-autocomplete-input gamename-input" placeholder="Search for a game"/>
-              <button type="submit" className="search-game-button btn-primary" onClick={this.createAjax}><i className="fa fa-search" aria-hidden="true"></i></button>
+              <form className='form-group search-game-form' onSubmit={this.createAjax}>
+                <input type="text" ref={(input) => {this.titleInput = input}} className="ui-autocomplete-input gamename-input" placeholder="Search for a game"/>
+                <button type="button" className="search-game-button btn-primary" ><i className="fa fa-search" aria-hidden="true"></i></button>
+              </form>
             </div>
 
           </div>

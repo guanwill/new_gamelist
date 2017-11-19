@@ -31,7 +31,7 @@ export default class Game extends React.Component {
     if(confirm("Are you sure?")) {
       $.ajax({
           type: "DELETE",
-          url: window.location.origin + `/api/gamesapi/${this.props.game.id}`,
+          url: window.location.origin + `/api/games/${this.props.game.id}`,
           })
           .done( (data) => {
             alert('Game deleted')
