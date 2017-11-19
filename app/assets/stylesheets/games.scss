@@ -70,6 +70,7 @@ a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active {
   width: 100%;
   border-radius: 0 !important;
   background: #221e2d !important;
+  // background: #2d2740;
   margin: 0 !important;
   min-height: auto !important;
 }
@@ -179,6 +180,13 @@ a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active {
 }
 
 // GAMES INDEX PAGE
+.home-container {
+  background: url(http://s33.postimg.org/i15bzczhb/Summoners_Rift3.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
 .add-game-container {
   display: block;
   text-align: center;
@@ -199,6 +207,7 @@ a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active {
 // SEARCH FORM AND SEARCH RESULTS AND OTHER FORMS
 .search-results-container {
   padding: 0px 20px;
+  background: white;
 }
 
 .game_record_container {
@@ -223,6 +232,7 @@ a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active {
   padding: 11px;
   border-top: 1px solid #123d63;
   color: #123d63;
+  background: white;
 }
 
 .divider-second-top {
@@ -357,9 +367,9 @@ input[type="date"] {
 }
 
 .table thead th {
-  font-size: 16px;
+  font-size: 19px;
   color: #1abd93;
-  font-weight: lighter;
+  font-weight: 400;
   border-bottom: 1px dotted #d5d5da !important;
 }
 
@@ -393,6 +403,7 @@ input[type="date"] {
 // GAME PANELS
 .ps-playing-th, .x-playing-th, .nin-playing-th, .pc-playing-th, .ps-start-th, .x-start-th, .nin-start-th, .pc-start-th, .ps-complete-th, .x-complete-th, .nin-complete-th, .pc-complete-th, .ps-wish-th, .x-wish-th, .nin-wish-th, .pc-wish-th  {
   cursor: pointer;
+  background: white;
 }
 
 .close_release_date {
@@ -413,7 +424,7 @@ input[type="date"] {
 }
 
 .red-platform {
- color: #ca5833 !important;
+ color: lightgrey !important;
 }
 
 // GAME TABS - PLAN, COMPLETED, WISHLIST, ETC
@@ -449,8 +460,14 @@ a.game_status_title_last,  a.game_status_title_last:hover {
 
 .tab-content {
   margin: 40px;
+  margin-bottom: 50px;
   min-height: 652px; //set min height for games list
   margin-top: 0;
+  padding: 23px;
+  border-radius: 7px;
+  border: 1px dotted #8a8599;
+  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 // DISQUS
@@ -545,7 +562,7 @@ a.game_status_title_last,  a.game_status_title_last:hover {
    position: relative;
    bottom: 0;
    width: 100%;
-   background: #221e2d;
+   background: #0a0714;
    display: flex;
    justify-content: center;
    align-items: center;

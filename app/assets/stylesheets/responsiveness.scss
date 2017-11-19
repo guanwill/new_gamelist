@@ -290,6 +290,10 @@
     width: 65%;
   }
 
+  .tab-content {
+    margin: 20px;
+  }
+
   #game_title{
     width: 268px;
     text-align: center;
@@ -416,16 +420,6 @@
     width: 150px;
     text-align: center;
     margin-top: 2px;
-  }
-
-  //add game page
-  input.addgamefield, select {
-    height: 25px;
-    border: 1px solid lightgrey;
-    text-align: center !important;
-    background: white !important;
-    border-radius: 2px !important;
-    margin-top: 0px !important;
   }
 
   //account pages
