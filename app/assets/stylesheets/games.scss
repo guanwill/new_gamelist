@@ -11,6 +11,16 @@
 // BUTTONS
 // DISQUS
 
+html, body {
+  height: 100%;
+}
+
+body {
+  // background: url("http://s33.postimg.org/i15bzczhb/Summoners_Rift3.jpg") no-repeat center center fixed;
+  background: url("https://s33.postimg.org/g62r7ct7j/retro-game-background-_For-_Free-_Wallpaper.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
 h2 {
   color: #384c91;
   font-family: 'raleway';
@@ -180,13 +190,6 @@ a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active {
 }
 
 // GAMES INDEX PAGE
-.home-container {
-  background: url(http://s33.postimg.org/i15bzczhb/Summoners_Rift3.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-}
-
 .add-game-container {
   display: block;
   text-align: center;
@@ -368,7 +371,8 @@ input[type="date"] {
 
 .table thead th {
   font-size: 19px;
-  color: #1abd93;
+  // color: #1abd93;
+  color: #333559;
   font-weight: 400;
   border-bottom: 1px dotted #d5d5da !important;
 }
@@ -424,7 +428,7 @@ input[type="date"] {
 }
 
 .red-platform {
- color: lightgrey !important;
+ color: #a09b9b !important;
 }
 
 // GAME TABS - PLAN, COMPLETED, WISHLIST, ETC
@@ -455,13 +459,15 @@ a.game_status_title_last,  a.game_status_title_last:hover {
   padding-bottom: 15px;
   padding-top: 15px;
   font-size: 16px;
-  background: #e8e4e4;
+  // background: #e8e4e4;
+  background: white;
 }
 
 .tab-content {
   margin: 40px;
   margin-bottom: 50px;
-  min-height: 652px; //set min height for games list
+  // min-height: 652px; //set min height for games list
+  height: 100%;
   margin-top: 0;
   padding: 23px;
   border-radius: 7px;
@@ -586,6 +592,7 @@ a.game_status_title_last,  a.game_status_title_last:hover {
    background: white;
    z-index: 5;
    margin-top: 20px;
+   border-radius: 7px;
  }
 
  #add_game {

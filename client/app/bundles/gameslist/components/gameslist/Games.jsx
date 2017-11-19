@@ -1,10 +1,11 @@
 import React from 'react';
-import {GamesList} from './GamesList'; //braces because its a name import. an es6 thing
+import {GamesList} from './GamesList';
 import update from 'immutability-helper';
 import AddGameForm from './AddGameForm';
 import { Header } from '../Header'
 import { Link } from 'react-router-dom';
-import  FooterBottom  from '../footer/FooterBottom'
+import { toggleTableHeadimg } from '../util/custom';
+// import  FooterBottom  from '../footer/FooterBottom'
 
 export default class Games extends React.Component{
   static defaultProps = {
@@ -33,90 +34,9 @@ export default class Games extends React.Component{
       })
     }
 
-    //hide and show functionality to game list
-    $( ".ps-playing-th" ).click(function() {
-      $( ".ps-playing-body" ).toggle( "fast" );
-      $( ".ps-playing-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
-    $( ".x-playing-th" ).click(function() {
-      $( ".x-playing-body" ).toggle( "fast" );
-      $( ".x-playing-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
-    $( ".nin-playing-th" ).click(function() {
-      $( ".nin-playing-body" ).toggle( "fast" );
-      $( ".nin-playing-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
-    $( ".pc-playing-th" ).click(function() {
-      $( ".pc-playing-body" ).toggle( "fast" );
-      $( ".pc-playing-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
+    // allow user to show and hide game list per platform panel
+    toggleTableHeadimg()
 
-    $( ".ps-start-th" ).click(function() {
-      $( ".ps-start-body" ).toggle( "fast" );
-      $( ".ps-start-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
-    $( ".x-start-th" ).click(function() {
-      $( ".x-start-body" ).toggle( "fast" );
-      $( ".x-start-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
-    $( ".nin-start-th" ).click(function() {
-      $( ".nin-start-body" ).toggle( "fast" );
-      $( ".nin-start-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
-    $( ".pc-start-th" ).click(function() {
-      $( ".pc-start-body" ).toggle( "fast" );
-      $( ".pc-start-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
-
-    $( ".ps-complete-th" ).click(function() {
-      $( ".ps-complete-body" ).toggle( "fast" );
-      $( ".ps-complete-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
-    $( ".x-complete-th" ).click(function() {
-      $( ".x-complete-body" ).toggle( "fast" );
-      $( ".x-complete-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
-    $( ".nin-complete-th" ).click(function() {
-      $( ".nin-complete-body" ).toggle( "fast" );
-      $( ".nin-complete-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
-    $( ".pc-complete-th" ).click(function() {
-      $( ".pc-complete-body" ).toggle( "fast" );
-      $( ".pc-complete-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
-
-    $( ".ps-wish-th" ).click(function() {
-      $( ".ps-wish-body" ).toggle( "fast" );
-      $( ".ps-wish-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
-    $( ".x-wish-th" ).click(function() {
-      $( ".x-wish-body" ).toggle( "fast" );
-      $( ".x-wish-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
-    $( ".nin-wish-th" ).click(function() {
-      $( ".nin-wish-body" ).toggle( "fast" );
-      $( ".nin-wish-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
-    $( ".pc-wish-th" ).click(function() {
-      $( ".pc-wish-body" ).toggle( "fast" );
-      $( ".pc-wish-th" ).toggleClass( "red-platform" )
-      console.log('toggle')
-    });
   }
 
   addGame = (game) => {
@@ -138,22 +58,8 @@ export default class Games extends React.Component{
       return 0;
     }
 
-    // const game_data_sort_by_date = this.state.game_data
-    // game_data_sort_by_date.sort(compare)
-    // function compare(a,b) {
-    //   // sorts by date. oldest to newest
-    //   var adate = new Date(a.release_date)
-    //   console.log(adate)
-    //   var bdate = new Date(b.release_date)
-    //   console.log(bdate)
-    //   if (adate < bdate)
-    //     return -1;
-    //   if (adate > bdate)
-    //     return 1;
-    // }
-
     return (
-      <div>
+      <div className="gameslist_body">
         <div className="home_header_bar">
           <Link className='gameslist_link' to={ `/` }>My Games List</Link>
         </div>
@@ -169,8 +75,10 @@ export default class Games extends React.Component{
         <AddGameForm handleNewGame={this.addGame}/>
         <GamesList games={this.state.game_data} />
 
-        <FooterBottom currentUser={this.state.currentUser} /> 
+
       </div>
     )
   }
 }
+
+// <FooterBottom currentUser={this.state.currentUser} />
