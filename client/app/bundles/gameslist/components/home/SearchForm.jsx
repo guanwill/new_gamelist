@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default class SearchForm extends React.Component{
 
+  // Grab user input data
   createAjax = (e) => {
     e.preventDefault()
     if (this.titleInput.value.trim() == "") {
@@ -12,7 +13,6 @@ export default class SearchForm extends React.Component{
       var query = this.titleInput.value
     }
 
-    this.props.getQuery(query)
     this.props.searchthis(query)
     console.log(query)
     $('.divider-second-top p').text("Searching...")
@@ -25,7 +25,7 @@ export default class SearchForm extends React.Component{
             <div className="api_form">
               <form className='form-group search-game-form' onSubmit={this.createAjax}>
                 <input type="text" ref={(input) => {this.titleInput = input}} className="ui-autocomplete-input gamename-input" placeholder="Search for a game"/>
-                <button type="button" className="search-game-button btn-primary" ><i className="fa fa-search" aria-hidden="true"></i></button>
+                <button type="button" onClick={this.createAjax} className="search-game-button btn-primary" ><i className="fa fa-search" aria-hidden="true"></i></button>
               </form>
             </div>
 

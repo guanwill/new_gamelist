@@ -10,17 +10,17 @@ export default class Footer extends React.Component{
       }
   }
 
-  showLatestGames = (response) => {
-    this.setState({latestGames: response.results})
-  }
-
+  // Always make API call to grab latest game when rendering home page and then display it in slider
   componentDidMount() {
     $.ajax({
       method: 'get',
       crossDomain: true,
       url: '/getnewgames',
       success: function(response){
-        this.showLatestGames(response);
+
+        // Update latestGames state with the results
+        this.setState({latestGames: response.results})
+
         $("#lightSlider").lightSlider({
           item: 5,
           autoWidth: false,
@@ -37,6 +37,8 @@ export default class Footer extends React.Component{
     });
   }
 
+  // Render footer slider. Footer bottom nav is a separate component. not lumped together as some components only want the Footer bottom nav and not the Footer slider
+  // We pass the results in latestGames to the FooterGamesList component
   render() {
     return (
       <div className="footer-container">

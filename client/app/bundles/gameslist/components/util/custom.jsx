@@ -1,3 +1,9 @@
+export function toggleSearchResults() {
+  $( ".divider-second-top" ).click(function() {
+    $( ".search-container2" ).toggle( "fast" );
+  });
+}
+
 export function toggleTableHeadimg() {
   //hide and show functionality to game list
   $( ".ps-playing-th" ).click(function() {
