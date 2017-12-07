@@ -12,6 +12,7 @@ export default class Results extends React.Component{
       var currentUserName = ""
     }
 
+    // Each search result will have its own component which we can manipulate through the ResultItems component used below. Make sure key is present
     const resultItems = this.props.searchResults.map(function(result){
       return (
         <ResultItems key={result.id} gameResult={result} currentUser={currentUserName} />

@@ -5,7 +5,8 @@ import update from 'immutability-helper';
 import { Link } from 'react-router-dom';
 
 
-export default class NewAddGameForm extends React.Component{
+export default class AddSearchedGameForm extends React.Component{
+  // Prepopulate the states with gameResult props from parent component
   constructor(props, _railsContext){
       super(props)
       console.log(this.props.gameResult.original_release_date)
@@ -27,10 +28,6 @@ export default class NewAddGameForm extends React.Component{
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.addGame();
-  }
-
-  addGame = () => {
     $.ajax({
       url: window.location.origin + '/api/games',
       type: 'POST',

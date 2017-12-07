@@ -1,10 +1,14 @@
 import React from 'react';
 import moment from 'moment';
-import NewAddGameForm from './NewAddGameForm'
+import AddSearchedGameForm from './AddSearchedGameForm'
 
 export default class ResultItems extends React.Component{
   render() {
+
+    // Individual games passed down from Results component
     var game = this.props.gameResult;
+
+    // Format game release date if release date exists
     if (this.props.gameResult.original_release_date != ""){
       var gameDate = moment(this.props.gameResult.original_release_date).local().format('DD/MM/YYYY')
     }
@@ -27,13 +31,14 @@ export default class ResultItems extends React.Component{
       var game_image_url = ""
     }
 
-    // For displaying an AddGameForm for each game
+    // For displaying a unique AddGameForm for each game.
     var data_target_name = "#gameid" + game.id
-    var data_target_classname = ".gameid" + game.id //for if you want to trigger addGame form in a modal
 
+    // We display game image and info here. We also pass some game data, formatted release date and current user as props to AddSearchedGameForm component
     return(
       <div className="game_record_container">
         <div className="row-eq-height">
+
           <div className='col-md-2 col-sm-2 image-col'>
             <img className="api-image=" src={game_image_url}/>
           </div>
@@ -48,7 +53,7 @@ export default class ResultItems extends React.Component{
 
         <div className="row">
           <div className='col-md-12 col-sm-12'>
-            <NewAddGameForm gameResult={game} gameDate={gameDate} currentUser={this.props.currentUser} />
+            <AddSearchedGameForm gameResult={game} gameDate={gameDate} currentUser={this.props.currentUser} />
           </div>
         </div>
       </div>

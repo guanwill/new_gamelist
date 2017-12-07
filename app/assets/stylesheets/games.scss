@@ -17,7 +17,10 @@ html, body {
 
 body {
   // background: url("http://s33.postimg.org/i15bzczhb/Summoners_Rift3.jpg") no-repeat center center fixed;
-  background: url("https://s33.postimg.org/g62r7ct7j/retro-game-background-_For-_Free-_Wallpaper.jpg") no-repeat center center fixed;
+  // background: url("https://s33.postimg.org/g62r7ct7j/retro-game-background-_For-_Free-_Wallpaper.jpg") no-repeat center center fixed;
+  // background: url("https://images.alphacoders.com/545/thumb-1920-545454.jpg") no-repeat center center fixed;
+  // background: url("https://nexus.leagueoflegends.com/wp-content/uploads/2016/10/LOL_CMS_Article_Dev-OnStory_Hero.jpg") no-repeat center center fixed;
+  background: url("https://s18.postimg.org/bzq8rqwe1/abstract_patterns_monochrome_Simon_C_Page_1920x1200.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -356,7 +359,7 @@ input[type="date"] {
 
 // TABLES
 .table {
-  border: 1px dotted rgb(206, 205, 205);
+  border: 0px dotted rgb(206, 205, 205);
 }
 
 .table-responsive {
@@ -379,8 +382,11 @@ input[type="date"] {
 
 .table td {
   border: 0 !important;
-  padding: 7px !important;
-  background: white;
+  padding-left: 11px !important;
+}
+
+tbody {
+  background: #e5e5e5;
 }
 
 // BUTTONS
@@ -463,17 +469,19 @@ a.game_status_title_last,  a.game_status_title_last:hover {
   background: white;
 }
 
+// If you want to wrap all 4 console panels with a container panel
 .tab-content {
   margin: 40px;
   margin-bottom: 50px;
   // min-height: 652px; //set min height for games list
   height: 100%;
   margin-top: 0;
-  padding: 23px;
+  padding: 35px;
   border-radius: 7px;
   border: 1px dotted #8a8599;
-  background: rgba(255, 255, 255, 0.3);
+  // background: rgba(255, 255, 255, 0.3);
   background: rgba(0, 0, 0, 0.5);
+  // background: #34374499;
 }
 
 // DISQUS

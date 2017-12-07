@@ -3,7 +3,6 @@ import Games from '../gameslist/Games.jsx';
 import { Link } from 'react-router-dom';
 import AddGameForm from '../gameslist/AddGameForm';
 import SearchForm from './SearchForm';
-import Results from './Results';
 import { Header } from '../Header';
 import Footer from '../footer/Footer'
 import  FooterBottom  from '../footer/FooterBottom'
