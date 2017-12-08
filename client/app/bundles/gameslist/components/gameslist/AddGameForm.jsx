@@ -23,7 +23,7 @@ export default class AddGameForm extends React.Component{
       }
   }
 
-  // Preload existing fields when editing a selected game
+  // Preload existing fields when editing a selected game. The PUT call will grab current state of these props
   componentDidMount () {
     if(this.props.match){
       $.ajax({
@@ -39,12 +39,14 @@ export default class AddGameForm extends React.Component{
           release_date: data.release_date || "",
           review: data.review || "",
           comments: data.comments || "",
+          // Change the url to edit
           editing: this.props.match.path === '/games/:id/edit'
         });
       })
     }
   }
 
+  // Update data as input field changes
   handleChange = (e) => {
     var name = e.target.name;
     var obj = {};
@@ -52,13 +54,14 @@ export default class AddGameForm extends React.Component{
     this.setState(obj)
   }
 
+  // Depending on editing state, we either update game or add game
   handleSubmit = (e) => {
     e.preventDefault();
     this.state.editing ? this.updateGame() : this.addGame();
   }
 
+  // Post call to add entry to games
   addGame = () => {
-    // e.preventDefault();
     $.ajax({
       url: window.location.origin + '/api/games',
       type: 'POST',
@@ -87,6 +90,7 @@ export default class AddGameForm extends React.Component{
     })
   }
 
+  // To delete game entry
   deleteGame = () => {
     if(confirm("Are you sure?")) {
       $.ajax({
@@ -103,7 +107,9 @@ export default class AddGameForm extends React.Component{
     }
   }
 
+  // PUT action to update game entry
   updateGame = () => {
+    // Get current state of the game and past as data to the PUT call
     const game = {
       title: this.state.title,
       genre: this.state.genre,
@@ -114,33 +120,28 @@ export default class AddGameForm extends React.Component{
       comments: this.state.comments,
     };
     $.ajax({
-          type: "PUT",
-          url: window.location.origin + `/api/games/${this.props.match.params.id}`,
-          data: {game: game}
-          })
-          .done( (data) => {
-            alert('Game updated')
-            this.props.history.push('/games')
-          })
-          .fail( (response) => {
-            console.log(response)
-          })
+      type: "PUT",
+      url: window.location.origin + `/api/games/${this.props.match.params.id}`,
+      data: {game: game}
+      })
+      .done( (data) => {
+        alert('Game updated')
+        this.props.history.push('/games')
+      })
+      .fail( (response) => {
+        console.log(response)
+      })
   }
 
   render () {
+    // For game notes and review fields. Textarea will adjust as content increases/decreases
     autosize($('textarea.edit-textarea'));
-    // $('textarea').each(function () {
-    //   this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
-    //   console.log(this.scrollHeight)
-    // }).on('click', function () {
-    //   this.style.height = 'auto';
-    //   this.style.height = (this.scrollHeight) + 'px';
-    // });
 
+    // Validation on input fields and submit/updating button
     const disabledSubmitStatus = (this.state.title != "" && this.state.progress != "" && this.state.platform != "") ? false : true
     const disabledInputStatus = this.state.editing ? true : false
 
-    // {this.state.editing && (<h2>Update Game</h2>)} //put title out of the form
+    // The below form uses this.state.editing to determine whether items should be shown or not when updating/adding a game
     return (
       <div>
 
@@ -206,7 +207,6 @@ export default class AddGameForm extends React.Component{
             <input disabled={disabledSubmitStatus} type="submit" value={this.state.editing ? 'Update Game' : 'Add Game'} className="btn btn-primary add-game-button" />
 
           </form>
-
 
           {this.state.editing && (<button className="btn btn-danger delete-game-button" onClick={this.deleteGame}>Delete</button>)}
           {this.state.editing && (<p className="back-from-update-button"><Link to={ `/games` }>Back</Link></p>)}

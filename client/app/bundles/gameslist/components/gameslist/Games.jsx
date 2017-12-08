@@ -36,11 +36,11 @@ export default class Games extends React.Component{
 
     // allow user to show and hide game list per platform panel
     toggleTableHeadimg()
-
   }
 
+  // Add game via manual user input
   addGame = (game) => {
-    const game_data = update(this.state.game_data, { $push: [game]});
+    const game_data = update(this.state.game_data, { $push: [game] });
     this.setState({
       game_data: game_data
     });
@@ -58,8 +58,10 @@ export default class Games extends React.Component{
       return 0;
     }
 
+    // RENDERS GAMES LIST AND ADD GAME FORM
     return (
       <div className="gameslist_body">
+
         <div className="home_header_bar">
           <Link className='gameslist_link' to={ `/` }>My Games List</Link>
         </div>
@@ -74,7 +76,6 @@ export default class Games extends React.Component{
 
         <AddGameForm handleNewGame={this.addGame}/>
         <GamesList games={this.state.game_data} />
-
 
       </div>
     )

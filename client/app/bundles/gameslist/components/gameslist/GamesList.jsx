@@ -2,6 +2,11 @@ import React from 'react';
 import Game from './Game';
 
 export const GamesList = ({games}) =>
+
+// Each div.tab-pane tag represents a status of your games. Within that div contains four child tables that represents the console the game belongs to
+// Within each table, we loop through the game list and create a game component for each game so we can customize how the game component looks
+// there must be a way to optimise this
+
 <div className="tab-content">
 
   <div id="game_playing" className="tab-pane fade in active">
@@ -24,7 +29,6 @@ export const GamesList = ({games}) =>
           </tbody>
         </table>
       </div>
-
       <div className="col-md-3 col-sm-12">
           <table className="table table-borderedd">
             <thead>
@@ -61,7 +65,6 @@ export const GamesList = ({games}) =>
             </tbody>
           </table>
       </div>
-
       <div className="col-md-3 col-sm-12">
           <table className="table table-borderedd">
             <thead>
@@ -161,10 +164,6 @@ export const GamesList = ({games}) =>
     </div>
   </div>
 
-
-
-
-
   <div id="game_completed" className="tab-pane fade in">
     <div className="row  ">
       <div className="col-md-3 col-sm-12">
@@ -241,8 +240,6 @@ export const GamesList = ({games}) =>
       </div>
     </div>
   </div>
-
-
 
   <div id="game_wish" className="tab-pane fade in">
     <div className="row  ">
