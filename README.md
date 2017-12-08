@@ -27,6 +27,11 @@ Heroku: https://nameless-forest-56676.herokuapp.com/
 * [Devise Gem](https://github.com/plataformatec/devise)
 * [GiantBomb's API](http://www.giantbomb.com/api/)
 
+## Update 12/2017
+* Refactored code; made code more clean and maintainable
+* Removed redundant files
+* CSS Update
+
 ## Update 7/2017
 * This is a redevelopment of [My Games List](https://github.com/guanwill/gamelist)
 * Migrated from React-rails gem to react_on_rails gem
