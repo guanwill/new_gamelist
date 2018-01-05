@@ -90,3 +90,38 @@ export function toggleTableHeadimg() {
     console.log('toggle')
   });
 }
+
+export function changeGametabColor() {
+  $('.playing_tab').css('color', '#d28622')
+  $('.planning_tab').css('color', '#2a376d')
+  $('.completed_tab').css('color', '#2a376d')
+  $('.wishlist_tab').css('color', '#2a376d')
+
+  $('.playing_tab').click(function() {
+    $('.playing_tab').css('color', '#d28622')
+    $('.planning_tab').css('color', '#2a376d')
+    $('.completed_tab').css('color', '#2a376d')
+    $('.wishlist_tab').css('color', '#2a376d')
+  });
+
+  $('.planning_tab').click(function() {
+    $('.planning_tab').css('color', '#d28622')
+    $('.playing_tab').css('color', '#2a376d')
+    $('.completed_tab').css('color', '#2a376d')
+    $('.wishlist_tab').css('color', '#2a376d')
+  });
+
+  $('.completed_tab').click(function() {
+    $('.completed_tab').css('color', '#d28622')
+    $('.planning_tab').css('color', '#2a376d')
+    $('.playing_tab').css('color', '#2a376d')
+    $('.wishlist_tab').css('color', '#2a376d')
+  });
+
+  $('.wishlist_tab').click(function() {
+    $('.wishlist_tab').css('color', '#d28622')
+    $('.planning_tab').css('color', '#2a376d')
+    $('.completed_tab').css('color', '#2a376d')
+    $('.playing_tab').css('color', '#2a376d')
+  });
+}

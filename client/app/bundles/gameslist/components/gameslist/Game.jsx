@@ -12,9 +12,9 @@ export default class Game extends React.Component {
       var time_now = moment()
       var game_release_date = moment(this.props.game.release_date)
       var answer = (game_release_date - time_now) / (1000*60*60*24)
-      var comparison = (answer < 7 && answer > 0)
+      var comparison = (answer < 30 && answer > 0)
 
-      if ( answer < 7 && answer > 0 )  {
+      if ( answer < 30 && answer > 0 )  {
         var final_game_release_date = moment(this.props.game.release_date).format('Do MMMM YYYY')
       }
       else if  ( answer <= 0 ) {

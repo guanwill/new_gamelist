@@ -5,6 +5,8 @@ import AddGameForm from './AddGameForm';
 import { Header } from '../Header'
 import { Link } from 'react-router-dom';
 import { toggleTableHeadimg } from '../util/custom';
+import { changeGametabColor } from '../util/custom';
+
 // import  FooterBottom  from '../footer/FooterBottom'
 
 export default class Games extends React.Component{
@@ -36,6 +38,7 @@ export default class Games extends React.Component{
 
     // allow user to show and hide game list per platform panel
     toggleTableHeadimg()
+    changeGametabColor()
   }
 
   // Add game via manual user input
@@ -67,10 +70,10 @@ export default class Games extends React.Component{
         </div>
 
         <div className="game_status_title_container">
-            <a className="game_status_title" data-toggle="tab" href="#game_playing">Playing</a>
-            <a className="game_status_title" data-toggle="tab" href="#game_start">Planning</a>
-            <a className="game_status_title" data-toggle="tab" href="#game_completed">Completed</a>
-            <a className="game_status_title" data-toggle="tab" href="#game_wish">Wishlist</a>
+            <a className="playing_tab game_status_title" data-toggle="tab" href="#game_playing">Playing</a>
+            <a className="planning_tab game_status_title" data-toggle="tab" href="#game_start">Planning</a>
+            <a className="completed_tab game_status_title" data-toggle="tab" href="#game_completed">Completed</a>
+            <a className="wishlist_tab game_status_title" data-toggle="tab" href="#game_wish">Wishlist</a>
             <a className="game_status_title_last" data-toggle="collapse" data-target="#add_game">Add</a>
         </div>
 
