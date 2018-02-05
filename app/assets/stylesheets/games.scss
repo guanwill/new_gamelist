@@ -445,6 +445,10 @@ a.game_status_title, a.game_status_title:hover {
   cursor: pointer;
 }
 
+.home-container, .gameslist_body {
+  margin-bottom: 20px;
+}
+
 // a.game_status_title:active, a.game_status_title:focus {
 //   color: #d28622 !important;
 // }

@@ -18,7 +18,7 @@ Heroku: https://nameless-forest-56676.herokuapp.com/
 ## Technologies Used
 * [React on Rails Gem](https://github.com/shakacode/react_on_rails) (Packs with Babel, Webpacks, React, Redux)
 * [React Router DOM](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
-* Ruby on Rails (Serves Games API and Devise)
+* Ruby(2.2.2) on Rails (Serves Games API and Devise)
 * PostgreSQL
 * HTML5/CSS3/Bootstrap
 * Google Fonts
