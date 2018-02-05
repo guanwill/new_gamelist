@@ -80,6 +80,7 @@ export default class Games extends React.Component{
         <AddGameForm handleNewGame={this.addGame}/>
         <GamesList games={this.state.game_data} />
 
+        <p><br/></p>
       </div>
     )
   }
