@@ -6,6 +6,9 @@ export default class Game extends React.Component {
   render () {
     if (this.props.game.release_date == null) {
       var game_release_date = ""
+      if ( this.props.game.progress == 'Contemplating' ) {
+        var maybe_status = 'Maybe'
+      }
     }
     else {
       // Display the release date of a game in my list if it is going to be released within 7 days from today
