@@ -15,7 +15,7 @@ export const GamesList = ({games}) =>
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-6 col-sm-6 ps-playing-th"><img className="console-icons" src="https://s12.postimg.org/fawhlmetp/ps3.png"/>PLAYSTATION</th>
+              <th className="col-md-6 col-sm-6 ps-playing-th"><img className="console-icons" src="https://s31.postimg.cc/4198l75qj/game.png"/>PLAYSTATION</th>
             </tr>
           </thead>
           <tbody className="ps-playing-body">
@@ -51,7 +51,7 @@ export const GamesList = ({games}) =>
           <table className="table table-borderedd">
             <thead>
               <tr>
-                <th className="col-md-6 col-sm-6 nin-playing-th"><img className="console-icons" src="https://s4.postimg.org/plm3mbpf1/nin2.png"/>NINTENDO</th>
+                <th className="col-md-6 col-sm-6 nin-playing-th"><img className="console-icons" src="https://s31.postimg.cc/s3q2ghu7v/switch2.png"/>NINTENDO</th>
               </tr>
             </thead>
             <tbody className="nin-playing-body">
@@ -93,7 +93,7 @@ export const GamesList = ({games}) =>
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-6 col-sm-6 ps-start-th"><img className="console-icons" src="https://s12.postimg.org/fawhlmetp/ps3.png"/>PLAYSTATION</th>
+              <th className="col-md-6 col-sm-6 ps-start-th"><img className="console-icons" src="https://s31.postimg.cc/4198l75qj/game.png"/>PLAYSTATION</th>
             </tr>
           </thead>
           <tbody className="ps-start-body">
@@ -129,7 +129,7 @@ export const GamesList = ({games}) =>
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-6 col-sm-6 nin-start-th"><img className="console-icons" src="https://s4.postimg.org/plm3mbpf1/nin2.png"/>NINTENDO</th>
+              <th className="col-md-6 col-sm-6 nin-start-th"><img className="console-icons" src="https://s31.postimg.cc/s3q2ghu7v/switch2.png"/>NINTENDO</th>
             </tr>
           </thead>
           <tbody className="nin-start-body">
@@ -170,7 +170,7 @@ export const GamesList = ({games}) =>
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-6 col-sm-6 ps-complete-th"><img className="console-icons" src="https://s12.postimg.org/fawhlmetp/ps3.png"/>PLAYSTATION</th>
+              <th className="col-md-6 col-sm-6 ps-complete-th"><img className="console-icons" src="https://s31.postimg.cc/4198l75qj/game.png"/>PLAYSTATION</th>
             </tr>
           </thead>
           <tbody className="ps-complete-body">
@@ -206,7 +206,7 @@ export const GamesList = ({games}) =>
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-6 col-sm-6 nin-complete-th"><img className="console-icons" src="https://s4.postimg.org/plm3mbpf1/nin2.png"/>NINTENDO</th>
+              <th className="col-md-6 col-sm-6 nin-complete-th"><img className="console-icons" src="https://s31.postimg.cc/s3q2ghu7v/switch2.png"/>NINTENDO</th>
             </tr>
           </thead>
           <tbody className="nin-complete-body">
@@ -247,7 +247,7 @@ export const GamesList = ({games}) =>
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-6 col-sm-6 ps-wish-th"><img className="console-icons" src="https://s12.postimg.org/fawhlmetp/ps3.png"/>PLAYSTATION</th>
+              <th className="col-md-6 col-sm-6 ps-wish-th"><img className="console-icons" src="https://s31.postimg.cc/4198l75qj/game.png"/>PLAYSTATION</th>
             </tr>
           </thead>
           <tbody className="ps-wish-body">
@@ -283,7 +283,7 @@ export const GamesList = ({games}) =>
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-6 col-sm-6 nin-wish-th"><img className="console-icons" src="https://s4.postimg.org/plm3mbpf1/nin2.png"/>NINTENDO</th>
+              <th className="col-md-6 col-sm-6 nin-wish-th"><img className="console-icons" src="https://s31.postimg.cc/s3q2ghu7v/switch2.png"/>NINTENDO</th>
             </tr>
           </thead>
           <tbody className="nin-wish-body">

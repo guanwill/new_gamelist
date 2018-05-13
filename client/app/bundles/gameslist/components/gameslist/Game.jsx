@@ -14,7 +14,10 @@ export default class Game extends React.Component {
       var answer = (game_release_date - time_now) / (1000*60*60*24)
       var comparison = (answer < 90 && answer > 0)
 
-      if ( answer < 90 && answer > 0 )  {
+      if ( this.props.game.progress == 'Contemplating' ) {
+        var maybe_status = 'Maybe'
+      }
+      else if ( answer < 90 && answer > 0 )  {
         var final_game_release_date = moment(this.props.game.release_date).format('Do MMMM YYYY')
       }
       else if  ( answer <= 0 ) {
@@ -25,7 +28,7 @@ export default class Game extends React.Component {
     // Display Game Name as a link to the AddGameForm. The component has a Editing State. When it is true, the form will display differently with different buttons
     return (
       <tr>
-        <td><Link to={ `/games/${this.props.game.id}/edit` }>{this.props.game.title} </Link> <span className="close_release_date"> {final_game_release_date} </span></td>
+        <td><Link to={ `/games/${this.props.game.id}/edit` }>{this.props.game.title} </Link> <span className="close_release_date"> {final_game_release_date} </span> <span className="maybe_status"> {maybe_status} </span></td>
       </tr>
     )
   }
