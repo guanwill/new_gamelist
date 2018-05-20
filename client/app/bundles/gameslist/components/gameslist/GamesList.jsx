@@ -33,7 +33,7 @@ export const GamesList = ({games}) =>
           <table className="table table-borderedd">
             <thead>
               <tr>
-                <th className="col-md-6 col-sm-6 x-playing-th"><img className="console-icons" src="https://s17.postimg.org/kaa37ogbj/image.png"/>XBOX</th>
+                <th className="col-md-6 col-sm-6 x-playing-th"><img className="console-icons" src="https://s31.postimg.cc/sxhgxq5rf/image.png"/>XBOX</th>
               </tr>
             </thead>
             <tbody className="x-playing-body">
@@ -69,7 +69,7 @@ export const GamesList = ({games}) =>
           <table className="table table-borderedd">
             <thead>
               <tr>
-                <th className="col-md-6 col-sm-6 pc-playing-th"><img className="console-icons" src="https://s17.postimg.org/wqsfz0fsv/image.png"/>PC</th>
+                <th className="col-md-6 col-sm-6 pc-playing-th"><img className="console-icons" src="https://s31.postimg.cc/hz67fl6wb/image.png"/>PC</th>
               </tr>
             </thead>
             <tbody className="pc-playing-body">
@@ -111,7 +111,7 @@ export const GamesList = ({games}) =>
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-6 col-sm-6 x-start-th"><img className="console-icons" src="https://s17.postimg.org/kaa37ogbj/image.png"/>XBOX</th>
+              <th className="col-md-6 col-sm-6 x-start-th"><img className="console-icons" src="https://s31.postimg.cc/sxhgxq5rf/image.png"/>XBOX</th>
             </tr>
           </thead>
           <tbody className="x-start-body">
@@ -147,7 +147,7 @@ export const GamesList = ({games}) =>
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-6 col-sm-6 pc-start-th"><img className="console-icons" src="https://s17.postimg.org/wqsfz0fsv/image.png"/>PC</th>
+              <th className="col-md-6 col-sm-6 pc-start-th"><img className="console-icons" src="https://s31.postimg.cc/hz67fl6wb/image.png"/>PC</th>
             </tr>
           </thead>
           <tbody className="pc-start-body">
@@ -188,7 +188,7 @@ export const GamesList = ({games}) =>
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-6 col-sm-6 x-complete-th"><img className="console-icons" src="https://s17.postimg.org/kaa37ogbj/image.png"/>XBOX</th>
+              <th className="col-md-6 col-sm-6 x-complete-th"><img className="console-icons" src="https://s31.postimg.cc/sxhgxq5rf/image.png"/>XBOX</th>
             </tr>
           </thead>
           <tbody className="x-complete-body">
@@ -224,7 +224,7 @@ export const GamesList = ({games}) =>
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-6 col-sm-6 pc-complete-th"><img className="console-icons" src="https://s17.postimg.org/wqsfz0fsv/image.png"/>PC</th>
+              <th className="col-md-6 col-sm-6 pc-complete-th"><img className="console-icons" src="https://s31.postimg.cc/hz67fl6wb/image.png"/>PC</th>
             </tr>
           </thead>
           <tbody className="pc-complete-body">
@@ -265,7 +265,7 @@ export const GamesList = ({games}) =>
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-6 col-sm-6 x-wish-th"><img className="console-icons" src="https://s17.postimg.org/kaa37ogbj/image.png"/>XBOX</th>
+              <th className="col-md-6 col-sm-6 x-wish-th"><img className="console-icons" src="https://s31.postimg.cc/sxhgxq5rf/image.png"/>XBOX</th>
             </tr>
           </thead>
           <tbody className="x-wish-body">
@@ -301,7 +301,7 @@ export const GamesList = ({games}) =>
         <table className="table table-borderedd">
           <thead>
             <tr>
-              <th className="col-md-6 col-sm-6 pc-wish-th"><img className="console-icons" src="https://s17.postimg.org/wqsfz0fsv/image.png"/>PC</th>
+              <th className="col-md-6 col-sm-6 pc-wish-th"><img className="console-icons" src="https://s31.postimg.cc/hz67fl6wb/image.png"/>PC</th>
             </tr>
           </thead>
           <tbody className="pc-wish-body">
